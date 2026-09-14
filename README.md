@@ -8,17 +8,22 @@ A home for work in progress, completed manuscripts, and the materials shared for
 
 ## Proof index
 
-No proofs have been uploaded yet. Manuscripts can be added first; Lean formalizations can follow when available.
+**6 manuscripts · 6 Lean source files across 5 problems.** The Lean counterpart for **#272** is still missing. See the [upload inventory](docs/upload-inventory.md) for original filenames and reproduction materials still needed.
+
+The descriptions below reflect manuscript claims. The manuscripts report prior formal verification; those checks have not yet been independently reproduced in this repository.
 
 | Problem | Result / title | Proof PDF | Lean | Submission |
 | :--- | :--- | :--- | :--- | :--- |
-| — | Awaiting the first manuscript | — | — | — |
-
-<!-- Replace the empty-state row when the first proof is added. Sort by numeric problem ID. Link each problem to its folder and each PDF directly to the file. -->
+| [#14](problems/erdos-14/) | Non-unique sums, parts I and II | [PDF](problems/erdos-14/paper/proof.pdf) | [2 files; not checked](problems/erdos-14/lean/) | Draft |
+| [#96](problems/erdos-96/) | Unit distances in convex position | [PDF](problems/erdos-96/paper/proof.pdf) | [Source; not checked](problems/erdos-96/lean/) | Draft |
+| [#196](problems/erdos-196/) | Permutations avoiding four-term progressions | [PDF](problems/erdos-196/paper/proof.pdf) | [Source; not checked](problems/erdos-196/lean/) | Draft |
+| [#272](problems/erdos-272/) | Arithmetic-intersection families: linear error | [PDF](problems/erdos-272/paper/proof.pdf) | **[Missing](problems/erdos-272/lean/)** | Draft |
+| [#354](problems/erdos-354/) | Two floor-doubling sequences, part I | [PDF](problems/erdos-354/paper/proof.pdf) | [Source; not checked](problems/erdos-354/lean/) | Draft |
+| [#944](problems/erdos-944/) | Critical graphs: existence for all k ≥ 4 | [PDF](problems/erdos-944/paper/proof.pdf) | [Source; not checked](problems/erdos-944/lean/) | Draft |
 
 ## Inside each problem
 
-Every entry will live in `problems/erdos-<number>/`, using the number from the Erdős Problems website.
+Every entry lives in `problems/erdos-<number>/`, using the number from the Erdős Problems website.
 
 ```text
 problems/
@@ -45,6 +50,6 @@ The reusable starting point is in [templates/problem](templates/problem/). The [
 
 Manuscript review and Lean verification are recorded separately on each problem page. A Lean upload starts as **not checked**; a passing build records the exact revision, theorem, and scope. See the [verification guide](docs/lean-verification.md).
 
-## Sending the next proof
+## Adding or updating material
 
-Start with the **PDF and Erdős problem number**. Include the preferred title, author names, and whether the result is a full solution, a partial result, or another kind of contribution. The Lean files and their original project configuration can be added afterward.
+Use the [upload guide](CONTRIBUTING.md) for new manuscripts or revisions. The next missing proof counterpart is **Lean for #272**. Original Lean project or task bundles can be added alongside the supplied sources to make their builds reproducible; the [inventory](docs/upload-inventory.md) records what is still needed.

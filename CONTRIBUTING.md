@@ -9,7 +9,7 @@
 3. Replace `{{NUMBER}}` and `{{TITLE}}` in the copied files. Fill in the official problem link, authors, exact statement, scope, and current review status. Replace the template instruction block with a short abstract.
 4. Add the supplied PDF as `paper/proof.pdf`. Preserve the manuscript's contents and author line. Optional source files belong alongside it; keep their original internal structure.
 5. Change the manuscript row in the problem README to `[Read the proof](paper/proof.pdf)` and update `paper/README.md` to describe the uploaded files. Link only files that exist. Fill in the version or date printed in the manuscript; use “not specified” if absent.
-6. Replace the empty-state row and introductory sentence in the root proof index with a real entry, sorted by numeric problem number. Update `problems/README.md` to remove its empty-state note. Link the problem folder and the PDF. Leave Lean as “Not uploaded” until files arrive and submission as “Draft” until its status changes.
+6. Add or update the root proof-index entry, sorted by numeric problem number. Update the counts, `problems/README.md`, and `docs/upload-inventory.md` when the available files change. Link the problem folder and PDF. Leave Lean as “Not uploaded” until files arrive and submission as “Draft” until its status changes. Record original filenames and refresh the problem’s `SHA256SUMS` when replacing source files.
 
 A PDF can be published in the repository while review or formalization is still in progress. Record that state on the problem page.
 
