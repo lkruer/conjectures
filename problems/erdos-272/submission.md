@@ -11,7 +11,7 @@
 | Official problem | [Erdős #272](https://www.erdosproblems.com/272) |
 | Manuscript | [PDF](paper/proof.pdf), September 9, 2026 |
 | Authors | Jensen Kohlmeyer and Liam Kruer |
-| Lean | **Missing** — PDF references `Solution.lean` |
+| Lean | [Main.lean](lean/Main.lean) — repository verification pending |
 | Proof snapshot for submission | Not frozen; current links above follow the repository branch. |
 
 ## Draft summary for author review
@@ -22,9 +22,9 @@
 
 **Proof idea:** A structural reduction removes a linear number of exceptional members; primitive-pair assignments and private witnesses then control the remaining family with a linear error.
 
-**Scope:** The manuscript addresses the Szabó strong variant. It does not claim an exact formula, the optimal linear coefficient, or a classification of every extremal family. Its referenced Lean certificate has not been supplied.
+**Scope:** The manuscript addresses the Szabó strong variant. It does not claim an exact formula, the optimal linear coefficient, or a classification of every extremal family. The supplied Lean submission body declares the target for this variant.
 
-**Formalization:** The manuscript describes a Lean certificate, but the source has not yet been uploaded.
+**Formalization:** The accompanying submission body is available as [Main.lean](lean/Main.lean). The manuscript describes prior checks; this repository has not reproduced them yet.
 
 **Assistance disclosure:** The manuscript credits substantial assistance from OpenAI Codex in proof development, Lean formalization, and manuscript preparation. Preserve the manuscript’s specific acknowledgments in any announcement.
 

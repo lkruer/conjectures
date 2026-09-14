@@ -2,29 +2,34 @@
 
 [Back to the problem](../README.md) · [Verification guide](../../../docs/lean-verification.md)
 
-**Status: Not uploaded — missing counterpart.**
+**Status: Uploaded; not checked.**
 
 ## Supplied source
 
 | File | Role | Lines |
 | :--- | :--- | ---: |
-| Not supplied | The PDF references `Solution.lean` and `submission/Main.lean`. | — |
+| [Main.lean](Main.lean) | Szabó strong variant; submission body | 12,791 |
 
-The PDF describes a standalone `Solution.lean` importing `FormalConjectures.ErdosProblems.«272»` and `TaskSupport`, plus `submission/Main.lean` for a task-supplied wrapper. Neither source was included.
+The upload is preserved as `Main.lean`, with its original filename and bytes. It has no imports or enclosing `Bounty` namespace. The PDF describes this submission-body format as `submission/Main.lean`; the trusted task wrapper supplies `FormalConjectures.ErdosProblems.«272»`, `TaskSupport`, and the outer namespace. The standalone companion is called `Solution.lean` in the manuscript.
 
 ## Target and scope
 
-The PDF identifies `Bounty.target` for `Erdos272.erdos_272.variants.szabo_strong`; no source has been received to inspect.
+The final declaration in the supplied source is:
 
-Principal declarations observed in the supplied source: Not inspected: the source file is missing.
+```lean
+theorem target : fcTypeOfName% "Erdos272.erdos_272.variants.szabo_strong" := by
+  exact target_of_structural_reduction structural_reduction
+```
 
-The manuscript addresses the Szabó strong variant. It does not claim an exact formula, the optimal linear coefficient, or a classification of every extremal family. Its referenced Lean certificate has not been supplied.
+Principal declarations observed in the source include `target_of_finite_upper_bound`, `target_of_structural_reduction`, and `structural_reduction`. The original wrapper would place these declarations in `Bounty`.
+
+The manuscript addresses the Szabó strong variant. It does not claim an exact formula, the optimal linear coefficient, or a classification of every extremal family. The declared target matches the variant identified by the manuscript; its type and proof have not been independently checked here.
 
 ## Reported environment and earlier checks
 
-Section 10 reports Lean **4.33.1**, Formal Conjectures `8432eac998110a563e03df65a28c117e97c8c142`, and mathlib `0df444a360eaa60ab8c11dca51a86af692955474`. These are manuscript-reported versions, not a supplied project.
+Section 10 and the uploaded source header both report Lean **4.33.1**, Formal Conjectures `8432eac998110a563e03df65a28c117e97c8c142`, and mathlib `0df444a360eaa60ab8c11dca51a86af692955474`. The project configuration was not supplied.
 
-Section 10 describes compilation, axiom, type, dependency, and static-policy checks for a 12,797-line standalone file. The source and verification record were not included in this upload. See the [manuscript, Section 10](../paper/proof.pdf).
+Section 10 describes compilation, axiom, type, dependency, and static-policy checks for a 12,797-line standalone file. The uploaded submission body has 12,791 lines and omits its wrapper. The verification record was not supplied, and these checks have not been reproduced here. See the [manuscript, Section 10](../paper/proof.pdf).
 
 ## Repository verification record
 
@@ -35,18 +40,18 @@ Section 10 describes compilation, axiom, type, dependency, and static-policy che
 | Build result | Not run |
 | Kernel / axiom audit | Not run |
 | Target correspondence | Not independently reviewed |
-| File integrity | No Lean file available to compare. |
+| File integrity | Uploaded source bytes matched the original `Main.lean`; see [SHA256SUMS](../SHA256SUMS). |
 
 ## Materials still needed for reproduction
 
-Missing primary counterpart: `Solution.lean` or the corresponding `submission/Main.lean`. The PDF also describes `verification.json`, task support, and source TeX that were not supplied.
+The primary Lean counterpart is now present. The original task wrapper, `TaskSupport`, pinned project, and `verification.json` were not supplied. The standalone companion and source TeX described by the PDF are also absent from this upload.
 
 No `lean-toolchain`, `lakefile.toml` / `lakefile.lean`, or `lake-manifest.json` was supplied with this problem. Add the original project or task bundle before recording an independently reproduced build. The uploaded proof text has not been edited to guess the missing environment.
 
-The PDF gives the standalone `Solution.lean` SHA-256 as:
+The PDF gives the wrapped standalone `Solution.lean` SHA-256 as:
 
 ```text
 0d651c16942333977ee1ee4ddf17d017e3510f0dc6f2f1dd3542e434d16eb91e
 ```
 
-This is a manuscript-reported identifier to help locate the missing file, not a checksum verified against an uploaded source.
+This manuscript-reported checksum refers to the standalone file with its wrapper. It is not the checksum of the uploaded submission body; the latter is recorded separately in [SHA256SUMS](../SHA256SUMS).

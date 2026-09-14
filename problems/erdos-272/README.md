@@ -15,7 +15,7 @@ Jensen Kohlmeyer and Liam Kruer · September 9, 2026
 | Manuscript | [PDF, 15 pages](paper/proof.pdf) |
 | Manuscript date | September 9, 2026 |
 | Manuscript review | Not independently reviewed in this repository |
-| Lean | Not uploaded — missing counterpart |
+| Lean | Uploaded; not checked |
 | Submission | Draft; no announcement recorded |
 
 ## Problem and manuscript claim
@@ -28,13 +28,13 @@ This description follows the supplied manuscript. Its mathematical correctness a
 
 ## Scope and reading guide
 
-The manuscript addresses the Szabó strong variant. It does not claim an exact formula, the optimal linear coefficient, or a classification of every extremal family. Its referenced Lean certificate has not been supplied.
+The manuscript addresses the Szabó strong variant. It does not claim an exact formula, the optimal linear coefficient, or a classification of every extremal family. The supplied Lean source is the submission body for this variant.
 
-Theorem 1.1 states the bounds. Sections 2–9 develop and assemble the counting argument; Section 10 identifies the missing Lean certificate and its reported checks.
+Theorem 1.1 states the bounds. Sections 2–9 develop and assemble the counting argument; Section 10 describes the Lean certificate and its reported checks.
 
 ## Formalization
 
-The PDF identifies `Bounty.target` for `Erdos272.erdos_272.variants.szabo_strong`; no source has been received to inspect.
+The supplied [Main.lean](lean/Main.lean) ends with `target : fcTypeOfName% "Erdos272.erdos_272.variants.szabo_strong"`, proved using `target_of_structural_reduction structural_reduction`. The task wrapper supplies the imports and enclosing `Bounty` namespace.
 
 See the [Lean record](lean/README.md) for the uploaded files, reported environment, and missing reproduction materials. Previously reported checks in the manuscript are recorded separately from checks performed in this repository.
 
@@ -45,3 +45,4 @@ References and author credits are preserved in the [original PDF](paper/proof.pd
 ## Revision notes
 
 - **2026-09-13:** Added the supplied manuscript and a record of the missing Lean counterpart. PDF and source contents were preserved byte for byte. Original filenames are recorded in [the manuscript record](paper/README.md) and [upload inventory](../../docs/upload-inventory.md); [SHA256SUMS](SHA256SUMS) identifies the uploaded files.
+- **2026-09-13, subsequent upload:** Added `lean/Main.lean` unchanged, confirmed the declared #272 Szabó strong target, and updated the inventory and checksum record. Repository compilation and proof verification remain pending.

@@ -2,14 +2,14 @@
 
 [Back to the proof index](../README.md#proof-index)
 
-The September 13, 2026 upload contains **six PDFs and six Lean source files for six problem numbers**. Every problem has a PDF. **#272 is the only problem missing a primary Lean counterpart.**
+The September 13, 2026 uploads contain **six PDFs and seven Lean source files for six problem numbers**. Every listed problem has both a PDF and Lean source. The later `Main.lean` upload completes the pair for #272.
 
 | Problem | Original PDF filename | Pages | Original Lean filename(s) |
 | :--- | :--- | ---: | :--- |
 | [#14](../problems/erdos-14/) | `Erdos14_Unified_Paper.pdf` | 8 | `Erdos14_PartI.lean`, `Erdos14_PartII_Counterexample.lean` |
 | [#96](../problems/erdos-96/) | `erdos96-convex-unit-distances.pdf` | 8 | `erdos96.lean` |
 | [#196](../problems/erdos-196/) | `Erdos196-Kohlmeyer-Kruer (1).pdf` | 7 | `Erdos196.lean` |
-| [#272](../problems/erdos-272/) | `erdos272-linear-error (1).pdf` | 15 | **Missing** |
+| [#272](../problems/erdos-272/) | `erdos272-linear-error (1).pdf` | 15 | `Main.lean` |
 | [#354](../problems/erdos-354/) | `erdos354-Kohlmeyer-Kruer.pdf` | 13 | `lean354` |
 | [#944](../problems/erdos-944/) | `erdos944-kruer-kohlmeyer (2).pdf` | 13 | `erdos944.lean` |
 
@@ -20,9 +20,9 @@ The September 13, 2026 upload contains **six PDFs and six Lean source files for 
 - The #14 unified PDF and its two Lean files cover both parts, so a second PDF is not needed for this upload.
 - The #354 pair covers part I (multiplier 2). No claim is made here about the separate multiplier question.
 
-## Missing primary counterpart
+## PDF and Lean coverage
 
-**#272:** Section 10 of its [manuscript](../problems/erdos-272/paper/proof.pdf) calls the full proof `Solution.lean` and the task-body version `submission/Main.lean`. Neither was included. The paper describes a 12,797-line standalone source; its reported checksum is copied into the [Lean record](../problems/erdos-272/lean/README.md) to help identify it.
+All six pairs are present. **#272:** the supplied [Main.lean](../problems/erdos-272/lean/Main.lean) contains 12,791 lines and ends with the target `Erdos272.erdos_272.variants.szabo_strong`. It omits the imports and outer namespace, corresponding to the submission-body format described in Section 10 of the [manuscript](../problems/erdos-272/paper/proof.pdf). The original wrapper and project remain needed for reproduction; see the [Lean record](../problems/erdos-272/lean/README.md).
 
 ## Materials needed to reproduce the Lean checks
 
@@ -33,7 +33,7 @@ The supplied sources are recorded as uploaded and not independently checked. Non
 | [#14](../problems/erdos-14/lean/) | Separate task wrappers for the two bodies, imports, task support, and prior verification records. |
 | [#96](../problems/erdos-96/lean/) | The original task wrapper or the 21-module project described in the PDF, its problem definitions, audit, manifest, and logs. |
 | [#196](../problems/erdos-196/lean/) | Task wrapper and support; the standalone companion and index theorem described in the PDF are separate from the supplied body. |
-| [#272](../problems/erdos-272/lean/) | The missing proof source plus its pinned task project and `verification.json`. |
+| [#272](../problems/erdos-272/lean/) | The task wrapper, pinned project, `TaskSupport`, and `verification.json` for the supplied submission body. |
 | [#354](../problems/erdos-354/lean/) | Task project and support, `Audit.lean`, `verify.py`, and `verification.json`. |
 | [#944](../problems/erdos-944/lean/) | Task project and support, `validation.json`, and the supplementary finite-check program described in the PDF. |
 
