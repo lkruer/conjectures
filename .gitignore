@@ -1,0 +1,27 @@
+# Lean build output and downloaded dependencies
+.lake/
+*.olean
+*.ilean
+
+# TeX build byproducts (keep PDFs and source files)
+*.aux
+*.bcf
+*.blg
+*.fdb_latexmk
+*.fls
+*.lof
+*.lot
+*.nav
+*.out
+*.run.xml
+*.snm
+*.synctex.gz
+*.toc
+
+# Operating system and editor byproducts
+.DS_Store
+Thumbs.db
+Desktop.ini
+*.swp
+*.swo
+*~
