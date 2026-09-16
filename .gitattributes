@@ -7,3 +7,6 @@
 *.bib text eol=lf
 lean-toolchain text eol=lf
 *.pdf binary
+
+# Preserve the supplied Green 51 source byte for byte, including CRLF line endings.
+problems/green-51/lean/green51onehalf.lean -text

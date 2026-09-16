@@ -11,7 +11,7 @@
 | Problem source | [Ben Green, *100 open problems*](https://people.maths.ox.ac.uk/greenbj/papers/open-problems.pdf), Problem 15 |
 | Manuscript | [PDF](paper/proof.pdf), September 10, 2026 |
 | Authors | Jensen Kohlmeyer and Liam Kruer |
-| Lean | **Not uploaded**; expected files are listed in the [Lean record](lean/README.md). |
+| Lean | [Green15.lean](lean/Green15.lean); uploaded, not checked. See the [Lean record](lean/README.md). |
 | Submission destination | Not recorded |
 | Proof snapshot | Not frozen; current links follow the repository branch. |
 

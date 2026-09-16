@@ -15,7 +15,7 @@ Jensen Kohlmeyer and Liam Kruer · September 10, 2026
 | Manuscript | [PDF, 8 pages](paper/proof.pdf) |
 | Manuscript date | September 10, 2026 |
 | Manuscript review | Not independently reviewed in this repository |
-| Lean | Not uploaded |
+| Lean | Uploaded; not checked |
 | Submission | Draft; no announcement recorded |
 
 ## Problem and manuscript claim
@@ -32,7 +32,7 @@ Theorem 1.1 states the construction. Section 5 describes the Lean formalization 
 
 ## Formalization
 
-`Bounty.target` for `Green15.green_15`, as identified in Section 5 of the manuscript. Its source has not yet been supplied.
+The supplied [Green15.lean](lean/Green15.lean) contains `main_result` and `target : fcTypeOfName% "Green15.green_15"`. Its header states that the validator supplies the trusted imports and enclosing `Bounty` namespace.
 
 See the [Lean record](lean/README.md) for source availability, manuscript-reported checks, and materials needed to reproduce them. Repository compilation and mathematical review have not been performed.
 
@@ -42,4 +42,5 @@ The [original PDF](paper/proof.pdf) preserves the authors’ references and cred
 
 ## Revision notes
 
-- **2026-09-15:** Added the supplied manuscript; the Lean counterpart remains to be supplied. Original file contents were preserved byte for byte. See [the manuscript record](paper/README.md), [SHA256SUMS](SHA256SUMS), and the [upload inventory](../../docs/upload-inventory.md).
+- **2026-09-15:** Added the supplied manuscript; no Lean counterpart was included in that upload. Original file contents were preserved byte for byte. See [the manuscript record](paper/README.md), [SHA256SUMS](SHA256SUMS), and the [upload inventory](../../docs/upload-inventory.md).
+- **2026-09-15, subsequent upload:** Added `lean/Green15.lean` unchanged and recorded its declared target. Repository compilation remains pending.
