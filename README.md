@@ -8,7 +8,7 @@ A home for manuscripts, formalizations, and review materials connected with [Erd
 
 ## Proof index
 
-**9 manuscripts · 8 Lean source files · 9 problem folders.** The [complete upload checklist](docs/upload-inventory.md#materials-still-to-upload) tracks all 13 entries on the author-provided list. Four PDFs and six Lean counterparts remain to be supplied.
+**9 manuscripts · 8 Lean source files · 9 problem folders.** The [complete upload checklist](docs/upload-inventory.md#materials-still-to-upload) tracks all 12 entries on the author-provided list. Three PDFs and five Lean counterparts remain to be supplied.
 
 The descriptions below reflect manuscript claims. The manuscripts report prior formal verification; those checks have not yet been independently reproduced in this repository.
 

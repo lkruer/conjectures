@@ -2,16 +2,15 @@
 
 [Back to the proof index](../README.md#proof-index)
 
-The repository contains **nine PDFs and eight Lean source files across nine problem folders**. The author’s September 15, 2026 list contains **13 entries: nine Erdős problems and four Green problems**. This inventory records file availability and the supplied scope labels; proof verification is tracked separately.
+The repository contains **nine PDFs and eight Lean source files across nine problem folders**. The author’s current list contains **12 entries: eight Erdős problems and four Green problems**. This inventory records file availability and the supplied scope labels; proof verification is tracked separately.
 
 ## Materials still to upload
 
-**Four PDFs and six Lean counterparts remain.**
+**Three PDFs and five Lean counterparts remain.**
 
 | Problem | Still needed |
 | :--- | :--- |
 | Erdős #18 | PDF and Lean |
-| Erdős #97 | PDF and Lean |
 | Erdős #108 | PDF and Lean |
 | Green #15 | Lean only |
 | Green #40 (f(2)) | PDF and Lean |
@@ -26,7 +25,6 @@ For Green 15, the PDF names `Green15.lean`. For Green 51 (1/2), it names `Soluti
 | [Erdős #14](../problems/erdos-14/) | Parts I and II | [Present](../problems/erdos-14/paper/proof.pdf) | [2 files](../problems/erdos-14/lean/) |
 | Erdős #18 | As listed by the author | **Not supplied** | **Not supplied** |
 | [Erdős #96](../problems/erdos-96/) | Convex unit distances | [Present](../problems/erdos-96/paper/proof.pdf) | [1 file](../problems/erdos-96/lean/) |
-| Erdős #97 | As listed by the author | **Not supplied** | **Not supplied** |
 | Erdős #108 | As listed by the author | **Not supplied** | **Not supplied** |
 | [Erdős #196](../problems/erdos-196/) | Four-term progression counterexample | [Present](../problems/erdos-196/paper/proof.pdf) | [1 file](../problems/erdos-196/lean/) |
 | [Erdős #272](../problems/erdos-272/) | Szabó strong variant | [Present](../problems/erdos-272/paper/proof.pdf) | [1 file](../problems/erdos-272/lean/) |
