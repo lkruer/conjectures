@@ -7,14 +7,16 @@
 | Item | Record |
 | :--- | :--- |
 | Problem page | [Erdős #108](https://www.erdosproblems.com/108) |
-| Manuscript | Not uploaded |
+| Manuscript | [PDF](paper/proof.pdf), September 15, 2026 |
+| Authors | Jensen Kohlmeyer and Liam Kruer |
 | Lean source | [Erdos108.lean](lean/Erdos108.lean); uploaded, not checked |
 | Verification | [Record and missing environment](lean/README.md) |
 | Proof snapshot for submission | Not frozen |
 
 ## Preparation
 
-- [ ] Add the manuscript and confirm its title, authors, date, and exact claim.
+- [x] Record the manuscript’s title, authors, date, and stated claim.
+- [ ] Resolve the PDF’s `paper_main` and `arcGraph_triangle_free` references against the uploaded source.
 - [ ] Review the argument and its correspondence to the official problem.
 - [ ] Establish the evidence and scope of any formal-verification claims.
 - [ ] Prepare the announcement, acknowledgments, and commit permalinks.

@@ -8,7 +8,7 @@ A home for manuscripts, formalizations, and review materials connected with [Erd
 
 ## Proof index
 
-**9 manuscripts · 11 Lean source files · 10 problem folders.** The [complete upload checklist](docs/upload-inventory.md#materials-still-to-upload) tracks all 12 entries on the author-provided list. Three PDFs and two Lean counterparts remain to be supplied.
+**11 manuscripts · 11 Lean source files · 11 problem folders.** The [complete upload checklist](docs/upload-inventory.md#materials-still-to-upload) tracks all 12 entries on the author-provided list. One PDF and two Lean counterparts remain to be supplied.
 
 The descriptions below reflect the uploaded materials. Manuscript-reported verification has not yet been independently reproduced in this repository.
 
@@ -16,12 +16,13 @@ The descriptions below reflect the uploaded materials. Manuscript-reported verif
 | :--- | :--- | :--- | :--- | :--- |
 | [Erdős #14](problems/erdos-14/) | Non-unique sums, parts I and II | [PDF](problems/erdos-14/paper/proof.pdf) | [2 files; not checked](problems/erdos-14/lean/) | Draft |
 | [Erdős #96](problems/erdos-96/) | Unit distances in convex position | [PDF](problems/erdos-96/paper/proof.pdf) | [Source; not checked](problems/erdos-96/lean/) | Draft |
-| [Erdős #108](problems/erdos-108/) | Counterexample via arc graphs | **[Not uploaded](problems/erdos-108/paper/)** | [Source; not checked](problems/erdos-108/lean/) | Draft |
+| [Erdős #108](problems/erdos-108/) | Counterexample via arc graphs | [PDF](problems/erdos-108/paper/proof.pdf) | [Source; not checked](problems/erdos-108/lean/) | Draft |
 | [Erdős #196](problems/erdos-196/) | Permutations avoiding four-term progressions | [PDF](problems/erdos-196/paper/proof.pdf) | [Source; not checked](problems/erdos-196/lean/) | Draft |
 | [Erdős #272](problems/erdos-272/) | Arithmetic-intersection families: linear error | [PDF](problems/erdos-272/paper/proof.pdf) | [Source; not checked](problems/erdos-272/lean/) | Draft |
 | [Erdős #354](problems/erdos-354/) | Two floor-doubling sequences, part I | [PDF](problems/erdos-354/paper/proof.pdf) | [Source; not checked](problems/erdos-354/lean/) | Draft |
 | [Erdős #944](problems/erdos-944/) | Critical graphs: existence for all k ≥ 4 | [PDF](problems/erdos-944/paper/proof.pdf) | [Source; not checked](problems/erdos-944/lean/) | Draft |
 | [Green #15](problems/green-15/) | Lipschitz graph without three-term progressions | [PDF](problems/green-15/paper/proof.pdf) | [Source; not checked](problems/green-15/lean/) | Draft |
+| [Green #40 (f(2))](problems/green-40/) | Binary linear covering codes of radius two | [PDF](problems/green-40/paper/proof.pdf) | **[Not uploaded](problems/green-40/lean/)** | Draft |
 | [Green #47](problems/green-47/) | Exact quadratic-containment counterexample | [PDF](problems/green-47/paper/proof.pdf) | [Source; not checked](problems/green-47/lean/) | Draft |
 | [Green #51 (1/2)](problems/green-51/) | Binary sumsets at density one half | [PDF](problems/green-51/paper/proof.pdf) | [Source; not checked](problems/green-51/lean/) | Draft |
 

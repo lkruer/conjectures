@@ -2,8 +2,17 @@
 
 [Back to the problem](../README.md)
 
-**Status: Not uploaded.**
+**Status: Uploaded; not independently reviewed.**
 
-The [Lean source](../lean/Erdos108.lean) has been supplied. Its companion PDF is still needed.
+[Read the manuscript](proof.pdf)
 
-Add the original manuscript here as `proof.pdf` when available, preserving its contents and author line. Then record its title, authors, date, and scope on the problem page.
+| Field | Details |
+| :--- | :--- |
+| Title | A counterexample to Erdős problem 108 via arc graphs |
+| Authors | Jensen Kohlmeyer and Liam Kruer |
+| Printed date | September 15, 2026 |
+| Pages | 8 |
+| Uploaded filename | `erdos108-arc-graphs.pdf` |
+| Repository filename | `proof.pdf` |
+
+The PDF is preserved byte for byte; its checksum is in [SHA256SUMS](../SHA256SUMS). The [Lean record](../lean/README.md#manuscript-correspondence) identifies two declarations named in the manuscript that are absent from the previously uploaded source.
