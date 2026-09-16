@@ -8,14 +8,15 @@ A home for manuscripts, formalizations, and review materials connected with [Erd
 
 ## Proof index
 
-**9 manuscripts · 8 Lean source files · 9 problem folders.** The [complete upload checklist](docs/upload-inventory.md#materials-still-to-upload) tracks all 12 entries on the author-provided list. Three PDFs and five Lean counterparts remain to be supplied.
+**9 manuscripts · 9 Lean source files · 10 problem folders.** The [complete upload checklist](docs/upload-inventory.md#materials-still-to-upload) tracks all 12 entries on the author-provided list. Three PDFs and four Lean counterparts remain to be supplied.
 
-The descriptions below reflect manuscript claims. The manuscripts report prior formal verification; those checks have not yet been independently reproduced in this repository.
+The descriptions below reflect the uploaded materials. Manuscript-reported verification has not yet been independently reproduced in this repository.
 
 | Problem | Result / title | Proof PDF | Lean | Submission |
 | :--- | :--- | :--- | :--- | :--- |
 | [Erdős #14](problems/erdos-14/) | Non-unique sums, parts I and II | [PDF](problems/erdos-14/paper/proof.pdf) | [2 files; not checked](problems/erdos-14/lean/) | Draft |
 | [Erdős #96](problems/erdos-96/) | Unit distances in convex position | [PDF](problems/erdos-96/paper/proof.pdf) | [Source; not checked](problems/erdos-96/lean/) | Draft |
+| [Erdős #108](problems/erdos-108/) | Counterexample via arc graphs | **[Not uploaded](problems/erdos-108/paper/)** | [Source; not checked](problems/erdos-108/lean/) | Draft |
 | [Erdős #196](problems/erdos-196/) | Permutations avoiding four-term progressions | [PDF](problems/erdos-196/paper/proof.pdf) | [Source; not checked](problems/erdos-196/lean/) | Draft |
 | [Erdős #272](problems/erdos-272/) | Arithmetic-intersection families: linear error | [PDF](problems/erdos-272/paper/proof.pdf) | [Source; not checked](problems/erdos-272/lean/) | Draft |
 | [Erdős #354](problems/erdos-354/) | Two floor-doubling sequences, part I | [PDF](problems/erdos-354/paper/proof.pdf) | [Source; not checked](problems/erdos-354/lean/) | Draft |

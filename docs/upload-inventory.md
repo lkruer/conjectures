@@ -2,16 +2,16 @@
 
 [Back to the proof index](../README.md#proof-index)
 
-The repository contains **nine PDFs and eight Lean source files across nine problem folders**. The author’s current list contains **12 entries: eight Erdős problems and four Green problems**. This inventory records file availability and the supplied scope labels; proof verification is tracked separately.
+The repository contains **nine PDFs and nine Lean source files across ten problem folders**. The author’s current list contains **12 entries: eight Erdős problems and four Green problems**. This inventory records file availability and the supplied scope labels; proof verification is tracked separately.
 
 ## Materials still to upload
 
-**Three PDFs and five Lean counterparts remain.**
+**Three PDFs and four Lean counterparts remain.**
 
 | Problem | Still needed |
 | :--- | :--- |
 | Erdős #18 | PDF and Lean |
-| Erdős #108 | PDF and Lean |
+| [Erdős #108](../problems/erdos-108/) | PDF only |
 | Green #15 | Lean only |
 | Green #40 (f(2)) | PDF and Lean |
 | Green #51 (1/2) | Lean only |
@@ -25,7 +25,7 @@ For Green 15, the PDF names `Green15.lean`. For Green 51 (1/2), it names `Soluti
 | [Erdős #14](../problems/erdos-14/) | Parts I and II | [Present](../problems/erdos-14/paper/proof.pdf) | [2 files](../problems/erdos-14/lean/) |
 | Erdős #18 | As listed by the author | **Not supplied** | **Not supplied** |
 | [Erdős #96](../problems/erdos-96/) | Convex unit distances | [Present](../problems/erdos-96/paper/proof.pdf) | [1 file](../problems/erdos-96/lean/) |
-| Erdős #108 | As listed by the author | **Not supplied** | **Not supplied** |
+| [Erdős #108](../problems/erdos-108/) | Counterexample (source claim) | **Not supplied** | [1 file](../problems/erdos-108/lean/) |
 | [Erdős #196](../problems/erdos-196/) | Four-term progression counterexample | [Present](../problems/erdos-196/paper/proof.pdf) | [1 file](../problems/erdos-196/lean/) |
 | [Erdős #272](../problems/erdos-272/) | Szabó strong variant | [Present](../problems/erdos-272/paper/proof.pdf) | [1 file](../problems/erdos-272/lean/) |
 | [Erdős #354](../problems/erdos-354/) | Part (i), multiplier 2 | [Present](../problems/erdos-354/paper/proof.pdf) | [1 file](../problems/erdos-354/lean/) |
@@ -41,6 +41,7 @@ For Green 15, the PDF names `Green15.lean`. For Green 51 (1/2), it names `Soluti
 | :--- | :--- | ---: | :--- |
 | [Erdős #14](../problems/erdos-14/) | `Erdos14_Unified_Paper.pdf` | 8 | `Erdos14_PartI.lean`, `Erdos14_PartII_Counterexample.lean` |
 | [Erdős #96](../problems/erdos-96/) | `erdos96-convex-unit-distances.pdf` | 8 | `erdos96.lean` |
+| [Erdős #108](../problems/erdos-108/) | **Not supplied** | — | `Erdos108.lean` |
 | [Erdős #196](../problems/erdos-196/) | `Erdos196-Kohlmeyer-Kruer (1).pdf` | 7 | `Erdos196.lean` |
 | [Erdős #272](../problems/erdos-272/) | `erdos272-linear-error (1).pdf` | 15 | `Main.lean` |
 | [Erdős #354](../problems/erdos-354/) | `erdos354-Kohlmeyer-Kruer.pdf` | 13 | `lean354` |
@@ -66,6 +67,7 @@ Uploaded Lean sources have not been independently compiled here. Original toolch
 | :--- | :--- |
 | [Erdős #14](../problems/erdos-14/lean/) | Separate task wrappers for the two bodies, imports, task support, and prior verification records. |
 | [Erdős #96](../problems/erdos-96/lean/) | The original task wrapper or the 21-module project described in the PDF, its problem definitions, audit, manifest, and logs. |
+| [Erdős #108](../problems/erdos-108/lean/) | The original imports or task wrapper, problem definitions and support for `fcTypeOfName%`, pinned Lean project, and any prior verification records. |
 | [Erdős #196](../problems/erdos-196/lean/) | Task wrapper and support; the standalone companion and index theorem described in the PDF are separate from the supplied body. |
 | [Erdős #272](../problems/erdos-272/lean/) | The task wrapper, pinned project, `TaskSupport`, and `verification.json` for the supplied submission body. |
 | [Erdős #354](../problems/erdos-354/lean/) | Task project and support, `Audit.lean`, `verify.py`, and `verification.json`. |
