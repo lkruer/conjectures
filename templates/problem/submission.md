@@ -1,6 +1,6 @@
-# Submission — Erdős #{{NUMBER}}
+# Submission — {{COLLECTION}} #{{NUMBER}}
 
-[Back to the problem](README.md) · [Submission guide](../../docs/submission-guide.md)
+[Back to the problem](README.md) · [Erdős site guidance, when applicable](../../docs/submission-guide.md)
 
 **Status: Draft. No announcement has been recorded.**
 
@@ -8,7 +8,8 @@
 
 | Item | Record |
 | :--- | :--- |
-| Official problem page | Not set |
+| Problem source | Not set |
+| Intended submission destination | Not set |
 | Proof snapshot (full commit SHA) | Not set |
 | Problem landing page at that commit | Not set |
 | PDF link at that commit | Not set |
@@ -30,7 +31,7 @@
 
 Replace the prompts below with a brief announcement before sharing:
 
-**Result:** State the precise contribution to Erdős problem #{{NUMBER}} and its scope.
+**Result:** State the precise contribution to {{COLLECTION}} problem #{{NUMBER}} and its scope.
 
 **Manuscript:** Add the title, authors, and PDF permalink.
 

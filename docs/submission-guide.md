@@ -2,6 +2,8 @@
 
 [Back to the proof index](../README.md#proof-index)
 
+This guide covers the Erdős Problems website. Green entries have preparation notes and destination records in their own problem folders.
+
 The site’s FAQ directs updates to a comment on the relevant problem or an email identifying the problem. Its forum guidance asks authors to link to an external PDF for long proofs and to understand and check the mathematics before posting. Disclose AI assistance when applicable. Check the current [FAQ](https://www.erdosproblems.com/faq) and [forum guidance](https://www.erdosproblems.com/forum/) before submission.
 
 ## Prepare the problem page

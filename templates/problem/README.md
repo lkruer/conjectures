@@ -1,6 +1,6 @@
-# Erdős #{{NUMBER}} — {{TITLE}}
+# {{COLLECTION}} #{{NUMBER}} — {{TITLE}}
 
-> Template: copy this folder to `problems/erdos-<number>/`, replace the placeholders, and replace this block with a short abstract. See the [upload guide](../../CONTRIBUTING.md).
+> Template: copy this folder to `problems/erdos-<number>/` or `problems/green-<number>/`, replace the placeholders, and replace this block with a short abstract. See the [upload guide](../../CONTRIBUTING.md).
 
 [All proofs](../../README.md#proof-index) · [Manuscript folder](paper/) · [Lean files and build record](lean/) · [Submission record](submission.md)
 
@@ -8,7 +8,7 @@
 
 | Field | Details |
 | :--- | :--- |
-| Erdős Problems page | Not set — add the official problem link. |
+| Problem source | Not set — add the problem page or source collection link. |
 | Authors | Not supplied |
 | Contribution | Not specified — full solution, partial result, counterexample, alternate proof, or formalization of a known result. |
 | Manuscript | Not uploaded |
@@ -19,7 +19,7 @@
 
 ## Problem statement
 
-Add the precise statement, including hypotheses and the source or date consulted. Link to the numbered Erdős Problems page and note any difference in formulation.
+Add the precise statement, including hypotheses and the source or date consulted. Link to the source, identify the problem number and any part or variant, and note any difference in formulation.
 
 ## Result and scope
 
