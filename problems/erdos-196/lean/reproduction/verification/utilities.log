@@ -1,0 +1,6 @@
+✔ [8897/8902] Built FormalConjecturesUtil.Linters.LatexDocstringLinterTest (2.1s)
+✔ [8898/8902] Built FormalConjecturesUtil.Metadata (2.1s)
+✔ [8899/8902] Built FormalConjecturesUtil.Linters.CategoryDocstringLinterTest (2.2s)
+✔ [8900/8902] Built FormalConjecturesUtil.Linters.AnswerLinterTest (2.2s)
+✔ [8901/8902] Built FormalConjecturesUtil.DeclName (2.2s)
+Build completed successfully (8902 jobs).

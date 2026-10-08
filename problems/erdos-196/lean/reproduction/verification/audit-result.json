@@ -1,0 +1,41 @@
+{
+  "status": "passed",
+  "utc": "2026-10-08T19:17:09.156415+00:00",
+  "axioms": {
+    "Bounty.target": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Bounty.paper_main": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Bounty.Construction196.counterexample": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Bounty.Construction196.finite_extension": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Bounty.Construction196.permFun_injective": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Bounty.Construction196.permFun_surjective": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Bounty.Construction196.permFun_no_four": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  }
+}

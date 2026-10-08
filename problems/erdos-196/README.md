@@ -15,8 +15,8 @@ Jensen Kohlmeyer and Liam Kruer · September 9, 2026
 | Manuscript | [PDF, 7 pages](paper/proof.pdf) |
 | Manuscript date | September 9, 2026 |
 | Manuscript review | Not independently reviewed in this repository |
-| Lean | Uploaded; not checked |
-| Submission | Draft; no announcement recorded |
+| Lean | [Build passing; scope recorded](lean/README.md), local verification October 8, 2026 |
+| Submission | [Public proof claim from September 14; JSP submission prepared](submission.md) |
 
 ## Problem and manuscript claim
 
@@ -36,12 +36,14 @@ Theorem 1.1 states the result. Sections 2–5 develop the finite extension argum
 
 `target` for the negation of `Erdos196.erdos_196`.
 
-See the [Lean record](lean/README.md) for the uploaded files, reported environment, and missing reproduction materials. Previously reported checks in the manuscript are recorded separately from checks performed in this repository.
+See the [Lean record](lean/README.md) for the uploaded files, pinned environment, and current reproduction package. Previously reported checks in the manuscript are recorded separately from the fresh local checks. Read the [publication and attribution record](PUBLICATION-HISTORY.md), including Boon Suan Ho's earlier public paper and the limits of the manuscript date as priority evidence.
 
 ## References and acknowledgments
 
-References and author credits are preserved in the [original PDF](paper/proof.pdf). The manuscript acknowledges substantial assistance from OpenAI Codex in the mathematical development, formalization, and manuscript preparation. Its authors remain responsible for the mathematical content. Prior literature has not been reassessed during this upload.
+References and author credits are preserved in the [original PDF](paper/proof.pdf). The manuscript acknowledges substantial assistance from OpenAI Codex in the mathematical development, formalization, and manuscript preparation. Its authors remain responsible for the mathematical content. The original references are retained; current related-work and publication-history evidence is recorded in [the publication record](PUBLICATION-HISTORY.md).
 
 ## Revision notes
 
-- **2026-09-13:** Added the supplied manuscript and supplied Lean source. PDF and source contents were preserved byte for byte. Original filenames are recorded in [the manuscript record](paper/README.md) and [upload inventory](../../docs/upload-inventory.md); [SHA256SUMS](SHA256SUMS) identifies the uploaded files.
+- **2026-09-13 (original local-date upload note; the recorded Git commit is September 14 UTC):** Added the supplied manuscript and supplied Lean source. PDF and source contents were preserved byte for byte. Original filenames are recorded in [the manuscript record](paper/README.md) and [upload inventory](../../docs/upload-inventory.md); [SHA256SUMS](SHA256SUMS) identifies the uploaded files.
+
+- **2026-10-08:** Preserved the PDF and original Lean payload; added pinned reproduction materials, fresh verification evidence, and explicit publication-history disclosure for JSP-000185.

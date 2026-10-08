@@ -1,43 +1,25 @@
-# Submission — Erdős #196
+# Submission — Erdős 196 / JSP-000185
 
-[Back to the problem](README.md) · [Submission guide](../../docs/submission-guide.md)
+**Status: Public proof claim recorded; JSP submission prepared for review.**
 
-**Status: Draft. No announcement has been recorded.**
+The submitted construction and formalization are credited to Jensen Kohlmeyer ([jenw1n](https://github.com/JENW1N)) and Liam Kruer ([lkruer](https://github.com/lkruer)). The [original seven-page manuscript](paper/proof.pdf), dated September 9, 2026, and [original Lean payload](lean/Erdos196.lean) are preserved. The [reproduction package](lean/reproduction/README.md) supplies the complete wrapped proof, pinned dependencies, commands and fresh verification evidence.
 
-## Materials
+The manuscript's Theorem 1.1 gives a bijection of all natural numbers avoiding increasing and decreasing four-term arithmetic progressions as subsequences. Sections 2–5 establish the finite extension construction, and Section 6 derives the infinite permutation. The formal target is `Bounty.Construction196.counterexample`, together with the exact catalogue-negation theorem `Bounty.target`.
 
-| Item | Record |
-| :--- | :--- |
-| Official problem | [Erdős #196](https://www.erdosproblems.com/196) |
-| Manuscript | [PDF](paper/proof.pdf), September 9, 2026 |
-| Authors | Jensen Kohlmeyer and Liam Kruer |
-| Lean | [Uploaded sources](lean/) — repository verification pending |
-| Proof snapshot for submission | Not frozen; current links above follow the repository branch. |
+## Existing publication
 
-## Draft summary for author review
+- Original repository upload: [commit 8ede860e8fc90a300207a2c17e8aefe6167b3086](https://github.com/lkruer/conjectures/commit/8ede860e8fc90a300207a2c17e8aefe6167b3086), recorded September 14, 2026.
+- Public author claim: [Erdős Problems claim 311](https://www.erdosproblems.com/forum/thread/196/proof-claims#proof-claim-311), displayed September 14, 2026.
+- Earlier public result disclosed: Boon Suan Ho's [arXiv:2609.12780v1](https://arxiv.org/abs/2609.12780v1), submitted September 11, 2026.
 
-**Title:** Erdős 196: A permutation of the natural numbers with no monotone four-term arithmetic progression
+The manuscript date alone does not establish public priority. See the [full history and attribution record](PUBLICATION-HISTORY.md). No first-publication claim or award entitlement is asserted.
 
-**Result:** The manuscript claims a bijection $p:\mathbb{N}_0\to\mathbb{N}_0$ with no indices $i<j<k<\ell$ satisfying both $p(i)+p(k)=2p(j)$ and $p(j)+p(\ell)=2p(k)$.
+## JSP record
 
-**Proof idea:** Finite prefixes are extended using binary residue orders and a finite saturation argument, preserving compatibility conditions until every natural number has been included.
+The correct catalogue entry is [JSP-000185](https://github.com/TheJustinSunPrize/awards/blob/main/problems/catalog-0101-0200.md#JSP-000185). The contribution is submitted through the original repository owner's connected `lkruer` account, crediting both authors. It is a reference-only mathematical and Lean submission; proof files remain in this repository.
 
-**Scope:** The claimed permutation enumerates all natural numbers and avoids both directions of monotone four-term progressions. The supplied Lean file is the body intended for the counterexample task wrapper.
+The exact selected commit and eventual PR URL will be recorded after submission. A pending PR does not establish JSP acceptance or prize eligibility. Each future applicant must follow JSP's own-account claim and identity process if invited or eligible; this submission does not make proxy prize claims.
 
-**Formalization:** The accompanying sources are available in the repository. The manuscript describes prior checks; this repository has not reproduced them yet.
+## Verification limits
 
-**Assistance disclosure:** The manuscript credits substantial assistance from OpenAI Codex in proof development, Lean formalization, and manuscript preparation. Preserve the manuscript’s specific acknowledgments in any announcement.
-
-## Before posting
-
-- [x] The supplied PDF and its title, authors, and date are recorded.
-- [x] The availability of the supplied Lean files is accurately recorded.
-- [ ] Recheck the current problem statement and relevant literature.
-- [ ] Complete author review of the argument and any remaining gaps.
-- [ ] Confirm the precise scope and evidence behind any verification claims.
-- [ ] Freeze the version to share and replace the current links with commit permalinks.
-- [ ] Check the current site guidance and approve the final announcement text.
-
-## Submission and follow-up history
-
-No submissions or site references recorded. Add the date, destination or comment permalink, and proof revision after an actual announcement.
+Fresh local verification and the full axiom audit are recorded in the reproduction package. These checks are distinct from independent human mathematical review and from the historical validator assertions in the PDF. The manuscript's acknowledgment of extensive Codex assistance remains intact.

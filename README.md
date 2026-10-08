@@ -8,16 +8,16 @@ A home for manuscripts, formalizations, and review materials connected with [Erd
 
 ## Proof index
 
-**11 manuscripts · 11 Lean source files · 11 problem folders.** The [complete upload checklist](docs/upload-inventory.md#materials-still-to-upload) tracks all 12 entries on the author-provided list. One PDF and two Lean counterparts remain to be supplied.
+**11 manuscripts · 11 originally supplied Lean source files · 11 problem folders**, plus reproduction support for Erdős 196. The [complete upload checklist](docs/upload-inventory.md#materials-still-to-upload) tracks all 12 entries on the author-provided list. One PDF and two Lean counterparts remain to be supplied.
 
-The descriptions below reflect the uploaded materials. Manuscript-reported verification has not yet been independently reproduced in this repository.
+The descriptions below reflect the uploaded materials. Erdős 196 now has a local build and axiom-audit record; the other verification statuses remain as shown. Compilation is distinct from independent mathematical review.
 
 | Problem | Result / title | Proof PDF | Lean | Submission |
 | :--- | :--- | :--- | :--- | :--- |
 | [Erdős #14](problems/erdos-14/) | Non-unique sums, parts I and II | [PDF](problems/erdos-14/paper/proof.pdf) | [2 files; not checked](problems/erdos-14/lean/) | Draft |
 | [Erdős #96](problems/erdos-96/) | Unit distances in convex position | [PDF](problems/erdos-96/paper/proof.pdf) | [Source; not checked](problems/erdos-96/lean/) | Draft |
 | [Erdős #108](problems/erdos-108/) | Counterexample via arc graphs | [PDF](problems/erdos-108/paper/proof.pdf) | [Source; not checked](problems/erdos-108/lean/) | Draft |
-| [Erdős #196](problems/erdos-196/) | Permutations avoiding four-term progressions | [PDF](problems/erdos-196/paper/proof.pdf) | [Source; not checked](problems/erdos-196/lean/) | Draft |
+| [Erdős #196](problems/erdos-196/) | Permutations avoiding four-term progressions | [PDF](problems/erdos-196/paper/proof.pdf) | [Build passing; scope recorded](problems/erdos-196/lean/) | [Public proof claim; JSP preparation](problems/erdos-196/submission.md) |
 | [Erdős #272](problems/erdos-272/) | Arithmetic-intersection families: linear error | [PDF](problems/erdos-272/paper/proof.pdf) | [Source; not checked](problems/erdos-272/lean/) | Draft |
 | [Erdős #354](problems/erdos-354/) | Two floor-doubling sequences, part I | [PDF](problems/erdos-354/paper/proof.pdf) | [Source; not checked](problems/erdos-354/lean/) | Draft |
 | [Erdős #944](problems/erdos-944/) | Critical graphs: existence for all k ≥ 4 | [PDF](problems/erdos-944/paper/proof.pdf) | [Source; not checked](problems/erdos-944/lean/) | Draft |

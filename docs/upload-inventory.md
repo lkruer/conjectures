@@ -2,7 +2,7 @@
 
 [Back to the proof index](../README.md#proof-index)
 
-The repository contains **eleven PDFs and eleven Lean source files across eleven problem folders**. The author’s current list contains **12 entries: eight Erdős problems and four Green problems**. This inventory records file availability and the supplied scope labels; proof verification is tracked separately.
+The repository contains **eleven PDFs and eleven originally supplied Lean source files across eleven problem folders**, plus the Erdős 196 reproduction package. The author’s current list contains **12 entries: eight Erdős problems and four Green problems**. This inventory records file availability and the supplied scope labels; proof verification is tracked separately.
 
 ## Materials still to upload
 
@@ -23,7 +23,7 @@ These totals count missing PDF/Lean counterparts. Erdős 108 has both, but its P
 | Erdős #18 | As listed by the author | **Not supplied** | **Not supplied** |
 | [Erdős #96](../problems/erdos-96/) | Convex unit distances | [Present](../problems/erdos-96/paper/proof.pdf) | [1 file](../problems/erdos-96/lean/) |
 | [Erdős #108](../problems/erdos-108/) | Counterexample via arc graphs | [Present](../problems/erdos-108/paper/proof.pdf) | [1 file; correspondence note](../problems/erdos-108/lean/) |
-| [Erdős #196](../problems/erdos-196/) | Four-term progression counterexample | [Present](../problems/erdos-196/paper/proof.pdf) | [1 file](../problems/erdos-196/lean/) |
+| [Erdős #196](../problems/erdos-196/) | Four-term progression counterexample | [Present](../problems/erdos-196/paper/proof.pdf) | [Original source and reproduction package](../problems/erdos-196/lean/) |
 | [Erdős #272](../problems/erdos-272/) | Szabó strong variant | [Present](../problems/erdos-272/paper/proof.pdf) | [1 file](../problems/erdos-272/lean/) |
 | [Erdős #354](../problems/erdos-354/) | Part (i), multiplier 2 | [Present](../problems/erdos-354/paper/proof.pdf) | [1 file](../problems/erdos-354/lean/) |
 | [Erdős #944](../problems/erdos-944/) | Existence statement | [Present](../problems/erdos-944/paper/proof.pdf) | [1 file](../problems/erdos-944/lean/) |
@@ -60,14 +60,14 @@ These totals count missing PDF/Lean counterparts. Erdős 108 has both, but its P
 
 ## Materials needed to reproduce the Lean checks
 
-Uploaded Lean sources have not been independently compiled here. Original toolchain/project files, task support, and the verification records described by the manuscripts were not included. The following support files are separate from the PDF/Lean counterpart checklist above.
+Erdős 196 has a fresh local compilation and axiom-audit record with recovered task support and pinned dependencies. The other uploaded Lean sources have not been independently compiled here. Original toolchain/project files, task support, and the verification records described by those manuscripts were not included. The following support files are separate from the PDF/Lean counterpart checklist above.
 
 | Problem | Additional reproduction material described by the upload |
 | :--- | :--- |
 | [Erdős #14](../problems/erdos-14/lean/) | Separate task wrappers for the two bodies, imports, task support, and prior verification records. |
 | [Erdős #96](../problems/erdos-96/lean/) | The original task wrapper or the 21-module project described in the PDF, its problem definitions, audit, manifest, and logs. |
 | [Erdős #108](../problems/erdos-108/lean/) | Source revision or clarification for the PDF’s `paper_main` and `arcGraph_triangle_free`; original task wrapper and support, pinned Lean project, and verification record containing full dependency revisions and the checked artifact digest. |
-| [Erdős #196](../problems/erdos-196/lean/) | Task wrapper and support; the standalone companion and index theorem described in the PDF are separate from the supplied body. |
+| [Erdős #196](../problems/erdos-196/lean/) | Recovered wrapper, exact pinned dependency reconstruction, and fresh audit are now provided. See the reproduction package for the separate October 8 index corollary and the limits of historical verification claims. |
 | [Erdős #272](../problems/erdos-272/lean/) | The task wrapper, pinned project, `TaskSupport`, and `verification.json` for the supplied submission body. |
 | [Erdős #354](../problems/erdos-354/lean/) | Task project and support, `Audit.lean`, `verify.py`, and `verification.json`. |
 | [Erdős #944](../problems/erdos-944/lean/) | Task project and support, `validation.json`, and the supplementary finite-check program described in the PDF. |

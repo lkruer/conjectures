@@ -1,0 +1,635 @@
+/-!
+Single-file submission for ErdÅ‘s problem 196, COUNTEREXAMPLE mode.
+
+Task: fc-8432eac9-erdos196-erdos-196-b7454f0edd-counterexample-v1
+Pinned Formal Conjectures commit: 8432eac998110a563e03df65a28c117e97c8c142
+
+The validator supplies the following trusted wrapper around this entire file:
+  import FormalConjectures.ErdosProblems.Â«196Â»
+  import TaskSupport
+  namespace Bounty
+  ... this file ...
+  end Bounty
+
+Every proof declaration is contained below. No supplementary proof files are needed.
+The target is negated because this is a disproof of the affirmative statement.
+-/
+
+namespace Construction196
+
+def LowEq (k a b : â„•) : Prop :=
+  âˆ€ i < k, a.testBit i = b.testBit i
+
+def low (a k : â„•) : Fin k â†’ Bool := fun i => a.testBit i
+
+lemma low_eq_iff {k a b : â„•} : low a k = low b k â†” LowEq k a b := by
+  constructor
+  Â· intro h i hi
+    exact congrFun h âŸ¨i, hiâŸ©
+  Â· intro h
+    funext i
+    exact h i i.isLt
+
+lemma LowEq.symm {k a b : â„•} (h : LowEq k a b) : LowEq k b a :=
+  fun i hi => (h i hi).symm
+
+lemma LowEq.trans {k a b c : â„•} (h : LowEq k a b) (h' : LowEq k b c) :
+    LowEq k a c := fun i hi => (h i hi).trans (h' i hi)
+
+lemma LowEq.mono {k l a b : â„•} (h : LowEq k a b) (hl : l â‰¤ k) :
+    LowEq l a b := fun i hi => h i (lt_of_lt_of_le hi hl)
+
+lemma bit0_eq_iff (a b : â„•) : a.testBit 0 = b.testBit 0 â†” a % 2 = b % 2 := by
+  simp only [Nat.testBit_eq_decide_div_mod_eq, pow_zero, Nat.div_one,
+    decide_eq_decide]
+  omega
+
+lemma ap_bit0 {a b c : â„•} (h : a + c = 2 * b) : a.testBit 0 = c.testBit 0 := by
+  rw [bit0_eq_iff]
+  omega
+
+lemma ap_div_two {a b c : â„•} (h : a + c = 2 * b)
+    (hab : a.testBit 0 = b.testBit 0) : a / 2 + c / 2 = 2 * (b / 2) := by
+  have hac := ap_bit0 h
+  rw [bit0_eq_iff] at hab hac
+  omega
+
+lemma ap_low {a b c k : â„•} (h : a + c = 2 * b) (hl : LowEq k a b) :
+    LowEq (k + 1) a c := by
+  induction k generalizing a b c with
+  | zero =>
+      intro i hi
+      have : i = 0 := by omega
+      subst i
+      exact ap_bit0 h
+  | succ k ih =>
+      have hab : a.testBit 0 = b.testBit 0 := hl 0 (by omega)
+      have hdiv := ap_div_two h hab
+      have hl' : LowEq k (a / 2) (b / 2) := by
+        intro i hi
+        simpa only [Nat.testBit_div_two] using hl (i + 1) (by omega)
+      have hd := ih hdiv hl'
+      intro i hi
+      cases i with
+      | zero => exact ap_bit0 h
+      | succ i =>
+          simpa only [Nat.testBit_div_two, Nat.succ_eq_add_one] using hd i (by omega)
+
+lemma first_difference {a b : â„•} (hne : a â‰  b) :
+    âˆƒ k, LowEq k a b âˆ§ a.testBit k â‰  b.testBit k := by
+  classical
+  have hex : âˆƒ k, a.testBit k â‰  b.testBit k := by
+    by_contra h
+    push Not at h
+    exact hne (Nat.eq_of_testBit_eq h)
+  refine âŸ¨Nat.find hex, ?_, Nat.find_spec hexâŸ©
+  intro i hi
+  exact not_not.mp (Nat.find_min hex hi)
+
+abbrev Preference := (k : â„•) â†’ (Fin k â†’ Bool) â†’ Bool
+
+def key (e : Preference) (a k : â„•) : Bool :=
+  if a.testBit k = e k (low a k) then false else true
+
+def code (e : Preference) (a : â„•) : Lex (â„• â†’ Bool) :=
+  toLex (key e a)
+
+lemma key_eq_of_low {e : Preference} {a b k : â„•} (h : LowEq k a b) :
+    âˆ€ i < k, key e a i = key e b i := by
+  intro i hi
+  have hw : low a i = low b i := low_eq_iff.mpr (h.mono (Nat.le_of_lt hi))
+  simp only [key, h i hi, hw]
+
+lemma code_lt_of_split {e : Preference} {a b k : â„•}
+    (hl : LowEq k a b) (hne : a.testBit k â‰  b.testBit k)
+    (hp : a.testBit k = e k (low a k)) : code e a < code e b := by
+  change âˆƒ i, (âˆ€ j, j < i â†’ key e a j = key e b j) âˆ§ key e a i < key e b i
+  refine âŸ¨k, key_eq_of_low hl, ?_âŸ©
+  have hb : b.testBit k â‰  e k (low b k) := by
+    rw [â† low_eq_iff.mpr hl, â† hp]
+    exact hne.symm
+  simp [key, hp, hb]
+
+lemma code_lt_iff_split {e : Preference} {a b k : â„•}
+    (hl : LowEq k a b) (hne : a.testBit k â‰  b.testBit k) :
+    code e a < code e b â†” a.testBit k = e k (low a k) := by
+  constructor
+  Â· intro hab
+    by_contra hp
+    have hb : b.testBit k = e k (low b k) := by
+      rw [â† low_eq_iff.mpr hl]
+      cases ha : a.testBit k <;> cases hb : b.testBit k <;>
+        cases he : e k (low a k) <;> simp_all
+    exact lt_asymm hab (code_lt_of_split hl.symm hne.symm hb)
+  Â· exact code_lt_of_split hl hne
+
+lemma code_injective (e : Preference) : Function.Injective (code e) := by
+  intro a b heq
+  by_contra hne
+  obtain âŸ¨k, hl, hdâŸ© := first_difference hne
+  have hk : key e a k = key e b k := congrFun heq k
+  have hw := low_eq_iff.mpr hl
+  simp only [key, hw] at hk
+  cases ha : a.testBit k <;> cases hb : b.testBit k <;>
+    cases hp : e k (low b k) <;> simp_all
+
+lemma binary_no_three {e : Preference} {a b c : â„•}
+    (hab : code e a < code e b) (hbc : code e b < code e c)
+    (hap : a + c = 2 * b) : False := by
+  have hne : a â‰  b := fun h => (ne_of_lt hab) (congrArg (code e) h)
+  obtain âŸ¨k, hl, hdâŸ© := first_difference hne
+  have hac := ap_low hap hl
+  have hbit : a.testBit k = c.testBit k := hac k (by omega)
+  have hlow : LowEq k b c := hl.symm.trans (hac.mono (by omega))
+  have hdiff : b.testBit k â‰  c.testBit k := by rw [â† hbit]; exact hd.symm
+  have ha := (code_lt_iff_split hl hd).mp hab
+  have hb := (code_lt_iff_split hlow hdiff).mp hbc
+  rw [â† low_eq_iff.mpr hl] at hb
+  exact hd (ha.trans hb.symm)
+
+def shortCode (e : Preference) (K a : â„•) : Lex (Fin K â†’ Bool) :=
+  toLex (fun i => key e a i)
+
+noncomputable def rank (e : Preference) (K a : â„•) : â„• :=
+  ((Fintype.orderIsoFinOfCardEq (Lex (Fin K â†’ Bool)) rfl).symm (shortCode e K a)).val
+
+lemma rank_lt_of_split {e : Preference} {K a b k : â„•} (hk : k < K)
+    (hl : LowEq k a b) (hne : a.testBit k â‰  b.testBit k)
+    (hp : a.testBit k = e k (low a k)) : rank e K a < rank e K b := by
+  have hshort : shortCode e K a < shortCode e K b := by
+    change âˆƒ i : Fin K, (âˆ€ j, j < i â†’ key e a j = key e b j) âˆ§
+      key e a i < key e b i
+    refine âŸ¨âŸ¨k, hkâŸ©, fun j hj => key_eq_of_low hl j hj, ?_âŸ©
+    have hb : b.testBit k â‰  e k (low b k) := by
+      rw [â† low_eq_iff.mpr hl, â† hp]
+      exact hne.symm
+    simp [key, hp, hb]
+  exact (Fintype.orderIsoFinOfCardEq (Lex (Fin K â†’ Bool)) rfl).symm.strictMono hshort
+
+/-- The sublevel set of `2^(Ï n) * n` supplies a finite saturation. -/
+lemma finite_saturation (Ï : â„• â†’ â„•) (F : Finset â„•) :
+    âˆƒ A : Finset â„•, F âŠ† A âˆ§
+      âˆ€ a b, Ï a < Ï b â†’ a â‰¤ 2 * b â†’ b âˆˆ A â†’ a âˆˆ A := by
+  classical
+  let w : â„• â†’ â„• := fun n => 2 ^ Ï n * n
+  have hn (n : â„•) : n â‰¤ w n := by
+    have hp : 0 < 2 ^ Ï n := by positivity
+    dsimp [w]
+    nlinarith
+  have hm {a b : â„•} (hr : Ï a < Ï b) (hab : a â‰¤ 2 * b) : w a â‰¤ w b := by
+    have hp := Nat.pow_le_pow_right (n := 2) (by decide) (Nat.succ_le_of_lt hr)
+    rw [pow_succ] at hp
+    have hâ‚ := Nat.mul_le_mul_left (2 ^ Ï a) hab
+    have hâ‚‚ := Nat.mul_le_mul_right b hp
+    dsimp [w]
+    nlinarith
+  let M := F.sup w
+  let A := (Finset.range (M + 1)).filter (fun n => w n â‰¤ M)
+  refine âŸ¨A, ?_, ?_âŸ©
+  Â· intro n hF
+    have hw : w n â‰¤ M := Finset.le_sup hF
+    have hnv := hn n
+    simp only [A, Finset.mem_filter, Finset.mem_range]
+    exact âŸ¨by omega, hwâŸ©
+  Â· intro a b hr hab hb
+    have hwb : w b â‰¤ M := (Finset.mem_filter.mp hb).2
+    have hwa : w a â‰¤ M := (hm hr hab).trans hwb
+    have hav := hn a
+    simp only [A, Finset.mem_filter, Finset.mem_range]
+    exact âŸ¨by omega, hwaâŸ©
+
+def Branch (P : List â„•) (k : â„•) (w : Fin k â†’ Bool) : Prop :=
+  âˆƒ a âˆˆ P, âˆƒ b âˆˆ P, low a k = w âˆ§ low b k = w âˆ§ a.testBit k â‰  b.testBit k
+
+lemma branches_bounded (P : List â„•) : âˆƒ K, âˆ€ k w, Branch P k w â†’ k < K := by
+  let K := P.toFinset.sup id + 1
+  refine âŸ¨K, ?_âŸ©
+  intro k w âŸ¨a, ha, b, hb, _, _, hdâŸ©
+  by_contra hk
+  have ha' : a < K := Nat.lt_succ_of_le (Finset.le_sup (f := id) (List.mem_toFinset.mpr ha))
+  have hb' : b < K := Nat.lt_succ_of_le (Finset.le_sup (f := id) (List.mem_toFinset.mpr hb))
+  have hpow : k < 2 ^ k := Nat.lt_two_pow_self
+  have hba := Nat.testBit_eq_false_of_lt (show a < 2 ^ k by omega)
+  have hbb := Nat.testBit_eq_false_of_lt (show b < 2 ^ k by omega)
+  exact hd (hba.trans hbb.symm)
+
+def Before (P : List â„•) (a b : â„•) : Prop :=
+  a âˆˆ P âˆ§ b âˆˆ P âˆ§ P.idxOf a < P.idxOf b
+
+lemma Before.ne {P : List â„•} {a b : â„•} (h : Before P a b) : a â‰  b := by
+  intro he
+  subst b
+  exact (lt_irrefl _) h.2.2
+
+lemma Before.asymm {P : List â„•} {a b : â„•} (h : Before P a b)
+    (h' : Before P b a) : False := lt_asymm h.2.2 h'.2.2
+
+lemma before_append_old {P B : List â„•} {a b : â„•} (h : Before P a b) :
+    Before (P ++ B) a b := by
+  refine âŸ¨List.mem_append_left _ h.1, List.mem_append_left _ h.2.1, ?_âŸ©
+  simpa only [List.idxOf_append, if_pos h.1, if_pos h.2.1] using h.2.2
+
+lemma before_append_old_iff {P B : List â„•} {a b : â„•} (ha : a âˆˆ P) (hb : b âˆˆ P) :
+    Before (P ++ B) a b â†” Before P a b := by
+  constructor
+  Â· intro h
+    refine âŸ¨ha, hb, ?_âŸ©
+    simpa only [List.idxOf_append, if_pos ha, if_pos hb] using h.2.2
+  Â· exact before_append_old
+
+lemma old_of_before_old {P B : List â„•} {a b : â„•}
+    (h : Before (P ++ B) a b) (hb : b âˆˆ P) : a âˆˆ P := by
+  by_contra ha
+  have hi := h.2.2
+  simp only [List.idxOf_append, if_neg ha, if_pos hb] at hi
+  have hj := List.idxOf_lt_length_iff.mpr hb
+  omega
+
+lemma before_append_new_iff {P B : List â„•} {a b : â„•} (ha : a âˆ‰ P) (hb : b âˆ‰ P) :
+    Before (P ++ B) a b â†” Before B a b := by
+  simp [Before, List.idxOf_append, ha, hb]
+
+lemma before_old_new {P B : List â„•} {a b : â„•} (ha : a âˆˆ P)
+    (hb : b âˆˆ B) (hb' : b âˆ‰ P) : Before (P ++ B) a b := by
+  refine âŸ¨List.mem_append_left _ ha, List.mem_append_right _ hb, ?_âŸ©
+  rw [List.idxOf_append, List.idxOf_append, if_pos ha, if_neg hb']
+  have hi := List.idxOf_lt_length_iff.mpr ha
+  omega
+
+def Closed (P : List â„•) : Prop :=
+  âˆ€ a b c d, Before P a b â†’ Before P b c â†’
+    a + c = 2 * b â†’ b + d = 2 * c â†’ Before P d c
+
+def Compatible (P : List â„•) (e : Preference) : Prop :=
+  âˆ€ a b c d k, Before P a b â†’ a + c = 2 * b â†’ b + d = 2 * c â†’
+    c âˆ‰ P â†’ d âˆ‰ P â†’ LowEq k a b â†’ a.testBit k â‰  b.testBit k â†’
+    e k (low a k) = b.testBit k
+
+def Good (P : List â„•) : Prop := P.Nodup âˆ§ Closed P âˆ§ âˆƒ e, Compatible P e
+
+noncomputable def adapt (P : List â„•) (e : Preference) : Preference := by
+  classical
+  exact fun k w => if Branch P k w then e k w else
+    decide (âˆƒ a âˆˆ P, low a k = w âˆ§ a.testBit k = true)
+
+lemma adapt_branch {P : List â„•} {e : Preference} {k : â„•} {w : Fin k â†’ Bool}
+    (h : Branch P k w) : adapt P e k w = e k w := by
+  classical
+  simp [adapt, h]
+
+lemma adapt_old {P : List â„•} {e : Preference} {k a : â„•} {w : Fin k â†’ Bool}
+    (hn : Â¬ Branch P k w) (ha : a âˆˆ P) (hw : low a k = w) :
+    adapt P e k w = a.testBit k := by
+  classical
+  cases hv : a.testBit k with
+  | false =>
+      have he : Â¬ âˆƒ b âˆˆ P, low b k = w âˆ§ b.testBit k = true := by
+        rintro âŸ¨b, hb, hbw, hbvâŸ©
+        apply hn
+        exact âŸ¨a, ha, b, hb, hw, hbw, by simp [hv, hbv]âŸ©
+      simp [adapt, hn, he]
+  | true =>
+      have he : âˆƒ b âˆˆ P, low b k = w âˆ§ b.testBit k = true := âŸ¨a, ha, hw, hvâŸ©
+      simp [adapt, hn, he]
+
+lemma adapt_compatible {P : List â„•} {e : Preference} (h : Compatible P e) :
+    Compatible P (adapt P e) := by
+  intro a b c d k hab hâ‚ hâ‚‚ hc hd hl hbit
+  have hbr : Branch P k (low a k) :=
+    âŸ¨a, hab.1, b, hab.2.1, rfl, (low_eq_iff.mpr hl).symm, hbitâŸ©
+  rw [adapt_branch hbr]
+  exact h a b c d k hab hâ‚ hâ‚‚ hc hd hl hbit
+
+def Saturated (P : List â„•) (e : Preference) (A : Finset â„•) : Prop :=
+  âˆ€ k w a b, Branch P k w â†’ low a k = w â†’ low b k = w â†’
+    a.testBit k = e k w â†’ b.testBit k â‰  e k w â†’ a â‰¤ 2 * b â†’ b âˆˆ A â†’ a âˆˆ A
+
+lemma saturated_exists (P : List â„•) (e : Preference) (F : Finset â„•) :
+    âˆƒ A : Finset â„•, F âŠ† A âˆ§ Saturated P e A := by
+  obtain âŸ¨K, hKâŸ© := branches_bounded P
+  obtain âŸ¨A, hF, hAâŸ© := finite_saturation (rank e K) F
+  refine âŸ¨A, hF, ?_âŸ©
+  intro k w a b hbr ha hb hpa hpb hab hmem
+  apply hA a b _ hab hmem
+  apply rank_lt_of_split (hK k w hbr) (low_eq_iff.mp (ha.trans hb.symm))
+  Â· intro he
+    exact hpb (he.symm.trans hpa)
+  Â· simpa only [ha] using hpa
+
+lemma sorted_block (e : Preference) (P : List â„•) (A : Finset â„•) :
+    âˆƒ B : List â„•, B.Nodup âˆ§ (âˆ€ x, x âˆˆ B â†” x âˆˆ A âˆ§ x âˆ‰ P) âˆ§
+      âˆ€ a b, Before B a b â†’ code e a < code e b := by
+  classical
+  let r : â„• â†’ â„• â†’ Prop := fun a b => code e a â‰¤ code e b
+  let : IsTrans â„• r := âŸ¨fun _ _ _ hâ‚ hâ‚‚ => le_trans hâ‚ hâ‚‚âŸ©
+  let : Std.Antisymm r := âŸ¨fun _ _ hâ‚ hâ‚‚ => code_injective e (le_antisymm hâ‚ hâ‚‚)âŸ©
+  let : Std.Total r := âŸ¨fun _ _ => le_total _ _âŸ©
+  let B := (A \ P.toFinset).sort r
+  refine âŸ¨B, Finset.sort_nodup _ _, ?_, ?_âŸ©
+  Â· intro x
+    simp [B]
+  Â· intro a b hab
+    have hi := List.idxOf_lt_length_iff.mpr hab.1
+    have hj := List.idxOf_lt_length_iff.mpr hab.2.1
+    have hp := List.pairwise_iff_getElem.mp (Finset.pairwise_sort (A \ P.toFinset) r)
+      (B.idxOf a) (B.idxOf b) hi hj hab.2.2
+    have ha := List.getElem_idxOf hi
+    have hb := List.getElem_idxOf hj
+    change code e (B[B.idxOf a]) â‰¤ code e (B[B.idxOf b]) at hp
+    rw [ha, hb] at hp
+    exact lt_of_le_of_ne hp (fun h => hab.ne (code_injective e h))
+
+lemma before_of_code {e : Preference} {B : List â„•} {a b : â„•}
+    (ho : âˆ€ x y, Before B x y â†’ code e x < code e y)
+    (ha : a âˆˆ B) (hb : b âˆˆ B) (h : code e a < code e b) : Before B a b := by
+  refine âŸ¨ha, hb, ?_âŸ©
+  rcases lt_trichotomy (B.idxOf a) (B.idxOf b) with hi | hi | hi
+  Â· exact hi
+  Â· have hva := List.getElem_idxOf (List.idxOf_lt_length_iff.mpr ha)
+    have hvb := List.getElem_idxOf (List.idxOf_lt_length_iff.mpr hb)
+    have hab : a = b := by
+      have hva' : B[B.idxOf b]'(List.idxOf_lt_length_iff.mpr hb) = a := by
+        simpa only [hi] using hva
+      exact hva'.symm.trans hvb
+    exact False.elim ((ne_of_lt h) (congrArg (code e) hab))
+  Â· exact False.elim (lt_asymm h (ho b a âŸ¨hb, ha, hiâŸ©))
+
+lemma progression_bits {a b c d k : â„•} (hâ‚ : a + c = 2 * b)
+    (hâ‚‚ : b + d = 2 * c) (hl : LowEq k a b) :
+    low b k = low a k âˆ§ low c k = low a k âˆ§ low d k = low a k âˆ§
+      c.testBit k = a.testBit k âˆ§ d.testBit k = b.testBit k := by
+  have hac := ap_low hâ‚ hl
+  have hbc := hl.symm.trans (hac.mono (Nat.le_succ k))
+  have hbd := ap_low hâ‚‚ hbc
+  refine âŸ¨(low_eq_iff.mpr hl).symm,
+    (low_eq_iff.mpr (hac.mono (Nat.le_succ k))).symm,
+    (low_eq_iff.mpr (hbd.mono (Nat.le_succ k))).symm.trans (low_eq_iff.mpr hl).symm,
+    (hac k (Nat.lt_succ_self k)).symm, (hbd k (Nat.lt_succ_self k)).symmâŸ©
+
+lemma extend_closed {P B : List â„•} {e : Preference} {A : Finset â„•}
+    (hP : Closed P) (he : Compatible P e)
+    (hae : âˆ€ k w a, Â¬ Branch P k w â†’ a âˆˆ P â†’ low a k = w â†’ e k w = a.testBit k)
+    (hs : Saturated P e A)
+    (hB : âˆ€ x, x âˆˆ B â†” x âˆˆ A âˆ§ x âˆ‰ P)
+    (ho : âˆ€ a b, Before B a b â†’ code e a < code e b) : Closed (P ++ B) := by
+  intro a b c d hab hbc hâ‚ hâ‚‚
+  by_cases hc : c âˆˆ P
+  Â· have hb := old_of_before_old hbc hc
+    have ha := old_of_before_old hab hb
+    exact before_append_old (hP a b c d
+      ((before_append_old_iff ha hb).mp hab) ((before_append_old_iff hb hc).mp hbc) hâ‚ hâ‚‚)
+  have hcm : c âˆˆ B := (List.mem_append.mp hbc.2.1).resolve_left hc
+  have hcA : c âˆˆ A := ((hB c).mp hcm).1
+  by_cases hd : d âˆˆ P
+  Â· exact before_old_new hd hcm hc
+  have finish (k : â„•) (hl : LowEq k a b) (hbit : a.testBit k â‰  b.testBit k)
+      (hbr : Branch P k (low a k)) (hp : b.testBit k = e k (low a k)) :
+      Before (P ++ B) d c := by
+    obtain âŸ¨hwb, hwc, hwd, hcb, hdbâŸ© := progression_bits hâ‚ hâ‚‚ hl
+    have hdA : d âˆˆ A := hs k (low a k) d c hbr hwd hwc
+      (hdb.trans hp) (by rw [hcb, â† hp]; exact hbit) (by omega) hcA
+    have hdm : d âˆˆ B := (hB d).mpr âŸ¨hdA, hdâŸ©
+    have hdc : code e d < code e c := by
+      apply code_lt_of_split (low_eq_iff.mp (hwd.trans hwc.symm))
+      Â· rw [hdb, hcb]
+        exact hbit.symm
+      Â· simpa only [hwd] using hdb.trans hp
+    exact (before_append_new_iff hd hc).mpr (before_of_code ho hdm hcm hdc)
+  obtain âŸ¨k, hl, hbitâŸ© := first_difference hab.ne
+  by_cases hb : b âˆˆ P
+  Â· have ha := old_of_before_old hab hb
+    apply finish k hl hbit
+    Â· exact âŸ¨a, ha, b, hb, rfl, (low_eq_iff.mpr hl).symm, hbitâŸ©
+    Â· exact (he a b c d k ((before_append_old_iff ha hb).mp hab) hâ‚ hâ‚‚ hc hd hl hbit).symm
+  have hbcT := ho b c ((before_append_new_iff hb hc).mp hbc)
+  by_cases ha : a âˆˆ P
+  Â· obtain âŸ¨hwb, hwc, _, hcb, _âŸ© := progression_bits hâ‚ hâ‚‚ hl
+    have hlbc : LowEq k b c := low_eq_iff.mp (hwb.trans hwc.symm)
+    have hbitbc : b.testBit k â‰  c.testBit k := by rw [hcb]; exact hbit.symm
+    have hp : b.testBit k = e k (low a k) := by
+      simpa only [hwb] using (code_lt_iff_split hlbc hbitbc).mp hbcT
+    apply finish k hl hbit _ hp
+    by_contra hbr
+    have hpa := hae k (low a k) a hbr ha rfl
+    exact hbit (hpa.symm.trans hp.symm)
+  Â· exact False.elim (binary_no_three
+      (ho a b ((before_append_new_iff ha hb).mp hab)) hbcT hâ‚)
+
+lemma bool_other {x y z : Bool} (hxy : x â‰  y) (hyz : y â‰  z) : x = z := by
+  cases x <;> cases y <;> cases z <;> simp_all
+
+lemma bool_not_other {x y : Bool} (h : x â‰  y) : (!x) = y := by
+  cases x <;> cases y <;> simp_all
+
+noncomputable def nextPreference (P : List â„•) (e : Preference) : Preference := by
+  classical
+  exact fun k w => if Branch P k w then e k w else !(e k w)
+
+lemma extend_compatible {P B : List â„•} {e : Preference} {A : Finset â„•}
+    (he : Compatible P e)
+    (hae : âˆ€ k w a, Â¬ Branch P k w â†’ a âˆˆ P â†’ low a k = w â†’ e k w = a.testBit k)
+    (hs : Saturated P e A)
+    (hcover : âˆ€ x, x âˆˆ P ++ B â†” x âˆˆ A)
+    (ho : âˆ€ a b, Before B a b â†’ code e a < code e b) :
+    Compatible (P ++ B) (nextPreference P e) := by
+  classical
+  intro a b c d k hab hâ‚ hâ‚‚ hc hd hl hbit
+  have hcP : c âˆ‰ P := fun h => hc (List.mem_append_left _ h)
+  have hdP : d âˆ‰ P := fun h => hd (List.mem_append_left _ h)
+  by_cases hbr : Branch P k (low a k)
+  Â· simp only [nextPreference, if_pos hbr]
+    by_cases hb : b âˆˆ P
+    Â· have ha := old_of_before_old hab hb
+      exact he a b c d k ((before_append_old_iff ha hb).mp hab) hâ‚ hâ‚‚ hcP hdP hl hbit
+    Â· by_contra hp
+      have hpa : a.testBit k = e k (low a k) := bool_other hbit (Ne.symm hp)
+      obtain âŸ¨hwb, hwc, _, hcb, _âŸ© := progression_bits hâ‚ hâ‚‚ hl
+      have hbA : b âˆˆ A := (hcover b).mp hab.2.1
+      have hcA : c âˆˆ A := hs k (low a k) c b hbr hwc hwb
+        (hcb.trans hpa) (Ne.symm hp) (by omega) hbA
+      exact hc ((hcover c).mpr hcA)
+  Â· simp only [nextPreference, if_neg hbr]
+    have hb : b âˆ‰ P := by
+      intro hb
+      have ha := old_of_before_old hab hb
+      exact hbr âŸ¨a, ha, b, hb, rfl, (low_eq_iff.mpr hl).symm, hbitâŸ©
+    by_cases ha : a âˆˆ P
+    Â· have hp := hae k (low a k) a hbr ha rfl
+      exact bool_not_other (by rw [hp]; exact hbit)
+    Â· have hT := ho a b ((before_append_new_iff ha hb).mp hab)
+      have hp := (code_lt_iff_split hl hbit).mp hT
+      exact bool_not_other (by rw [â† hp]; exact hbit)
+
+/-- Every admissible prefix extends to include an arbitrary finite set. -/
+lemma finite_extension (P : List â„•) (hP : Good P) (F : Finset â„•) :
+    âˆƒ Q : List â„•, Good Q âˆ§ P <+: Q âˆ§ âˆ€ x âˆˆ F, x âˆˆ Q := by
+  classical
+  obtain âŸ¨hPN, hPC, eâ‚€, heâ‚€âŸ© := hP
+  let e := adapt P eâ‚€
+  have he : Compatible P e := adapt_compatible heâ‚€
+  have hae : âˆ€ k w a, Â¬ Branch P k w â†’ a âˆˆ P â†’ low a k = w â†’ e k w = a.testBit k :=
+    fun _ _ _ hn ha hw => adapt_old hn ha hw
+  obtain âŸ¨A, hseed, hsâŸ© := saturated_exists P e (P.toFinset âˆª F)
+  obtain âŸ¨B, hBN, hB, hoâŸ© := sorted_block e P A
+  have hPA : âˆ€ x âˆˆ P, x âˆˆ A := fun _ hx =>
+    hseed (Finset.mem_union_left _ (List.mem_toFinset.mpr hx))
+  have hcover : âˆ€ x, x âˆˆ P ++ B â†” x âˆˆ A := by
+    intro x
+    rw [List.mem_append, hB x]
+    constructor
+    Â· rintro (hp | âŸ¨ha, _âŸ©)
+      Â· exact hPA x hp
+      Â· exact ha
+    Â· intro ha
+      by_cases hp : x âˆˆ P
+      Â· exact Or.inl hp
+      Â· exact Or.inr âŸ¨ha, hpâŸ©
+  have hsep : âˆ€ a âˆˆ P, âˆ€ b âˆˆ B, a â‰  b := by
+    intro a ha b hb hab
+    subst b
+    exact ((hB a).mp hb).2 ha
+  refine âŸ¨P ++ B, âŸ¨List.nodup_append.mpr âŸ¨hPN, hBN, hsepâŸ©,
+    extend_closed hPC he hae hs hB ho,
+    âŸ¨nextPreference P e, extend_compatible he hae hs hcover hoâŸ©âŸ©,
+    List.prefix_append P B, ?_âŸ©
+  intro x hx
+  exact (hcover x).mpr (hseed (Finset.mem_union_right _ hx))
+
+lemma good_nil : Good [] := by
+  refine âŸ¨by simp, ?_, âŸ¨fun _ _ => false, ?_âŸ©âŸ©
+  Â· simp [Closed, Before]
+  Â· simp [Compatible, Before]
+
+noncomputable def nextStage (P : {Q : List â„• // Good Q}) (n : â„•) :
+    {Q : List â„• // Good Q} :=
+  âŸ¨Classical.choose (finite_extension P.val P.property {n}),
+    (Classical.choose_spec (finite_extension P.val P.property {n})).1âŸ©
+
+lemma nextStage_prefix (P : {Q : List â„• // Good Q}) (n : â„•) :
+    P.val <+: (nextStage P n).val :=
+  (Classical.choose_spec (finite_extension P.val P.property {n})).2.1
+
+lemma nextStage_mem (P : {Q : List â„• // Good Q}) (n : â„•) :
+    n âˆˆ (nextStage P n).val :=
+  (Classical.choose_spec (finite_extension P.val P.property {n})).2.2 n (by simp)
+
+/-- Stage `n + 1` includes the value `n` and preserves every earlier position. -/
+noncomputable def stage : â„• â†’ {Q : List â„• // Good Q}
+  | 0 => âŸ¨[], good_nilâŸ©
+  | n + 1 => nextStage (stage n) n
+
+lemma stage_prefix_succ (n : â„•) : (stage n).val <+: (stage (n + 1)).val :=
+  nextStage_prefix (stage n) n
+
+lemma stage_mem_succ (n : â„•) : n âˆˆ (stage (n + 1)).val := nextStage_mem (stage n) n
+
+lemma stage_prefix {m n : â„•} (h : m â‰¤ n) : (stage m).val <+: (stage n).val := by
+  induction n generalizing m with
+  | zero =>
+      have hm : m = 0 := by omega
+      subst m
+      exact List.prefix_refl _
+  | succ n ih =>
+      by_cases hm : m â‰¤ n
+      Â· exact (ih hm).trans (stage_prefix_succ n)
+      Â· have hm' : m = n + 1 := by omega
+        subst m
+        exact List.prefix_refl _
+
+lemma stage_contains {a n : â„•} (h : a < n) : a âˆˆ (stage n).val :=
+  (stage_prefix (Nat.succ_le_of_lt h)).subset (stage_mem_succ a)
+
+lemma stage_length (n : â„•) : n â‰¤ (stage n).val.length := by
+  have hs : Finset.range n âŠ† (stage n).val.toFinset := by
+    intro a ha
+    exact List.mem_toFinset.mpr (stage_contains (Finset.mem_range.mp ha))
+  calc
+    n = (Finset.range n).card := (Finset.card_range n).symm
+    _ â‰¤ (stage n).val.toFinset.card := Finset.card_le_card hs
+    _ â‰¤ (stage n).val.length := List.toFinset_card_le _
+
+lemma stage_index_bound (n : â„•) : n < (stage (n + 1)).val.length :=
+  lt_of_lt_of_le (Nat.lt_succ_self n) (stage_length (n + 1))
+
+noncomputable def permFun (n : â„•) : â„• := (stage (n + 1)).val[n]'(stage_index_bound n)
+
+lemma permFun_agrees (t i : â„•) (hi : i < (stage t).val.length) :
+    permFun i = (stage t).val[i] := by
+  by_cases ht : i + 1 â‰¤ t
+  Â· exact (stage_prefix ht).getElem (stage_index_bound i)
+  Â· have ht' : t â‰¤ i + 1 := by omega
+    exact ((stage_prefix ht').getElem hi).symm
+
+lemma permFun_injective : Function.Injective permFun := by
+  intro i j h
+  let t := i + j + 1
+  have hlen := stage_length t
+  have hi : i < (stage t).val.length :=
+    lt_of_lt_of_le (show i < t by dsimp [t]; omega) hlen
+  have hj : j < (stage t).val.length :=
+    lt_of_lt_of_le (show j < t by dsimp [t]; omega) hlen
+  have hv : (stage t).val[i] = (stage t).val[j] :=
+    (permFun_agrees t i hi).symm.trans (h.trans (permFun_agrees t j hj))
+  have hidx := congrArg (fun x => (stage t).val.idxOf x) hv
+  simpa only [(stage t).property.1.idxOf_getElem] using hidx
+
+lemma permFun_surjective : Function.Surjective permFun := by
+  intro x
+  obtain âŸ¨i, hi, hvâŸ© := List.mem_iff_getElem.mp (stage_mem_succ x)
+  exact âŸ¨i, (permFun_agrees (x + 1) i hi).trans hvâŸ©
+
+lemma before_get {P : List â„•} (hP : P.Nodup) {i j : â„•}
+    (hi : i < P.length) (hj : j < P.length) (hij : i < j) : Before P P[i] P[j] := by
+  refine âŸ¨List.getElem_mem hi, List.getElem_mem hj, ?_âŸ©
+  simpa only [hP.idxOf_getElem] using hij
+
+lemma permFun_no_four (i j k l : â„•) (hij : i < j) (hjk : j < k) (hkl : k < l)
+    (hâ‚ : permFun i + permFun k = 2 * permFun j)
+    (hâ‚‚ : permFun j + permFun l = 2 * permFun k) : False := by
+  let t := l + 1
+  have hlen := stage_length t
+  have hi : i < (stage t).val.length :=
+    lt_of_lt_of_le (show i < t by dsimp [t]; omega) hlen
+  have hj : j < (stage t).val.length :=
+    lt_of_lt_of_le (show j < t by dsimp [t]; omega) hlen
+  have hk : k < (stage t).val.length :=
+    lt_of_lt_of_le (show k < t by dsimp [t]; omega) hlen
+  have hl : l < (stage t).val.length :=
+    lt_of_lt_of_le (show l < t by dsimp [t]; omega) hlen
+  have hP := (stage t).property
+  have hab : Before (stage t).val (permFun i) (permFun j) := by
+    rw [permFun_agrees t i hi, permFun_agrees t j hj]
+    exact before_get hP.1 hi hj hij
+  have hbc : Before (stage t).val (permFun j) (permFun k) := by
+    rw [permFun_agrees t j hj, permFun_agrees t k hk]
+    exact before_get hP.1 hj hk hjk
+  have hcd : Before (stage t).val (permFun k) (permFun l) := by
+    rw [permFun_agrees t k hk, permFun_agrees t l hl]
+    exact before_get hP.1 hk hl hkl
+  exact hcd.asymm (hP.2.1 _ _ _ _ hab hbc hâ‚ hâ‚‚)
+
+lemma permFun_no_monotoneAP : Â¬ HasMonotoneAP permFun 4 := by
+  rintro âŸ¨indices, hap, hincâŸ©
+  have hlen : indices.length = 4 := by simpa using hap.length
+  obtain âŸ¨i, j, k, l, rflâŸ© := List.length_eq_four.mp hlen
+  simp only [List.pairwise_cons, List.mem_cons, List.not_mem_nil,
+    forall_eq_or_imp, or_false] at hinc
+  have hij : i < j := by tauto
+  have hjk : j < k := by tauto
+  have hkl : k < l := by tauto
+  rcases hap with âŸ¨a, d, heq | heqâŸ© <;>
+    norm_num [List.range_succ] at heq <;>
+    apply permFun_no_four i j k l hij hjk hkl <;> omega
+
+/-- A permutation of all natural numbers avoiding both directions of four-term APs. -/
+theorem counterexample : âˆƒ f : â„• â‰ƒ â„•, Â¬ HasMonotoneAP f 4 :=
+  âŸ¨Equiv.ofBijective permFun âŸ¨permFun_injective, permFun_surjectiveâŸ©,
+    permFun_no_monotoneAPâŸ©
+
+end Construction196
+
+/-- The exact counterexample-mode target from the pinned submission bundle. -/
+theorem target : Â¬ (fcTypeOfName% "Erdos196.erdos_196") := by
+  intro h
+  obtain âŸ¨f, hfâŸ© := Construction196.counterexample
+  exact hf (h.mp True.intro f)

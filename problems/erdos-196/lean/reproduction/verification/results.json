@@ -1,0 +1,79 @@
+[
+  {
+    "step": "bootstrap",
+    "command": [
+      "/Library/Developer/CommandLineTools/usr/bin/python3",
+      "scripts/bootstrap.py"
+    ],
+    "exit_code": 0
+  },
+  {
+    "step": "version",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "--version"
+    ],
+    "exit_code": 0
+  },
+  {
+    "step": "utilities",
+    "command": [
+      "lake",
+      "build",
+      "FormalConjecturesUtil",
+      "TaskSupport"
+    ],
+    "exit_code": 0
+  },
+  {
+    "step": "statement",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "--root=.dependencies/formal-conjectures",
+      "-Dgoogle.answer=always_true",
+      "-o",
+      ".dependencies/formal-conjectures/.lake/build/lib/lean/FormalConjectures/ErdosProblems/196.olean",
+      ".dependencies/formal-conjectures/FormalConjectures/ErdosProblems/196.lean"
+    ],
+    "exit_code": 0
+  },
+  {
+    "step": "Erdos196",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-o",
+      ".lake/build/lib/lean/Erdos196.olean",
+      "Erdos196.lean"
+    ],
+    "exit_code": 0
+  },
+  {
+    "step": "PaperMain",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-o",
+      ".lake/build/lib/lean/PaperMain.olean",
+      "PaperMain.lean"
+    ],
+    "exit_code": 0
+  },
+  {
+    "step": "audit",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "--trust=0",
+      "Audit.lean"
+    ],
+    "exit_code": 0
+  }
+]

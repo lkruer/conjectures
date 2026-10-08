@@ -1,0 +1,9 @@
+{
+  "command": "python3 scripts/reproduce.py --skip-cache",
+  "result": "passed",
+  "dependency_artifacts": "Existing local cache reused; proof, problem declaration, and new corollary compiled fresh; final audit used --trust=0.",
+  "fresh_bootstrap_test": "The bootstrap script fetched official base7d1a8c9912747679d0093f6d1216420c33ee5ffa and reconstructed exact8432eac998110a563e03df65a28c117e97c8c142 successfully before this run.",
+  "lean_platform": "arm64-apple-darwin24.6.0",
+  "clean_payload_sha256": "e65c98a926ce4eca5df30277790c8b3dbcc630074ceaa24a551464951b3d2826",
+  "mathematical_edits_to_payload": false
+}

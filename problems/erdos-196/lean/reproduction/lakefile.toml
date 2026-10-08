@@ -1,0 +1,19 @@
+name = "erdos196_submission"
+version = "0.1.0"
+defaultTargets = ["Erdos196", "Audit"]
+
+[[require]]
+name = "formal_conjectures"
+path = ".dependencies/formal-conjectures"
+
+[[lean_lib]]
+name = "TaskSupport"
+
+[[lean_lib]]
+name = "Erdos196"
+
+[[lean_lib]]
+name = "PaperMain"
+
+[[lean_lib]]
+name = "Audit"

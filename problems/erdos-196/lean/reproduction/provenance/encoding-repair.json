@@ -1,0 +1,15 @@
+{
+  "original_bytes": 28605,
+  "original_sha256": "5b3c1073ca064c2aa668cfb578aecf3a919e9497c5b2248eee1a30c19bbb1f12",
+  "clean_bytes": 26497,
+  "clean_sha256": "e65c98a926ce4eca5df30277790c8b3dbcc630074ceaa24a551464951b3d2826",
+  "corruption_model": "UTF-8 bytes decoded using Windows-1252 with undefined bytes retained as same-codepoint controls; U+00A0 replaced by U+0020; final newline removed",
+  "model_reproduces_original_exactly": true,
+  "clean_reference": "Existing public portfolio Erdos196.lean mirrored before this submission, no mathematical edits.",
+  "clean_user_attachment": {
+    "name": "Main (2).lean",
+    "sha256": "e65c98a926ce4eca5df30277790c8b3dbcc630074ceaa24a551464951b3d2826",
+    "bytes": 26497,
+    "identical_to_clean_payload": true
+  }
+}
