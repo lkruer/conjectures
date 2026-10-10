@@ -1,5 +1,7 @@
 # Verification record — October 8, 2026
 
+A separate [October 10 verification](../../verification/2026-10-10/report.md) adds fresh source compilation, an independent direct-statement bridge, all seven detailed target audits, Lean kernel replay and independent Nanoda checks. The historical record below retains its original scope.
+
 **Passed.** The unchanged clean payload, the required wrapper, and the new direct-statement corollary compile with Lean 4.33.1. The complete scripted run ended with `Build and axiom audit passed.`
 
 Test command from this directory: `python3 scripts/reproduce.py --skip-cache`. Existing dependency artifacts were reused. The script freshly compiled the pinned problem declaration in `google.answer=always_true` mode, `Erdos196.lean`, and `PaperMain.lean`, then ran `lake env lean --trust=0 Audit.lean`. The bootstrap had separately reconstructed the exact pinned commit from the public official base and the supplied patch. A fresh download of all dependency caches was not repeated.

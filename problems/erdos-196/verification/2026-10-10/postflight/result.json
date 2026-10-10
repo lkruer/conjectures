@@ -1,0 +1,26 @@
+{
+  "ready_for_target_checks": true,
+  "issues": [],
+  "head": "bf058b903350eb8f873a22ab4a54b2e0faa9727d",
+  "git_status": "",
+  "toolchain_file": "leanprover/lean4:v4.33.1",
+  "file_sha256": {
+    "Erdos196.lean": "eb2badaeb31b7a65a368baae5a7ab6113415f8955b06e2e92307e0ebd1447cd8",
+    "PaperMain.lean": "054f022ed4df4f2df9ed84e71260a44e180288d37033abf777b86bb0da77507d",
+    "lake-manifest.json": "cfca4fc0f267e330cf9482e5e7ad417dd7922f19929c7dceb01dd805ed09c15d",
+    "lakefile.lean": null,
+    "lakefile.toml": "2b9ad55441dec398e2536b8ca99de3e89c90b1c35f6144a6f23c770e401ace3e",
+    "lean-toolchain": "3aac669c7a910ec2389f4e4f921b605adf6ebf2d1e0c9b9cd0be4d33f3f5db71"
+  },
+  "manual_preconditions": [
+    "isolation and resource limits established",
+    "clean source build and trusted cache provenance recorded",
+    "actual dependency SHAs match fixed evidence",
+    "tool binaries are trusted and match the pinned toolchain",
+    "all untracked inputs and module/source mappings reviewed"
+  ],
+  "checker_compatibility": "not_probed; inspect pinned checker separately",
+  "manifest_sha256": "cb9274c504e5dfb2a32d64ea396336d4fedd9a9607e2fd6e60f554ee523c2609",
+  "script_sha256": "5db45dddcb4d588bc27e7c7161fbca5cedaa3e73e1c40843d21f5a214323cd07",
+  "exit_code": 0
+}

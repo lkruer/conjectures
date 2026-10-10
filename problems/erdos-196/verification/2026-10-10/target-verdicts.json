@@ -1,0 +1,66 @@
+{
+  "mechanical_status": "pass",
+  "target_count": 7,
+  "targets": {
+    "Bounty.target": {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "passed": true
+    },
+    "Bounty.Construction196.counterexample": {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "passed": true
+    },
+    "Bounty.Construction196.permFun_injective": {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "passed": true
+    },
+    "Bounty.Construction196.permFun_surjective": {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "passed": true
+    },
+    "Bounty.Construction196.permFun_no_four": {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "passed": true
+    },
+    "Bounty.Construction196.finite_extension": {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "passed": true
+    },
+    "Bounty.paper_main": {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "passed": true
+    }
+  },
+  "bridge": "checked196",
+  "statement_correspondence": "full",
+  "full_formal_disproof": true,
+  "prize_acceptance": false
+}

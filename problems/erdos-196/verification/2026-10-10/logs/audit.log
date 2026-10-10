@@ -1,0 +1,19 @@
+theorem Bounty.target : ¬(True ↔ ∀ (f : ℕ ≃ ℕ), HasMonotoneAP (⇑f) 4) :=
+fun h => Exists.casesOn Bounty.Construction196.counterexample fun f hf => hf (h.mp True.intro f)
+theorem Bounty.paper_main : ∃ p,
+  ∀ (i j k l : ℕ), i < j → j < k → k < l → ¬(p i + p k = 2 * p j ∧ p j + p l = 2 * p k) :=
+Exists.intro
+  (Equiv.ofBijective Bounty.Construction196.permFun
+    ⟨Bounty.Construction196.permFun_injective, Bounty.Construction196.permFun_surjective⟩)
+  fun i j k l hij hjk hkl h => Bounty.Construction196.permFun_no_four i j k l hij hjk hkl h.left h.right
+'Bounty.target' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Bounty.paper_main' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Bounty.Construction196.counterexample' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Bounty.Construction196.finite_extension' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Bounty.Construction196.permFun_injective' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Bounty.Construction196.permFun_surjective' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Bounty.Construction196.permFun_no_four' depends on axioms: [propext, Classical.choice, Quot.sound]
+def HasMonotoneAP.{u_1, u_2} : {α : Type u_1} →
+  [AddCommMonoid α] → {β : Type u_2} → [Preorder β] → (β → α) → ℕ → Prop :=
+fun {α} [AddCommMonoid α] {β} [Preorder β] f k =>
+  ∃ l, (List.map f l).IsAPOfLength k ∧ List.Pairwise (fun x1 x2 => x1 < x2) l

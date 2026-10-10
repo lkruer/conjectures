@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "source_sha256": "e65c98a926ce4eca5df30277790c8b3dbcc630074ceaa24a551464951b3d2826",
+  "source_bytes": 26497,
+  "original_commit": "8ede860e8fc90a300207a2c17e8aefe6167b3086",
+  "original_path": "problems/erdos-196/lean/Erdos196.lean",
+  "selected_proof_commit": "bf058b903350eb8f873a22ab4a54b2e0faa9727d",
+  "original_git_object_equals_service_download": true,
+  "selected_preserved_payload_equals_service_download": true,
+  "wrapped_proof_minus_only_imports_and_outer_namespace_equals_service_download": true,
+  "all_audited_sources_still_match_selected_commit": true,
+  "audited_files_checked": 6,
+  "historical_date_authenticated_by_this_script": false,
+  "scope": "Byte identity only. The service's historical dates require separate authentication."
+}

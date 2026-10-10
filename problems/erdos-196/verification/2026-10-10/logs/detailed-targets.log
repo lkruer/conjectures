@@ -1,0 +1,201 @@
+Bounty.target : ¬(True ↔ ∀ (f : ℕ ≃ ℕ), HasMonotoneAP (⇑f) 4)
+/private/var/folders/rh/rg0dlt911dl_2c1zyw9vhj4r0000gn/T/jsp-submission-update-l0t85s6o/verification196/Detailed196.lean:3:0: warning: This file has no module docstring (`/-! ... -/`). Add one after the imports to document the file.
+
+Note: This linter can be disabled with `set_option linter.style.moduleDocstring false`
+theorem Bounty.target : ¬(True ↔ ∀ (f : ℕ ≃ ℕ), HasMonotoneAP (⇑f) 4) :=
+fun h => Exists.casesOn Bounty.Construction196.counterexample fun f hf => hf (h.mp True.intro f)
+/private/var/folders/rh/rg0dlt911dl_2c1zyw9vhj4r0000gn/T/jsp-submission-update-l0t85s6o/verification196/Detailed196.lean:4:0: warning: This file has no module docstring (`/-! ... -/`). Add one after the imports to document the file.
+
+Note: This linter can be disabled with `set_option linter.style.moduleDocstring false`
+'Bounty.target' depends on axioms: [propext, Classical.choice, Quot.sound]
+/private/var/folders/rh/rg0dlt911dl_2c1zyw9vhj4r0000gn/T/jsp-submission-update-l0t85s6o/verification196/Detailed196.lean:5:0: warning: This file has no module docstring (`/-! ... -/`). Add one after the imports to document the file.
+
+Note: This linter can be disabled with `set_option linter.style.moduleDocstring false`
+Bounty.Construction196.counterexample : ∃ f, ¬HasMonotoneAP (⇑f) 4
+theorem Bounty.Construction196.counterexample : ∃ f, ¬HasMonotoneAP (⇑f) 4 :=
+Exists.intro
+  (Equiv.ofBijective Bounty.Construction196.permFun
+    ⟨Bounty.Construction196.permFun_injective, Bounty.Construction196.permFun_surjective⟩)
+  Bounty.Construction196.permFun_no_monotoneAP
+/private/var/folders/rh/rg0dlt911dl_2c1zyw9vhj4r0000gn/T/jsp-submission-update-l0t85s6o/verification196/Detailed196.lean:8:0: warning: This file has no module docstring (`/-! ... -/`). Add one after the imports to document the file.
+
+Note: This linter can be disabled with `set_option linter.style.moduleDocstring false`
+'Bounty.Construction196.counterexample' depends on axioms: [propext, Classical.choice, Quot.sound]
+/private/var/folders/rh/rg0dlt911dl_2c1zyw9vhj4r0000gn/T/jsp-submission-update-l0t85s6o/verification196/Detailed196.lean:9:0: warning: This file has no module docstring (`/-! ... -/`). Add one after the imports to document the file.
+
+Note: This linter can be disabled with `set_option linter.style.moduleDocstring false`
+Bounty.Construction196.permFun_injective : Function.Injective Bounty.Construction196.permFun
+theorem Bounty.Construction196.permFun_injective : Function.Injective Bounty.Construction196.permFun :=
+fun ⦃i j⦄ h =>
+  let t := i + j + 1;
+  have hlen := Bounty.Construction196.stage_length t;
+  have hi :=
+    lt_of_lt_of_le
+      (have this := id (Decidable.byContradiction fun a => Bounty.Construction196.permFun_injective._proof_1_1 a);
+      this)
+      hlen;
+  have hj :=
+    lt_of_lt_of_le
+      (have this := id (Decidable.byContradiction fun a => Bounty.Construction196.permFun_injective._proof_1_2 a);
+      this)
+      hlen;
+  have hv :=
+    Eq.trans (Eq.symm (Bounty.Construction196.permFun_agrees t i hi))
+      (Eq.trans h (Bounty.Construction196.permFun_agrees t j hj));
+  have hidx := congrArg (fun x => List.idxOf x ↑(Bounty.Construction196.stage t)) hv;
+  Eq.mp
+    (congr (congrArg Eq ((fun i h => List.Nodup.idxOf_getElem (Bounty.Construction196.stage t).property.left i h) i hi))
+      ((fun i h => List.Nodup.idxOf_getElem (Bounty.Construction196.stage t).property.left i h) j hj))
+    hidx
+'Bounty.Construction196.permFun_injective' depends on axioms: [propext, Classical.choice, Quot.sound]
+/private/var/folders/rh/rg0dlt911dl_2c1zyw9vhj4r0000gn/T/jsp-submission-update-l0t85s6o/verification196/Detailed196.lean:13:0: warning: This file has no module docstring (`/-! ... -/`). Add one after the imports to document the file.
+
+Note: This linter can be disabled with `set_option linter.style.moduleDocstring false`
+Bounty.Construction196.permFun_surjective : Function.Surjective Bounty.Construction196.permFun
+theorem Bounty.Construction196.permFun_surjective : Function.Surjective Bounty.Construction196.permFun :=
+fun x =>
+  Exists.casesOn (List.mem_iff_getElem.mp (Bounty.Construction196.stage_mem_succ x)) fun i h =>
+    Exists.casesOn h fun hi hv => Exists.intro i (Eq.trans (Bounty.Construction196.permFun_agrees (x + 1) i hi) hv)
+'Bounty.Construction196.permFun_surjective' depends on axioms: [propext, Classical.choice, Quot.sound]
+Bounty.Construction196.permFun_no_four : ∀ (i j k l : ℕ),
+  i < j →
+    j < k →
+      k < l →
+        Bounty.Construction196.permFun i + Bounty.Construction196.permFun k = 2 * Bounty.Construction196.permFun j →
+          Bounty.Construction196.permFun j + Bounty.Construction196.permFun l = 2 * Bounty.Construction196.permFun k →
+            False
+/private/var/folders/rh/rg0dlt911dl_2c1zyw9vhj4r0000gn/T/jsp-submission-update-l0t85s6o/verification196/Detailed196.lean:19:0: warning: This file has no module docstring (`/-! ... -/`). Add one after the imports to document the file.
+
+Note: This linter can be disabled with `set_option linter.style.moduleDocstring false`
+theorem Bounty.Construction196.permFun_no_four : ∀ (i j k l : ℕ),
+  i < j →
+    j < k →
+      k < l →
+        Bounty.Construction196.permFun i + Bounty.Construction196.permFun k = 2 * Bounty.Construction196.permFun j →
+          Bounty.Construction196.permFun j + Bounty.Construction196.permFun l = 2 * Bounty.Construction196.permFun k →
+            False :=
+fun i j k l hij hjk hkl h₁ h₂ =>
+  let t := l + 1;
+  have hlen := Bounty.Construction196.stage_length t;
+  have hi :=
+    lt_of_lt_of_le
+      (have this :=
+        id (Decidable.byContradiction fun a => Bounty.Construction196.permFun_no_four._proof_1_1 i j k l hij hjk hkl a);
+      this)
+      hlen;
+  have hj :=
+    lt_of_lt_of_le
+      (have this :=
+        id (Decidable.byContradiction fun a => Bounty.Construction196.permFun_no_four._proof_1_2 i j k l hjk hkl a);
+      this)
+      hlen;
+  have hk :=
+    lt_of_lt_of_le
+      (have this :=
+        id (Decidable.byContradiction fun a => Bounty.Construction196.permFun_no_four._proof_1_3 i j k l hkl a);
+      this)
+      hlen;
+  have hl :=
+    lt_of_lt_of_le
+      (have this := id (Decidable.byContradiction fun a => Bounty.Construction196.permFun_no_four._proof_1_4 i j k l a);
+      this)
+      hlen;
+  have hP := (Bounty.Construction196.stage t).property;
+  have hab :=
+    Eq.mpr
+      (id
+        (congrArg
+          (fun _a =>
+            Bounty.Construction196.Before (↑(Bounty.Construction196.stage t)) _a (Bounty.Construction196.permFun j))
+          (Bounty.Construction196.permFun_agrees t i hi)))
+      (Eq.mpr
+        (id
+          (congrArg
+            (fun _a =>
+              Bounty.Construction196.Before (↑(Bounty.Construction196.stage t)) (↑(Bounty.Construction196.stage t))[i]
+                _a)
+            (Bounty.Construction196.permFun_agrees t j hj)))
+        (Bounty.Construction196.before_get hP.left hi hj hij));
+  have hbc :=
+    Eq.mpr
+      (id
+        (congrArg
+          (fun _a =>
+            Bounty.Construction196.Before (↑(Bounty.Construction196.stage t)) _a (Bounty.Construction196.permFun k))
+          (Bounty.Construction196.permFun_agrees t j hj)))
+      (Eq.mpr
+        (id
+          (congrArg
+            (fun _a =>
+              Bounty.Construction196.Before (↑(Bounty.Construction196.stage t)) (↑(Bounty.Construction196.stage t))[j]
+                _a)
+            (Bounty.Construction196.permFun_agrees t k hk)))
+        (Bounty.Construction196.before_get hP.left hj hk hjk));
+  have hcd :=
+    Eq.mpr
+      (id
+        (congrArg
+          (fun _a =>
+            Bounty.Construction196.Before (↑(Bounty.Construction196.stage t)) _a (Bounty.Construction196.permFun l))
+          (Bounty.Construction196.permFun_agrees t k hk)))
+      (Eq.mpr
+        (id
+          (congrArg
+            (fun _a =>
+              Bounty.Construction196.Before (↑(Bounty.Construction196.stage t)) (↑(Bounty.Construction196.stage t))[k]
+                _a)
+            (Bounty.Construction196.permFun_agrees t l hl)))
+        (Bounty.Construction196.before_get hP.left hk hl hkl));
+  Bounty.Construction196.Before.asymm hcd
+    (hP.right.left (Bounty.Construction196.permFun i) (Bounty.Construction196.permFun j)
+      (Bounty.Construction196.permFun k) (Bounty.Construction196.permFun l) hab hbc h₁ h₂)
+/private/var/folders/rh/rg0dlt911dl_2c1zyw9vhj4r0000gn/T/jsp-submission-update-l0t85s6o/verification196/Detailed196.lean:20:0: warning: This file has no module docstring (`/-! ... -/`). Add one after the imports to document the file.
+
+Note: This linter can be disabled with `set_option linter.style.moduleDocstring false`
+'Bounty.Construction196.permFun_no_four' depends on axioms: [propext, Classical.choice, Quot.sound]
+Bounty.Construction196.finite_extension : ∀ (P : List ℕ),
+  Bounty.Construction196.Good P → ∀ (F : Finset ℕ), ∃ Q, Bounty.Construction196.Good Q ∧ P <+: Q ∧ ∀ x ∈ F, x ∈ Q
+/private/var/folders/rh/rg0dlt911dl_2c1zyw9vhj4r0000gn/T/jsp-submission-update-l0t85s6o/verification196/Detailed196.lean:23:0: warning: This file has no module docstring (`/-! ... -/`). Add one after the imports to document the file.
+
+Note: This linter can be disabled with `set_option linter.style.moduleDocstring false`
+theorem Bounty.Construction196.finite_extension : ∀ (P : List ℕ),
+  Bounty.Construction196.Good P → ∀ (F : Finset ℕ), ∃ Q, Bounty.Construction196.Good Q ∧ P <+: Q ∧ ∀ x ∈ F, x ∈ Q :=
+fun P hP F =>
+  And.casesOn hP fun hPN right =>
+    And.casesOn right fun hPC right =>
+      Exists.casesOn right fun e₀ he₀ =>
+        let e := Bounty.Construction196.adapt P e₀;
+        have he := Bounty.Construction196.adapt_compatible he₀;
+        have hae := fun x x_1 x_2 hn ha hw => Bounty.Construction196.adapt_old hn ha hw;
+        Exists.casesOn (Bounty.Construction196.saturated_exists P e (P.toFinset ∪ F)) fun A h =>
+          And.casesOn h fun hseed hs =>
+            Exists.casesOn (Bounty.Construction196.sorted_block e P A) fun B h =>
+              And.casesOn h fun hBN right =>
+                And.casesOn right fun hB ho =>
+                  have hPA := fun x hx => hseed (Finset.mem_union_left F (List.mem_toFinset.mpr hx));
+                  have hcover := fun x =>
+                    Eq.mpr (id (congrArg (fun _a => _a ↔ x ∈ A) (propext List.mem_append)))
+                      (Eq.mpr (id (congrArg (fun _a => x ∈ P ∨ _a ↔ x ∈ A) (propext (hB x))))
+                        { mp := fun a => Or.casesOn a (fun hp => hPA x hp) fun h => And.casesOn h fun ha right => ha,
+                          mpr := fun ha => if hp : x ∈ P then Or.inl hp else Or.inr ⟨ha, hp⟩ });
+                  have hsep := fun a ha b hb hab =>
+                    Eq.ndrec (motive := fun b => b ∈ B → False) (fun hb => ((hB a).mp hb).right ha) hab hb;
+                  Exists.intro (P ++ B)
+                    ⟨⟨List.nodup_append.mpr ⟨hPN, ⟨hBN, hsep⟩⟩,
+                        ⟨Bounty.Construction196.extend_closed hPC he hae hs hB ho,
+                          Exists.intro (Bounty.Construction196.nextPreference P e)
+                            (Bounty.Construction196.extend_compatible he hae hs hcover ho)⟩⟩,
+                      ⟨List.prefix_append P B, fun x hx =>
+                        (hcover x).mpr (hseed (Finset.mem_union_right P.toFinset hx))⟩⟩
+/private/var/folders/rh/rg0dlt911dl_2c1zyw9vhj4r0000gn/T/jsp-submission-update-l0t85s6o/verification196/Detailed196.lean:24:0: warning: This file has no module docstring (`/-! ... -/`). Add one after the imports to document the file.
+
+Note: This linter can be disabled with `set_option linter.style.moduleDocstring false`
+'Bounty.Construction196.finite_extension' depends on axioms: [propext, Classical.choice, Quot.sound]
+Bounty.paper_main : ∃ p, ∀ (i j k l : ℕ), i < j → j < k → k < l → ¬(p i + p k = 2 * p j ∧ p j + p l = 2 * p k)
+theorem Bounty.paper_main : ∃ p,
+  ∀ (i j k l : ℕ), i < j → j < k → k < l → ¬(p i + p k = 2 * p j ∧ p j + p l = 2 * p k) :=
+Exists.intro
+  (Equiv.ofBijective Bounty.Construction196.permFun
+    ⟨Bounty.Construction196.permFun_injective, Bounty.Construction196.permFun_surjective⟩)
+  fun i j k l hij hjk hkl h => Bounty.Construction196.permFun_no_four i j k l hij hjk hkl h.left h.right
+'Bounty.paper_main' depends on axioms: [propext, Classical.choice, Quot.sound]

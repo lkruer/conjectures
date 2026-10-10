@@ -2,7 +2,7 @@
 
 [Back to the problem](../README.md) · [Reproduction package](reproduction/README.md)
 
-**Status: Build passing; scope recorded.** Local verification on October 8, 2026 compiled the original construction in Lean 4.33.1 with the original Formal Conjectures pin. Mathematical review and JSP acceptance remain pending.
+**Status: Fresh source and independent proof checks passed.** The [October 10 report and raw logs](../verification/2026-10-10/report.md) cover all seven targets, exact statements, standard axiom dependencies, Lean kernel replay and Nanoda 0.4.17 plus source-built 0.4.19. The original October 8 record is retained separately. Mathematical review and JSP acceptance remain pending.
 
 ## Sources and theorem
 

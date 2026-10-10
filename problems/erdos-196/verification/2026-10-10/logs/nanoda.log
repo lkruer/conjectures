@@ -1,0 +1,29 @@
+def Intended196 :
+  Sort 0 :=
+  Exists
+    (fun (p : Equiv Nat Nat) =>
+    forall (i j k l : Nat),
+    LT.lt i j → LT.lt j k → LT.lt k l → Not
+      (And (Eq (HAdd.hAdd (DFunLike.coe p i) (DFunLike.coe p k)) (HMul.hMul (OfNat.ofNat 2) (DFunLike.coe p j)))
+        (Eq (HAdd.hAdd (DFunLike.coe p j) (DFunLike.coe p l)) (HMul.hMul (OfNat.ofNat 2) (DFunLike.coe p k)))))
+
+theorem Bounty.target : Not (Iff True (forall (f : Equiv Nat Nat), HasMonotoneAP (DFunLike.coe f) (OfNat.ofNat 4))) := _
+
+theorem Bounty.paper_main :
+  Exists
+    (fun (p : Equiv Nat Nat) =>
+    forall (i j k l : Nat),
+    LT.lt i j → LT.lt j k → LT.lt k l → Not
+      (And (Eq (HAdd.hAdd (DFunLike.coe p i) (DFunLike.coe p k)) (HMul.hMul (OfNat.ofNat 2) (DFunLike.coe p j)))
+        (Eq (HAdd.hAdd (DFunLike.coe p j) (DFunLike.coe p l)) (HMul.hMul (OfNat.ofNat 2) (DFunLike.coe p k))))) :=
+  _
+
+theorem checked196 : Intended196 := _
+
+axiom propext {a b : Sort 0} : Iff a b → Eq a b
+
+axiom Quot.sound.{u} {α : Sort u} {r : α → α → Sort 0} {a b : α} : r a b → Eq (Quot.mk r a) (Quot.mk r b)
+
+axiom Classical.choice.{u} {α : Sort u} : Nonempty α → α
+
+Checked 7300 declarations with no errors

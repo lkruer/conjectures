@@ -5,13 +5,16 @@ This submission concerns the complete counterexample in **Erdős 196: A permutat
 ## Source and publication history
 
 - **September 9, 2026:** date printed inside the seven-page manuscript. This is an internal manuscript date, not independently established public disclosure.
+- **September 9–11, 2026:** the [Conjectures.io result](https://conjectures.io/results/e73b95f7-1d1b-42b5-a442-c07077741d73) separately records verification on September 9, isolated replay on September 10 and approval on September 11. Its accepted source is byte-identical to the preserved payload; see the [priority evidence](PRIORITY.md). The page dates certification/publication September 14.
 - **September 11, 2026, 12:33:11 UTC:** arXiv records submission of Boon Suan Ho's [A 4AP-free permutation of the positive integers](https://arxiv.org/abs/2609.12780v1). It states the same full negative answer. This earlier public record is disclosed for mathematical and priority review.
 - **September 14, 2026, 03:39:34 UTC:** recorded commit date of this repository's [initial upload](https://github.com/lkruer/conjectures/commit/8ede860e8fc90a300207a2c17e8aefe6167b3086). It includes the [paper](https://github.com/lkruer/conjectures/blob/8ede860e8fc90a300207a2c17e8aefe6167b3086/problems/erdos-196/paper/proof.pdf) and [Lean source](https://github.com/lkruer/conjectures/blob/8ede860e8fc90a300207a2c17e8aefe6167b3086/problems/erdos-196/lean/Erdos196.lean). A commit date alone is not independent proof of first publication time.
 - **September 14, 2026, 04:05:27:** timestamp displayed on the [Erdős Problems public proof claim](https://www.erdosproblems.com/forum/thread/196/proof-claims#proof-claim-311), submitted by Liam Kruer and crediting Kruer and Kohlmeyer. The page does not establish correctness or peer review.
 - **September 15, 2026:** [Alejandro Zarzuelo's reproduction](https://github.com/alejandrozu/erdos196-counterexample) was linked in the claim discussion. Its report says the unchanged mathematical source compiled with Lean 4.33.1 and a reconstructed wrapper, with standard axioms only. It expressly disclaims independent human peer review. Its separate refinements are not claimed as work by Kohlmeyer or Kruer here.
 - **October 8, 2026:** this JSP submission preparation preserved the published paper and mathematical source and recovered the pinned local environment for a fresh check. The new reproduction record specifies exactly what was checked.
 
-No first-publication, independence-from-Ho, established-priority, or award-entitlement claim is made here. JSP maintainers must assess mathematical validity, formal verification, contribution attribution and any competing priority evidence separately.
+We claim completion by the service's recorded September 9 verification and request priority review on the basis of the [dated record and exact-source identity](PRIORITY.md). First public disclosure, mathematical priority and formalization priority are distinguished. No first-publication, independence-from-Ho, settled-priority or award-entitlement claim is made. JSP maintainers must assess the competing evidence and the service's historical records.
+
+- **October 10, 2026:** fresh verification of the selected proof passed, including all seven target audits, a direct-statement bridge, Lean kernel replay and two independent Nanoda checks. The [report and raw logs](verification/2026-10-10/report.md) identify exact sources, environment and trust boundaries.
 
 ## Preserved source identities
 

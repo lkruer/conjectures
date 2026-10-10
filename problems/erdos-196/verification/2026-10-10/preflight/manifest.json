@@ -1,0 +1,106 @@
+{
+  "schema_version": 1,
+  "project": {
+    "repository": "https://github.com/lkruer/conjectures",
+    "root": "/private/var/folders/rh/rg0dlt911dl_2c1zyw9vhj4r0000gn/T/jsp-submission-update-l0t85s6o/proof196/problems/erdos-196/lean/reproduction",
+    "commit": "bf058b903350eb8f873a22ab4a54b2e0faa9727d",
+    "toolchain": "leanprover/lean4:v4.33.1"
+  },
+  "problems": [
+    {
+      "id": "erdos196",
+      "source": "https://www.erdosproblems.com/196; catalog JSP-000185; original DEGS77 question as restated in arXiv:2609.12780v1 introduction",
+      "requirements": [
+        {
+          "id": "all_naturals",
+          "description": "Construct a bijection of all natural numbers",
+          "targets": [
+            "counterexample",
+            "injective",
+            "surjective"
+          ],
+          "coverage": "full",
+          "evidence": "Equiv.ofBijective from the proved injection and surjection"
+        },
+        {
+          "id": "arbitrary_indices",
+          "description": "Avoid four-term arithmetic progressions at any four increasing indices, in both value orientations",
+          "targets": [
+            "paper_main",
+            "no_four"
+          ],
+          "coverage": "full",
+          "evidence": "The two AP equalities are excluded for every i<j<k<l, including negative common differences"
+        },
+        {
+          "id": "unconditional",
+          "description": "Disprove the universal question without unproved extension assumptions",
+          "targets": [
+            "target",
+            "extension"
+          ],
+          "coverage": "full",
+          "evidence": "Proved finite-extension construction, followed by nested stages and the exact problem-type negation"
+        }
+      ]
+    }
+  ],
+  "targets": [
+    {
+      "id": "target",
+      "problem": "erdos196",
+      "role": "theorem",
+      "module": "Erdos196",
+      "source": "Erdos196.lean",
+      "declaration": "Bounty.target"
+    },
+    {
+      "id": "counterexample",
+      "problem": "erdos196",
+      "role": "theorem",
+      "module": "Erdos196",
+      "source": "Erdos196.lean",
+      "declaration": "Bounty.Construction196.counterexample"
+    },
+    {
+      "id": "injective",
+      "problem": "erdos196",
+      "role": "theorem",
+      "module": "Erdos196",
+      "source": "Erdos196.lean",
+      "declaration": "Bounty.Construction196.permFun_injective"
+    },
+    {
+      "id": "surjective",
+      "problem": "erdos196",
+      "role": "theorem",
+      "module": "Erdos196",
+      "source": "Erdos196.lean",
+      "declaration": "Bounty.Construction196.permFun_surjective"
+    },
+    {
+      "id": "no_four",
+      "problem": "erdos196",
+      "role": "theorem",
+      "module": "Erdos196",
+      "source": "Erdos196.lean",
+      "declaration": "Bounty.Construction196.permFun_no_four"
+    },
+    {
+      "id": "extension",
+      "problem": "erdos196",
+      "role": "theorem",
+      "module": "Erdos196",
+      "source": "Erdos196.lean",
+      "declaration": "Bounty.Construction196.finite_extension"
+    },
+    {
+      "id": "paper_main",
+      "problem": "erdos196",
+      "role": "theorem",
+      "module": "PaperMain",
+      "source": "PaperMain.lean",
+      "declaration": "Bounty.paper_main"
+    }
+  ]
+}

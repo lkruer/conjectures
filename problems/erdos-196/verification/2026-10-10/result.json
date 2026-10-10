@@ -1,0 +1,298 @@
+{
+  "status": "SOURCE_BUILD_AXIOMS_KERNEL_AND_NANODA_PASSED",
+  "started_utc": "2026-10-10T04:55:40.825427+00:00",
+  "proof_commit": "bf058b903350eb8f873a22ab4a54b2e0faa9727d",
+  "commands": [
+    {
+      "label": "version",
+      "argv": [
+        "/usr/bin/sandbox-exec",
+        "-f",
+        "/private/var/folders/rh/rg0dlt911dl_2c1zyw9vhj4r0000gn/T/jsp-submission-update-l0t85s6o/verification196/sandbox.sb",
+        "/Users/jenwin/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lake",
+        "env",
+        "lean",
+        "--version"
+      ],
+      "exit_code": 0,
+      "seconds": 14.559,
+      "log": "logs/version.log",
+      "sha256": "4762d596346ad354e28668de62b7eeae7de5d531b9a7b1c182ca59cfacd81bdd",
+      "bytes": 106,
+      "cwd": "/private/var/folders/rh/rg0dlt911dl_2c1zyw9vhj4r0000gn/T/jsp-submission-update-l0t85s6o/proof196/problems/erdos-196/lean/reproduction"
+    },
+    {
+      "label": "utilities",
+      "argv": [
+        "/usr/bin/sandbox-exec",
+        "-f",
+        "/private/var/folders/rh/rg0dlt911dl_2c1zyw9vhj4r0000gn/T/jsp-submission-update-l0t85s6o/verification196/sandbox.sb",
+        "/Users/jenwin/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lake",
+        "build",
+        "FormalConjecturesUtil",
+        "TaskSupport"
+      ],
+      "exit_code": 0,
+      "seconds": 271.129,
+      "log": "logs/utilities.log",
+      "sha256": "f9237429bdf54485324f68a155bbfcf4f8aa75b0059ec2ae107bdd59828157f2",
+      "bytes": 16446,
+      "cwd": "/private/var/folders/rh/rg0dlt911dl_2c1zyw9vhj4r0000gn/T/jsp-submission-update-l0t85s6o/proof196/problems/erdos-196/lean/reproduction"
+    },
+    {
+      "label": "statement",
+      "argv": [
+        "/usr/bin/sandbox-exec",
+        "-f",
+        "/private/var/folders/rh/rg0dlt911dl_2c1zyw9vhj4r0000gn/T/jsp-submission-update-l0t85s6o/verification196/sandbox.sb",
+        "/Users/jenwin/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "--root=.dependencies/formal-conjectures",
+        "-Dgoogle.answer=always_true",
+        "-o",
+        "/private/var/folders/rh/rg0dlt911dl_2c1zyw9vhj4r0000gn/T/jsp-submission-update-l0t85s6o/proof196/problems/erdos-196/lean/reproduction/.dependencies/formal-conjectures/.lake/build/lib/lean/FormalConjectures/ErdosProblems/196.olean",
+        ".dependencies/formal-conjectures/FormalConjectures/ErdosProblems/196.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 25.456,
+      "log": "logs/statement.log",
+      "sha256": "c01e1488d38e35c3b2453036fdfdc1cfa6a6a8f95c3d5c87cc6618ce43cffd7e",
+      "bytes": 114,
+      "cwd": "/private/var/folders/rh/rg0dlt911dl_2c1zyw9vhj4r0000gn/T/jsp-submission-update-l0t85s6o/proof196/problems/erdos-196/lean/reproduction"
+    },
+    {
+      "label": "Erdos196",
+      "argv": [
+        "/usr/bin/sandbox-exec",
+        "-f",
+        "/private/var/folders/rh/rg0dlt911dl_2c1zyw9vhj4r0000gn/T/jsp-submission-update-l0t85s6o/verification196/sandbox.sb",
+        "/Users/jenwin/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "-o",
+        "/private/var/folders/rh/rg0dlt911dl_2c1zyw9vhj4r0000gn/T/jsp-submission-update-l0t85s6o/proof196/problems/erdos-196/lean/reproduction/.lake/build/lib/lean/Erdos196.olean",
+        "Erdos196.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 12.346,
+      "log": "logs/Erdos196.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "cwd": "/private/var/folders/rh/rg0dlt911dl_2c1zyw9vhj4r0000gn/T/jsp-submission-update-l0t85s6o/proof196/problems/erdos-196/lean/reproduction"
+    },
+    {
+      "label": "PaperMain",
+      "argv": [
+        "/usr/bin/sandbox-exec",
+        "-f",
+        "/private/var/folders/rh/rg0dlt911dl_2c1zyw9vhj4r0000gn/T/jsp-submission-update-l0t85s6o/verification196/sandbox.sb",
+        "/Users/jenwin/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "-o",
+        "/private/var/folders/rh/rg0dlt911dl_2c1zyw9vhj4r0000gn/T/jsp-submission-update-l0t85s6o/proof196/problems/erdos-196/lean/reproduction/.lake/build/lib/lean/PaperMain.olean",
+        "PaperMain.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 8.439,
+      "log": "logs/PaperMain.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "cwd": "/private/var/folders/rh/rg0dlt911dl_2c1zyw9vhj4r0000gn/T/jsp-submission-update-l0t85s6o/proof196/problems/erdos-196/lean/reproduction"
+    },
+    {
+      "label": "audit",
+      "argv": [
+        "/usr/bin/sandbox-exec",
+        "-f",
+        "/private/var/folders/rh/rg0dlt911dl_2c1zyw9vhj4r0000gn/T/jsp-submission-update-l0t85s6o/verification196/sandbox.sb",
+        "/Users/jenwin/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "Audit.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 7.281,
+      "log": "logs/audit.log",
+      "sha256": "d63ad0b02c90a6493a46626fec215ce82a00ab9309f747ff69e1919a393fd601",
+      "bytes": 1528,
+      "cwd": "/private/var/folders/rh/rg0dlt911dl_2c1zyw9vhj4r0000gn/T/jsp-submission-update-l0t85s6o/proof196/problems/erdos-196/lean/reproduction"
+    },
+    {
+      "label": "independent-bridge",
+      "argv": [
+        "/usr/bin/sandbox-exec",
+        "-f",
+        "/private/var/folders/rh/rg0dlt911dl_2c1zyw9vhj4r0000gn/T/jsp-submission-update-l0t85s6o/verification196/sandbox.sb",
+        "/Users/jenwin/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "/private/var/folders/rh/rg0dlt911dl_2c1zyw9vhj4r0000gn/T/jsp-submission-update-l0t85s6o/verification196/Independent196.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 6.805,
+      "log": "logs/independent-bridge.log",
+      "sha256": "241773ed980d59170a4414755d434b630eac6dc59b4acd40f91724537d9dcd2d",
+      "bytes": 758,
+      "cwd": "/private/var/folders/rh/rg0dlt911dl_2c1zyw9vhj4r0000gn/T/jsp-submission-update-l0t85s6o/proof196/problems/erdos-196/lean/reproduction"
+    },
+    {
+      "label": "kernel-replay",
+      "argv": [
+        "/usr/bin/sandbox-exec",
+        "-f",
+        "/private/var/folders/rh/rg0dlt911dl_2c1zyw9vhj4r0000gn/T/jsp-submission-update-l0t85s6o/verification196/sandbox.sb",
+        "/Users/jenwin/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lake",
+        "env",
+        "leanchecker",
+        "--verbose",
+        "Erdos196",
+        "PaperMain"
+      ],
+      "exit_code": 0,
+      "seconds": 37.805,
+      "log": "logs/kernel-replay.log",
+      "sha256": "092a81bcc43d76eede328ff5e4a7e464a6b8d4cb14ec6075088f62adef6dcd95",
+      "bytes": 39,
+      "cwd": "/private/var/folders/rh/rg0dlt911dl_2c1zyw9vhj4r0000gn/T/jsp-submission-update-l0t85s6o/proof196/problems/erdos-196/lean/reproduction"
+    },
+    {
+      "label": "detailed-targets",
+      "argv": [
+        "/usr/bin/sandbox-exec",
+        "-f",
+        "/private/var/folders/rh/rg0dlt911dl_2c1zyw9vhj4r0000gn/T/jsp-submission-update-l0t85s6o/verification196/sandbox.sb",
+        "/Users/jenwin/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "/private/var/folders/rh/rg0dlt911dl_2c1zyw9vhj4r0000gn/T/jsp-submission-update-l0t85s6o/verification196/Detailed196.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 8.627,
+      "output": "logs/detailed-targets.log",
+      "sha256": "871db46d817b231467f50cc386eeea0defb3079582bc759ceb9f236c66e9995f",
+      "bytes": 12523,
+      "cwd": "/private/var/folders/rh/rg0dlt911dl_2c1zyw9vhj4r0000gn/T/jsp-submission-update-l0t85s6o/proof196/problems/erdos-196/lean/reproduction"
+    },
+    {
+      "label": "bridge-object",
+      "argv": [
+        "/usr/bin/sandbox-exec",
+        "-f",
+        "/private/var/folders/rh/rg0dlt911dl_2c1zyw9vhj4r0000gn/T/jsp-submission-update-l0t85s6o/verification196/sandbox.sb",
+        "/Users/jenwin/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "-o",
+        "/private/var/folders/rh/rg0dlt911dl_2c1zyw9vhj4r0000gn/T/jsp-submission-update-l0t85s6o/proof196/problems/erdos-196/lean/reproduction/.lake/build/lib/lean/Independent196.olean",
+        "/private/var/folders/rh/rg0dlt911dl_2c1zyw9vhj4r0000gn/T/jsp-submission-update-l0t85s6o/verification196/Independent196.lean"
+      ],
+      "exit_code": 1,
+      "seconds": 1.303,
+      "output": "logs/bridge-object.log",
+      "sha256": "3358317a235cb3df353f7863959e1093b624293dca2809b0370592f7823d73a6",
+      "bytes": 310,
+      "cwd": "/private/var/folders/rh/rg0dlt911dl_2c1zyw9vhj4r0000gn/T/jsp-submission-update-l0t85s6o/proof196/problems/erdos-196/lean/reproduction"
+    },
+    {
+      "label": "bridge-object-retry",
+      "argv": [
+        "/usr/bin/sandbox-exec",
+        "-f",
+        "/private/var/folders/rh/rg0dlt911dl_2c1zyw9vhj4r0000gn/T/jsp-submission-update-l0t85s6o/verification196/sandbox.sb",
+        "/Users/jenwin/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "--root=/private/var/folders/rh/rg0dlt911dl_2c1zyw9vhj4r0000gn/T/jsp-submission-update-l0t85s6o/verification196",
+        "-o",
+        "/private/var/folders/rh/rg0dlt911dl_2c1zyw9vhj4r0000gn/T/jsp-submission-update-l0t85s6o/proof196/problems/erdos-196/lean/reproduction/.lake/build/lib/lean/Independent196.olean",
+        "/private/var/folders/rh/rg0dlt911dl_2c1zyw9vhj4r0000gn/T/jsp-submission-update-l0t85s6o/verification196/Independent196.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 7.124,
+      "output": "logs/bridge-object-retry.log",
+      "sha256": "241773ed980d59170a4414755d434b630eac6dc59b4acd40f91724537d9dcd2d",
+      "bytes": 758,
+      "cwd": "/private/var/folders/rh/rg0dlt911dl_2c1zyw9vhj4r0000gn/T/jsp-submission-update-l0t85s6o/proof196/problems/erdos-196/lean/reproduction"
+    },
+    {
+      "label": "export-targets",
+      "argv": [
+        "/usr/bin/sandbox-exec",
+        "-f",
+        "/private/var/folders/rh/rg0dlt911dl_2c1zyw9vhj4r0000gn/T/jsp-submission-update-l0t85s6o/verification196/sandbox.sb",
+        "/Users/jenwin/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lake",
+        "env",
+        "/private/var/folders/rh/rg0dlt911dl_2c1zyw9vhj4r0000gn/T/jsp-submission-update-l0t85s6o/verification196/exporter/.lake/build/bin/lean4export",
+        "Independent196",
+        "--",
+        "Bounty.target",
+        "Bounty.paper_main",
+        "checked196"
+      ],
+      "exit_code": 0,
+      "seconds": 13.434,
+      "output": "Erdos196.ndjson",
+      "sha256": "3a4c867bd23b1bdb1e42f3411b0d3b41825411c4beabdcffa9e4bb9c154c846c",
+      "bytes": 28198472,
+      "cwd": "/private/var/folders/rh/rg0dlt911dl_2c1zyw9vhj4r0000gn/T/jsp-submission-update-l0t85s6o/proof196/problems/erdos-196/lean/reproduction"
+    },
+    {
+      "label": "nanoda",
+      "argv": [
+        "/usr/bin/sandbox-exec",
+        "-f",
+        "/private/var/folders/rh/rg0dlt911dl_2c1zyw9vhj4r0000gn/T/jsp-submission-update-l0t85s6o/verification196/sandbox.sb",
+        "/Users/jenwin/.elan/toolchains/leanprover--lean4---v4.35.0-rc2/bin/nanoda_bin",
+        "/private/var/folders/rh/rg0dlt911dl_2c1zyw9vhj4r0000gn/T/jsp-submission-update-l0t85s6o/verification196/nanoda.json"
+      ],
+      "exit_code": 0,
+      "seconds": 1.629,
+      "output": "logs/nanoda.log",
+      "sha256": "daaba332779ea20cdeb47c644c78ce8bc0a5b46054ae23b20fe151245860752f",
+      "bytes": 1188,
+      "cwd": "/private/var/folders/rh/rg0dlt911dl_2c1zyw9vhj4r0000gn/T/jsp-submission-update-l0t85s6o/proof196/problems/erdos-196/lean/reproduction"
+    }
+  ],
+  "initial_source_hashes": {
+    "Erdos196.lean": "eb2badaeb31b7a65a368baae5a7ab6113415f8955b06e2e92307e0ebd1447cd8",
+    "PaperMain.lean": "054f022ed4df4f2df9ed84e71260a44e180288d37033abf777b86bb0da77507d",
+    "Audit.lean": "32b009fd736d87c765c47e29362ac821db151b95e1944dd30def8c6a2c5c706c",
+    "TaskSupport.lean": "58a80a223dbd7383d92eb2a57b1ec207c0991131a1a1bf24585a4452777c257e",
+    "lake-manifest.json": "cfca4fc0f267e330cf9482e5e7ad417dd7922f19929c7dceb01dd805ed09c15d"
+  },
+  "source_unchanged": true,
+  "completed_utc": "2026-10-10T05:02:46.185079+00:00",
+  "export_sha256": "3a4c867bd23b1bdb1e42f3411b0d3b41825411c4beabdcffa9e4bb9c154c846c",
+  "export_bytes": 28198472,
+  "post_run_source_unchanged": true,
+  "tools": {
+    "lean": {
+      "sha256": "1b370cfcbf44e80d1b004ab1b1ab9a4c73951f9f7c242140bcff9bc577576554"
+    },
+    "leanchecker": {
+      "sha256": "9b9a22ecb11e8e5962ddfa09ed547851e599495e7eeb5eba2ee82ccf5ec930a1"
+    },
+    "nanoda": {
+      "sha256": "85daddc584afe0d8fa28e18d4c566219bc3c8ddd8b0d43b90285a8f5b35faf2c"
+    },
+    "exporter": {
+      "sha256": "e775ccfbe86c08fa9fea1ec1fe45c46ed168cf48236ff8ba429aa28b05c0623e"
+    }
+  },
+  "host": {
+    "system": "macOS-26.6.2-arm64-arm-64bit",
+    "machine": "arm64",
+    "ram_bytes": "68719476736"
+  },
+  "review_note": "The first attempt to emit the independent audit object used the project root for an audit file outside it and exited 1. Corrected only --root to the separate audit directory; no submitted proof source changed. The successful bridge-object-retry, export, and Nanoda check are recorded separately."
+}

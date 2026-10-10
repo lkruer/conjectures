@@ -1,0 +1,7 @@
+{
+  "repository": "https://github.com/leanprover/lean4export",
+  "commit": "15f6055e299ad5b89345e533cc2192f4cc00f659",
+  "change": "lean-toolchain set to v4.33.1; exporter source unmodified",
+  "exit_code": 0,
+  "seconds": 11.831199584
+}

@@ -14,8 +14,9 @@ Jensen Kohlmeyer and Liam Kruer · September 9, 2026
 | Contribution | Counterexample to the four-term progression assertion (manuscript claim). |
 | Manuscript | [PDF, 7 pages](paper/proof.pdf) |
 | Manuscript date | September 9, 2026 |
+| Claimed completion | [September 9 service verification, linked to the identical proof](PRIORITY.md); priority review pending |
 | Manuscript review | Not independently reviewed in this repository |
-| Lean | [Build passing; scope recorded](lean/README.md), local verification October 8, 2026 |
+| Lean | [Fresh verification passed](verification/2026-10-10/report.md), including independent proof checks on October 10, 2026 |
 | Submission | [Public proof claim from September 14; JSP submission prepared](submission.md) |
 
 ## Problem and manuscript claim
@@ -36,7 +37,7 @@ Theorem 1.1 states the result. Sections 2–5 develop the finite extension argum
 
 `target` for the negation of `Erdos196.erdos_196`.
 
-See the [Lean record](lean/README.md) for the uploaded files, pinned environment, and current reproduction package. Previously reported checks in the manuscript are recorded separately from the fresh local checks. Read the [publication and attribution record](PUBLICATION-HISTORY.md), including Boon Suan Ho's earlier public paper and the limits of the manuscript date as priority evidence.
+See the [October 10 report and logs](verification/2026-10-10/report.md) and [completion/priority evidence](PRIORITY.md). See the [Lean record](lean/README.md) for the uploaded files, pinned environment, and current reproduction package. Previously reported checks in the manuscript are recorded separately from the fresh local checks. Read the [publication and attribution record](PUBLICATION-HISTORY.md), including Boon Suan Ho's earlier public paper and the limits of the manuscript date as priority evidence.
 
 ## References and acknowledgments
 
