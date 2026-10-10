@@ -1,0 +1,13 @@
+{
+  "observed_at_utc": "2026-10-10T05:58:48.077977+00:00",
+  "ho_github_url": "https://github.com/boonsuan/4ap",
+  "ho_github_api": "https://api.github.com/repos/boonsuan/4ap",
+  "ho_github_created_at": "2026-09-11T00:56:33Z",
+  "ho_github_response_sha256": "3f8beb9582822de55eca3437c1ca771ce21282f5f556cb3444e377fe7b6a0501",
+  "ho_github_response_date": "Sat, 10 Oct 2026 05:58:48 GMT",
+  "ho_initial_commit": "057d19da7abd21c91b46fe5194c9c32789fa62c8",
+  "ho_arxiv_url": "https://arxiv.org/abs/2609.12780v1",
+  "ho_arxiv_v1_submitted_at": "2026-09-11T12:33:11Z",
+  "arxiv_observation_method": "Submission history read on arXiv v1 abstract page on October 10, 2026.",
+  "scope": "Comparison against identified competing records; repository creation is not proof of the exact time its first complete proof was published. Earlier unlocated work is not ruled out; no inference of copying."
+}

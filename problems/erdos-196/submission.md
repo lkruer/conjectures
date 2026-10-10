@@ -6,15 +6,16 @@ The submitted construction and formalization are credited to Jensen Kohlmeyer ([
 
 The manuscript's Theorem 1.1 gives a bijection of all natural numbers avoiding increasing and decreasing four-term arithmetic progressions as subsequences. Sections 2–5 establish the finite extension construction, and Section 6 derives the infinite permutation. The formal target is `Bounty.Construction196.counterexample`, together with the exact catalogue-negation theorem `Bounty.target`.
 
-The [October 10 verification report and logs](verification/2026-10-10/report.md) record the new source and independent checks. The [priority statement](PRIORITY.md) claims completion by the external service's September 9 verification and supplies an executable connection to the identical accepted source.
+The [October 10 verification report and logs](verification/2026-10-10/report.md) record the new source and independent checks. The [priority statement](PRIORITY.md) claims earlier documented mathematical completion using the [independent September 9 Discord manuscript evidence](priority-evidence/2026-10-10/README.md), reinforced by the service's verification record and the exact accepted-source linkage.
 
-## Existing publication
+## Completion and publication history
 
+- Original Discord transmission: [September 9 message](https://discord.com/channels/@me/1547019042907226143/1547393457478307970), 23:49:09.443 UTC. The identical complete manuscript was shared in a direct message; attachment and CDN dates independently agree.
 - Original repository upload: [commit 8ede860e8fc90a300207a2c17e8aefe6167b3086](https://github.com/lkruer/conjectures/commit/8ede860e8fc90a300207a2c17e8aefe6167b3086), recorded September 14, 2026.
 - Public author claim: [Erdős Problems claim 311](https://www.erdosproblems.com/forum/thread/196/proof-claims#proof-claim-311), displayed September 14, 2026.
 - Earlier public result disclosed: Boon Suan Ho's [arXiv:2609.12780v1](https://arxiv.org/abs/2609.12780v1), submitted September 11, 2026.
 
-The manuscript date alone does not establish public priority. See the [full history and attribution record](PUBLICATION-HISTORY.md). No first-publication claim or award entitlement is asserted.
+The claim now rests on independently checked provider records tied to the exact manuscript, beyond its internal date. We request mathematical priority for the September 9 documented completion. The original Discord message was private; unrestricted public release and formalization priority are assessed separately under the Prize rules. See the [full history and attribution record](PUBLICATION-HISTORY.md).
 
 ## JSP record
 

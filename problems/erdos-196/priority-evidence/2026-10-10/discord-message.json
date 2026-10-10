@@ -1,0 +1,22 @@
+{
+  "source_url": "https://discord.com/channels/@me/1547019042907226143/1547393457478307970",
+  "observed_at_utc": "2026-10-10T05:58:10.377Z",
+  "observation_method": "Read-only inspection of original Discord web message in the author account; recorded DOM time and matching attachment link.",
+  "channel_kind": "Direct Message",
+  "channel_id": "1547019042907226143",
+  "message_id": "1547393457478307970",
+  "author_display_name": "JenWIN",
+  "timestamp_utc": "2026-09-09T23:49:09.443Z",
+  "displayed_local_time": "9/9/26, 7:49 PM",
+  "message_content": "just like before if you'd like drafted papers feel free to use / reference these",
+  "edited_marker_visible": false,
+  "attachment": {
+    "id": "1547393457180643369",
+    "filename": "Erdos196-Kohlmeyer-Kruer.pdf",
+    "displayed_size": "89.65 KB",
+    "url": "https://cdn.discordapp.com/attachments/1547019042907226143/1547393457180643369/Erdos196-Kohlmeyer-Kruer.pdf?ex=6acacef5&is=6ac97d75&hm=33ebb6ffdf0a679a314f0fb691b0ac9eda7ec9063b819ec6b74ac0e7745eac29&"
+  },
+  "screenshot": "discord-message.jpg",
+  "screenshot_note": "Cropped from the observed browser screenshot to the author-supplied message only; no text or image content was changed. Other conversation and recipient details omitted. The second attachment is outside this review.",
+  "access_note": "This is a private direct message, not an unrestricted public post. The link requires channel access."
+}

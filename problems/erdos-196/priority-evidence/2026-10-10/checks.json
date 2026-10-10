@@ -1,0 +1,22 @@
+{
+  "status": "PASS",
+  "pdf_sha256": "b8b5a37349fcbc3d1fa89842ea67b6798dcb58a256998bb6c5064f3a499a7097",
+  "pdf_bytes": 91799,
+  "lean_sha256": "e65c98a926ce4eca5df30277790c8b3dbcc630074ceaa24a551464951b3d2826",
+  "lean_bytes": 26497,
+  "message_snowflake_utc": "2026-09-09T23:49:09.443000+00:00",
+  "attachment_snowflake_utc": "2026-09-09T23:49:09.372000+00:00",
+  "cdn_last_modified_utc": "2026-09-09T23:49:09+00:00",
+  "conjectures_verified_at": "2026-09-09T23:36:51.116698Z",
+  "same_pdf_in_original_and_selected_commits": true,
+  "same_lean_payload_in_service_original_and_selected_proof": true,
+  "message_precedes_ho_repository_seconds": 90443.557,
+  "message_precedes_ho_arxiv_seconds": 132241.557,
+  "fresh_comparison": {
+    "kind": "live_discord_download",
+    "matches": true,
+    "observed_at_utc": "2026-10-10T05:58:54.096063+00:00",
+    "last_modified": "Wed, 09 Sep 2026 23:49:09 GMT"
+  },
+  "scope": "Consistency and exact file identity. Provider records supply historical dates; this script does not create a timestamp certificate or establish unrestricted public publication."
+}

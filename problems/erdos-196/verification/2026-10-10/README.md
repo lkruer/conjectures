@@ -1,6 +1,6 @@
 # October 10 verification evidence
 
-[Full report](report.md) · [Completion and priority statement](../../PRIORITY.md) · [Source-identity check](source-identity-result.json)
+[Full report](report.md) · [Completion and priority statement](../../PRIORITY.md) · [Source-identity check](source-identity-result.json) · [Independent September 9 evidence](../../priority-evidence/2026-10-10/README.md)
 
 This directory preserves the completed check of proof commit `bf058b903350eb8f873a22ab4a54b2e0faa9727d`. The source-build and audit drivers, raw logs, standard-axiom verdicts, independent checker configuration and source-built checker provenance are included. The later publication adds evidence and documentation; it does not revise the proof. The recorded paths identify the actual local run and can be adapted to another checkout. The project's portable reproduction instructions remain in `../../lean/reproduction/REPRODUCING.md`.
 

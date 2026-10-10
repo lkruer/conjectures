@@ -1,0 +1,13 @@
+HTTP/2 200
+date: Sat, 10 Oct 2026 05:57:29 GMT
+content-type: application/pdf
+content-length: 91799
+etag: "45b24f306f23de8ae9bf2b19a4d6c799"
+last-modified: Wed, 09 Sep 2026 23:49:09 GMT
+x-goog-generation: 1788997749425886
+x-goog-hash: crc32c=CdR5Ow==
+x-goog-hash: md5=RbJPMG8j3orpvysZpNbHmQ==
+x-goog-metageneration: 1
+x-goog-storage-class: STANDARD
+x-goog-stored-content-encoding: identity
+x-goog-stored-content-length: 91799

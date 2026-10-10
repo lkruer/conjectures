@@ -1,0 +1,50 @@
+{
+  "source_url": "https://cdn.discordapp.com/attachments/1547019042907226143/1547393457180643369/Erdos196-Kohlmeyer-Kruer.pdf?ex=6acacef5&is=6ac97d75&hm=33ebb6ffdf0a679a314f0fb691b0ac9eda7ec9063b819ec6b74ac0e7745eac29&",
+  "observed_at_utc": "2026-10-10T05:57:29.574524+00:00",
+  "retrieval_method": "curl HTTPS GET with default TLS certificate verification; no Discord account cookie or authorization header",
+  "status": 200,
+  "curl_exit": 0,
+  "bytes": 91799,
+  "sha256": "b8b5a37349fcbc3d1fa89842ea67b6798dcb58a256998bb6c5064f3a499a7097",
+  "channel_id": "1547019042907226143",
+  "attachment_id": "1547393457180643369",
+  "attachment_snowflake_utc": "2026-09-09T23:49:09.372000+00:00",
+  "response_headers": {
+    "date": [
+      "Sat, 10 Oct 2026 05:57:29 GMT"
+    ],
+    "content-type": [
+      "application/pdf"
+    ],
+    "content-length": [
+      "91799"
+    ],
+    "etag": [
+      "\"45b24f306f23de8ae9bf2b19a4d6c799\""
+    ],
+    "last-modified": [
+      "Wed, 09 Sep 2026 23:49:09 GMT"
+    ],
+    "x-goog-generation": [
+      "1788997749425886"
+    ],
+    "x-goog-hash": [
+      "crc32c=CdR5Ow==",
+      "md5=RbJPMG8j3orpvysZpNbHmQ=="
+    ],
+    "x-goog-metageneration": [
+      "1"
+    ],
+    "x-goog-storage-class": [
+      "STANDARD"
+    ],
+    "x-goog-stored-content-encoding": [
+      "identity"
+    ],
+    "x-goog-stored-content-length": [
+      "91799"
+    ]
+  },
+  "header_selection": "Only content, date, version and checksum headers retained. Response cookies and unrelated transport headers omitted.",
+  "interpretation": "Snowflake and Last-Modified are Discord/provider date evidence. GCS generation is an opaque version identifier; it is not interpreted as a timestamp. URL is/ex fields are URL issue/expiry dates, not upload dates."
+}

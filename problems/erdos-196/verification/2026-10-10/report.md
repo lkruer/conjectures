@@ -79,28 +79,15 @@ The 28,198,472-byte independent export was retained locally; its uncompressed SH
 
 ## Priority evidence
 
-The [Conjectures.io result](https://conjectures.io/results/e73b95f7-1d1b-42b5-a442-c07077741d73) records verification on **September 9, 2026**, an isolated replay on September 10, approval on September 11 and certification/publication on September 14. It names JenW1N and reports the service reward paid. That service decision is separate from the Justin Sun Prize.
+**October 10 evidence update: the complete submitted manuscript is independently corroborated on Discord on September 9 at 23:49:09 UTC.** The original message, its attachment ID and CDN Last-Modified agree. The downloaded 91,799-byte PDF is identical to the manuscript in the original September 14 upload and selected proof commit, with SHA-256 `b8b5a37349fcbc3d1fa89842ea67b6798dcb58a256998bb6c5064f3a499a7097`. See the [evidence report, receipt and screenshot](../../priority-evidence/2026-10-10/README.md) and [passing combined checks](../../priority-evidence/2026-10-10/checks.json).
 
-The service's downloadable source is **byte-for-byte identical** to both the preserved payload and the file in the original September 14 repository upload:
+The [Conjectures.io public result](https://conjectures.io/v1/results/e73b95f7-1d1b-42b5-a442-c07077741d73) records verification at **September 9, 23:36:51.116698 UTC**, isolated replay September 10, approval September 11 and certification/publication September 14. Its accepted Lean source, SHA-256 `e65c98a926ce4eca5df30277790c8b3dbcc630074ceaa24a551464951b3d2826`, is identical to the original upload and the selected payload; the documented import/namespace-only wrapper preserves the proof. This connects the historical service record to the checked formalization. Discord supplies separate corroboration of the complete mathematical manuscript's existence and transmission.
 
-```text
-e65c98a926ce4eca5df30277790c8b3dbcc630074ceaa24a551464951b3d2826
-```
+The sending message predates creation of [Ho's repository](https://github.com/boonsuan/4ap), September 11 at 00:56:33 UTC, by **25 hours, 7 minutes, 23.557 seconds**. It predates [Ho's arXiv v1](https://arxiv.org/abs/2609.12780v1), September 11 at 12:33:11 UTC, by **36 hours, 44 minutes, 1.557 seconds**. These are objective comparisons of identified records, not dates for anyone's private discovery. Ho's code was not independently compiled in this review.
 
-That is strong evidence connecting the earlier service record to this proof. It is stronger than relying on an internal manuscript date alone, but it does not establish that the complete proof was public on September 9.
+**The authors claim priority for the complete mathematical solution on the basis of the documented September 9 completion.** This new evidence strengthens that claim beyond the previous retrospective service record and internal PDF date. The original Discord post is a private direct message, so it does not establish unrestricted public publication on September 9. The Prize's public-evidence requirement and the genuine October 8 selected-commit anchor for formalization remain for organizer review. The [priority statement](../../PRIORITY.md) distinguishes those findings explicitly.
 
-| Event | Date and evidence |
-| --- | --- |
-| This proof's recorded service verification | September 9, 2026, service result linked above |
-| Ho's competing public Lean repository | [boonsuan/4ap](https://github.com/boonsuan/4ap), GitHub creation September 11 at 00:56:33 UTC; initial commit `057d19da7abd21c91b46fe5194c9c32789fa62c8` |
-| Ho's full-result paper | [arXiv 2609.12780v1](https://arxiv.org/abs/2609.12780v1), submitted September 11 at 12:33:11 UTC |
-| This original repository upload | [8ede860e8fc90a300207a2c17e8aefe6167b3086](https://github.com/lkruer/conjectures/commit/8ede860e8fc90a300207a2c17e8aefe6167b3086), recorded September 14 at 03:39:34 UTC |
-| This public forum claim | [Claim 311](https://www.erdosproblems.com/forum/thread/196/proof-claims#proof-claim-311), displayed September 14 |
-| Selected reproducible JSP version | October 8 repository version audited here |
-
-**Claimed completion date: September 9, 2026, supported by the external service record and the exact-source linkage below. Priority remains subject to organizer review.** Your recorded completion predates Ho's publication, while the documented public release follows it. The Prize compares mathematical contribution and formalization priority separately and requires corroborating public history; a PR opening time or self-set Git date is insufficient. Ho's competing code was identified but was not independently compiled in this review. No conclusion of copying or independence follows from the chronology alone.
-
-The bounded literature check also distinguished earlier partial results: Geneson's August 2026 paper explicitly separates its density results from a full enumeration; the classical three-term obstruction and five-term avoidance results do not settle the four-term question; restricted-difference results do not imply this unrestricted theorem. See the existing PR's linked literature, [priority evidence](priority-evidence.json), and the [completion and priority submission](../../PRIORITY.md).
+The bounded literature check distinguished earlier partial results: Geneson's August 2026 paper separates its density results from full enumeration; the classical three-term obstruction and five-term avoidance results do not settle the four-term question; restricted-difference results do not imply this unrestricted theorem. See the existing PR's linked literature and [earlier evidence manifest](priority-evidence.json).
 
 ## Submission status
 

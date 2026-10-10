@@ -1,0 +1,29 @@
+[
+  {
+    "requested_url": "https://conjectures.io/v1/results/e73b95f7-1d1b-42b5-a442-c07077741d73",
+    "observed_utc": "2026-10-10T05:56:55.236620+00:00",
+    "exit": 0,
+    "status": "200",
+    "error": "",
+    "bytes": 3230,
+    "sha256": "c174364a2961b907d7637219cd24313aec0fd4b2b92380c093ac4981a8f9781d"
+  },
+  {
+    "requested_url": "https://conjectures.io/v1/results/e73b95f7-1d1b-42b5-a442-c07077741d73/report",
+    "observed_utc": "2026-10-10T05:56:55.236868+00:00",
+    "exit": 0,
+    "status": "200",
+    "error": "",
+    "bytes": 1063,
+    "sha256": "849e5dff9554a7d25c8124c599bbc401b87564b8436aa49257e022e5ed0f0f23"
+  },
+  {
+    "requested_url": "https://conjectures.io/v1/results/e73b95f7-1d1b-42b5-a442-c07077741d73/solution",
+    "observed_utc": "2026-10-10T05:56:55.241172+00:00",
+    "exit": 0,
+    "status": "200",
+    "error": "",
+    "bytes": 27458,
+    "sha256": "6b6f6babfdb8940a0a8d22af18f1a3266dbaa4eef2c9bca583dfe6c151d4e8d1"
+  }
+]
