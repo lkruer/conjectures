@@ -30,3 +30,7 @@ The organizers must review the mathematics, reproduce the proof, reconcile attri
 ## Verified submission snapshot
 
 Source commit: `d42416ace335b42e05c6f46d250c869bce4b5239`, on branch `codex/erdos944-prize-submission`. [Fresh verification run](https://github.com/lkruer/conjectures/actions/runs/39160734681): successful build and 2,339-declaration transitive axiom audit. [Permanent report](lean/reproducible/verification/REPORT.md). The evidence commit only archives outputs and updates documentation; it does not change the tested proof.
+
+## Prepared original-author pull request
+
+[Full prepared PR text](PR_SUBMISSION.md). [Published catalog comparison](https://github.com/TheJustinSunPrize/awards/compare/main...lkruer:awards:codex/erdos944-original-authors). The connected GitHub integration refused PR creation with HTTP 403; the original-author PR has not yet been opened. This permission failure is separate from the successful proof verification.
