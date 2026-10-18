@@ -8,9 +8,9 @@ A home for manuscripts, formalizations, and review materials connected with [Erd
 
 ## Proof index
 
-**11 manuscripts · 11 Lean source files · 11 problem folders.** The [complete upload checklist](docs/upload-inventory.md#materials-still-to-upload) tracks all 12 entries on the author-provided list. One PDF and two Lean counterparts remain to be supplied.
+**11 manuscripts · 11 original companion Lean files · 11 problem folders**, plus the reproducible Erdős 944 package. The [complete upload checklist](docs/upload-inventory.md#materials-still-to-upload) tracks all 12 entries on the author-provided list. One PDF and two Lean counterparts remain to be supplied.
 
-The descriptions below reflect the uploaded materials. Manuscript-reported verification has not yet been independently reproduced in this repository.
+The descriptions below reflect the uploaded materials. Verification is recorded per problem; Erdős 944 now has a fresh, pinned build and transitive axiom audit. Other rows retain their existing status.
 
 | Problem | Result / title | Proof PDF | Lean | Submission |
 | :--- | :--- | :--- | :--- | :--- |
@@ -20,7 +20,7 @@ The descriptions below reflect the uploaded materials. Manuscript-reported verif
 | [Erdős #196](problems/erdos-196/) | Permutations avoiding four-term progressions | [PDF](problems/erdos-196/paper/proof.pdf) | [Source; not checked](problems/erdos-196/lean/) | Draft |
 | [Erdős #272](problems/erdos-272/) | Arithmetic-intersection families: linear error | [PDF](problems/erdos-272/paper/proof.pdf) | [Source; not checked](problems/erdos-272/lean/) | Draft |
 | [Erdős #354](problems/erdos-354/) | Two floor-doubling sequences, part I | [PDF](problems/erdos-354/paper/proof.pdf) | [Source; not checked](problems/erdos-354/lean/) | Draft |
-| [Erdős #944](problems/erdos-944/) | Critical graphs: existence for all k ≥ 4 | [PDF](problems/erdos-944/paper/proof.pdf) | [Source; not checked](problems/erdos-944/lean/) | Draft |
+| [Erdős #944](problems/erdos-944/) | Critical graphs: existence for all k ≥ 4 | [PDF](problems/erdos-944/paper/proof.pdf) | [Verified package](problems/erdos-944/lean/reproducible/verification/REPORT.md) | Ready for prize review |
 | [Green #15](problems/green-15/) | Lipschitz graph without three-term progressions | [PDF](problems/green-15/paper/proof.pdf) | [Source; not checked](problems/green-15/lean/) | Draft |
 | [Green #40 (f(2))](problems/green-40/) | Binary linear covering codes of radius two | [PDF](problems/green-40/paper/proof.pdf) | **[Not uploaded](problems/green-40/lean/)** | Draft |
 | [Green #47](problems/green-47/) | Exact quadratic-containment counterexample | [PDF](problems/green-47/paper/proof.pdf) | [Source; not checked](problems/green-47/lean/) | Draft |

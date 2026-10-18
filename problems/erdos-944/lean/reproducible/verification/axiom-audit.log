@@ -1,0 +1,20 @@
+PASS: 2339 proof declarations checked; every transitive axiom is one of propext, Classical.choice, Quot.sound. No sorryAx or additional axioms.
+'Bounty.target' depends on axioms: [propext, Classical.choice, Quot.sound]
+AxiomAudit.lean:22:0: warning: This file has no module docstring (`/-! ... -/`). Add one after the imports to document the file.
+
+Note: This linter can be disabled with `set_option linter.style.moduleDocstring false`
+'Erdos944Prize.finite_all' depends on axioms: [propext, Classical.choice, Quot.sound]
+AxiomAudit.lean:23:0: warning: This file has no module docstring (`/-! ... -/`). Add one after the imports to document the file.
+
+Note: This linter can be disabled with `set_option linter.style.moduleDocstring false`
+'Erdos944Prize.target' depends on axioms: [propext, Classical.choice, Quot.sound]
+AxiomAudit.lean:24:0: warning: This file has no module docstring (`/-! ... -/`). Add one after the imports to document the file.
+
+Note: This linter can be disabled with `set_option linter.style.moduleDocstring false`
+'Erdos944Prize.benchmark_target' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos944Prize.benchmark_type_check' depends on axioms: [propext, Classical.choice, Quot.sound]
+theorem Erdos944Prize.target.{u} : ∀ k ≥ 4,
+  ∀ r ≥ 1, ∃ V G, Finite V ∧ G.IsCritical k ∧ ∀ (edges : Set (Sym2 V)), G.IsCriticalEdges edges → r < edges.ncard :=
+fun k hk r _hr =>
+  Exists.casesOn (Erdos944Prize.finite_all hk r) fun V h =>
+    Exists.casesOn h fun G h => And.casesOn h fun hfinite hG => Exists.intro V (Exists.intro G ⟨hfinite, hG⟩)

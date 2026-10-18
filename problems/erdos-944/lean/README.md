@@ -26,3 +26,7 @@ Use the [package README](reproducible/README.md) for exact commands, source inte
 Reference conjecture files retain their original admitted statements. They are reference material, not accepted proof dependencies: every submitted final theorem must have a transitive axiom report containing only `propext`, `Classical.choice`, and `Quot.sound`, with no `sorryAx` or added assumptions. The explicit statement check makes the submitted conclusion inspectable independently of the reference file’s answer notation.
 
 Local compiler and axiom checks are evidence for review. They do not constitute an independent human proof review, a Justin Sun Prize verification, or an award decision.
+
+## Completed check — 18 October 2026
+
+[GitHub Actions run 39160734681](https://github.com/lkruer/conjectures/actions/runs/39160734681) passed at source commit `d42416ace335b42e05c6f46d250c869bce4b5239`. The [report](reproducible/verification/REPORT.md) and [manifest](reproducible/verification/manifest.json) retain all dependency revisions and the exact results. All five final targets report only the three standard axioms; the namespace audit checked 2,339 declarations. The downloaded artifact and all 204 source checksums were independently matched to the submitted files.

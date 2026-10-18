@@ -26,3 +26,7 @@ The original-author contribution submission is distinct: it registers the origin
 ## Remaining organizer and author steps
 
 The organizers must review the mathematics, reproduce the proof, reconcile attribution and priority, and accept the contribution before a normal legacy award claim can proceed. Each actual claimant then submits their own claim and completes personal identity verification and written confirmation. No proxy claim, payment instructions, or private identity material is included here. The organizers publish the candidate and start the applicable 14-day review; no clock is claimed to have started merely from this repository or submission.
+
+## Verified submission snapshot
+
+Source commit: `d42416ace335b42e05c6f46d250c869bce4b5239`, on branch `codex/erdos944-prize-submission`. [Fresh verification run](https://github.com/lkruer/conjectures/actions/runs/39160734681): successful build and 2,339-declaration transitive axiom audit. [Permanent report](lean/reproducible/verification/REPORT.md). The evidence commit only archives outputs and updates documentation; it does not change the tested proof.
