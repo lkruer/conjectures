@@ -8,7 +8,7 @@ open Lean Elab Command in
 run_cmd do
   let env ← getEnv
   let allowed : Array Name := #[``propext, ``Classical.choice, ``Quot.sound]
-  let mut count := 0
+  let mut count : Nat := 0
   for (name, _info) in env.constants.toList do
     if (`Bounty.Erdos944Proof).isPrefixOf name ||
        (`Erdos944Prize).isPrefixOf name || name == `Bounty.target then
