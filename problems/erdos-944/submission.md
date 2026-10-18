@@ -1,43 +1,28 @@
-# Submission — Erdős #944
+# Original-author submission — Erdős #944 / JSP-000785
 
-[Back to the problem](README.md) · [Submission guide](../../docs/submission-guide.md)
+[Problem](README.md) · [Manuscript](paper/proof.pdf) · [Reproduction package](lean/reproducible/) · [Source history](SOURCE_HISTORY.md)
 
-**Status: Draft. No announcement has been recorded.**
+The original mathematical and Lean contributions are credited to **Liam Kruer (`lkruer`) and Jensen Kohlmeyer (`JENW1N`)**. This package is prepared from the original author-controlled repository for review by the Justin Sun Prize. Preparation, submission, and even a successful proof check do not announce an award.
 
-## Materials
+## Contribution submitted
 
-| Item | Record |
-| :--- | :--- |
-| Official problem | [Erdős #944](https://www.erdosproblems.com/944) |
-| Manuscript | [PDF](paper/proof.pdf), September 10, 2026 |
-| Authors | Liam Kruer and Jensen Kohlmeyer |
-| Lean | [Uploaded sources](lean/) — repository verification pending |
-| Proof snapshot for submission | Not frozen; current links above follow the repository branch. |
+For every `k ≥ 4` and `r ≥ 1`, there exists a finite `k`-vertex-critical graph whose chromatic number cannot be lowered by removing at most `r` unordered edges. The new mathematical contribution is the four-color construction for arbitrary `r`. The earlier higher-color mathematics is credited to **Ema Skottová and Raphael Steiner**, and the Lean source covers every required color count.
 
-## Draft summary for author review
+The historical manuscript has Theorem 1.1 for four colors and Corollary 1.2 for all colors. Its OpenAI Codex assistance disclosure is retained. Earlier `r=1` work by Alex Chan and Kenta Kitamura retains its credit. The submitted existence theorem does not claim peilinliu66-dev’s later prescribed-order extension.
 
-**Title:** Vertex-critical four-chromatic graphs with no small critical edge set
+## Evidence and verification
 
-**Result:** The manuscript claims a four-color construction and combines it with the higher-color result attributed to Skottova and Steiner. The supplied Lean source targets the existence statement for every k ≥ 4.
+- The exact manuscript is also published at [jenwin.io](https://jenwin.io/papers/erdos-944.pdf).
+- [Source history](SOURCE_HISTORY.md) identifies the manuscript, original September repository snapshot, accepted proof body, and coauthor’s later reproducible edition without conflating their dates or hashes.
+- The [reproduction package](lean/reproducible/) supplies pinned Lean/Mathlib dependencies, the accepted body, an explicit finite-existence theorem, integrity checks, and a transitive axiom audit. Only the recorded successful run establishes a completed check; a pending workflow is not a verification result.
+- The [separate Conjectures.io result](https://conjectures.io/results/e7afff2c-bb07-4fa8-92b6-67a530aaad70) records acceptance on 11 September and public certification on 16 September 2026. Its award does not establish Justin Sun Prize eligibility or payment.
 
-**Proof idea:** Punctured cyclic colorings, an integral height character, a winding inequality, and Chinese remainder parameters produce the four-color graphs; a separate higher-color construction completes the existence statement.
+## Related Justin Sun Prize records
 
-**Scope:** This is the existence statement for all k ≥ 4 and r ≥ 1. The manuscript does not assert the stronger statement about every sufficiently large graph order. Its higher-color construction is credited to prior work.
+[PR #4668](https://github.com/TheJustinSunPrize/awards/pull/4668) contains the later prescribed-order extension and integration. The original coauthors already supplied [chronology evidence](https://github.com/TheJustinSunPrize/awards/pull/4668#issuecomment-6094259665) and [original-source evidence](https://github.com/TheJustinSunPrize/awards/pull/4668#issuecomment-6094312797). [Issue #5002](https://github.com/TheJustinSunPrize/awards/issues/5002) asks for review and is not an award claim.
 
-**Formalization:** The accompanying sources are available in the repository. The manuscript describes prior checks; this repository has not reproduced them yet.
+The original-author contribution submission is distinct: it registers the original complete existence proof and original formalization from `lkruer`, with Jensen’s coauthorship retained. It requests separate review of each contribution’s provenance and scope. It does not seek credit for the later prescribed-order extension or erase prior work.
 
-**Assistance disclosure:** The manuscript credits substantial assistance from OpenAI Codex in proof development, Lean formalization, and manuscript preparation. Preserve the manuscript’s specific acknowledgments in any announcement.
+## Remaining organizer and author steps
 
-## Before posting
-
-- [x] The supplied PDF and its title, authors, and date are recorded.
-- [x] The availability of the supplied Lean files is accurately recorded.
-- [ ] Recheck the current problem statement and relevant literature.
-- [ ] Complete author review of the argument and any remaining gaps.
-- [ ] Confirm the precise scope and evidence behind any verification claims.
-- [ ] Freeze the version to share and replace the current links with commit permalinks.
-- [ ] Check the current site guidance and approve the final announcement text.
-
-## Submission and follow-up history
-
-No submissions or site references recorded. Add the date, destination or comment permalink, and proof revision after an actual announcement.
+The organizers must review the mathematics, reproduce the proof, reconcile attribution and priority, and accept the contribution before a normal legacy award claim can proceed. Each actual claimant then submits their own claim and completes personal identity verification and written confirmation. No proxy claim, payment instructions, or private identity material is included here. The organizers publish the candidate and start the applicable 14-day review; no clock is claimed to have started merely from this repository or submission.

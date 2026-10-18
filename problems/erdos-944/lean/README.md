@@ -1,44 +1,28 @@
 # Lean formalization — Erdős #944
 
-[Back to the problem](../README.md) · [Verification guide](../../../docs/lean-verification.md)
+[Back to the problem](../README.md) · [Source history](../SOURCE_HISTORY.md) · [Reproduction package](reproducible/)
 
-**Status: Uploaded; not checked.**
+The original authors are **Liam Kruer (`lkruer`) and Jensen Kohlmeyer (`JENW1N`)**. OpenAI Codex assisted with proof development and formalization. The higher-color mathematics of Skottová and Steiner retains its attribution.
 
-## Supplied source
+## Sources
 
-| File | Role | Lines |
-| :--- | :--- | ---: |
-| [erdos944.lean](erdos944.lean) | All-color existence target | 9,548 |
+| Source | Role |
+| --- | --- |
+| [erdos944.lean](erdos944.lean) | Historical September standalone source, preserved unchanged. Its original upload lacked the full task environment. |
+| [reproducible/](reproducible/) | Exact accepted proof body, standalone wrapper, explicit finite-existence statement check, frozen local reference sources, and pinned Lean/Mathlib dependencies. |
 
-The supplied file includes its imports of `FormalConjectures.ErdosProblems.«944»` and `TaskSupport` and the enclosing `Bounty` namespace. The imported task project was not included. Section 8 calls the standalone file `Solution.lean`; the upload is preserved as `erdos944.lean`.
+These sources are different versions. The historical file’s SHA-256 is `b89b43ce3470e9a3c51164f58f401a038260b0493e167fb6d8a5cf608bffd630`; the accepted proof body’s SHA-256 is `8bf7cd0e83463e5f304ad848921c5078d57e8f3411050e705c69a69822abecd5`. The difference includes proof details, not just imports. Do not transfer a verification claim between versions without checking the selected version.
 
-## Target and scope
+## Statement
 
-`Bounty.target` for `Erdos944.erdos_944`.
+The original target is `Bounty.target`, matching the frozen Formal Conjectures statement for Erdős 944. The package also checks a literal statement of finite graph existence for every `k ≥ 4` and `r ≥ 1`. The underlying predicate requires vertex criticality and that every edge set whose deletion lowers the chromatic number has cardinality greater than `r`.
 
-Principal declarations observed in the supplied source: `Bounty.Erdos944Proof.erdos944_four`, `erdos944_five`, `erdos944_ge_six`, and `erdos944_all`.
+The statement is existence of a graph for each pair of parameters. It does not assert existence at every sufficiently large order; peilinliu66-dev’s later prescribed-order extension remains separately credited.
 
-This is the existence statement for all k ≥ 4 and r ≥ 1. The manuscript does not assert the stronger statement about every sufficiently large graph order. Its higher-color construction is credited to prior work.
+## Reproduction and verification
 
-## Reported environment and earlier checks
+Use the [package README](reproducible/README.md) for exact commands, source integrity checks, and actual recorded results. The package pins Lean 4.33.1 and Mathlib `0df444a360eaa60ab8c11dca51a86af692955474` and includes the required frozen task/reference sources with their notices.
 
-The manuscript reports Lean **4.33.1** (compiler commit `819816b2e0a3bf405af45ae5c7af2491d8f5bee6`), Formal Conjectures `8432eac998110a563e03df65a28c117e97c8c142`, and mathlib `0df444a360eaa60ab8c11dca51a86af692955474`.
+Reference conjecture files retain their original admitted statements. They are reference material, not accepted proof dependencies: every submitted final theorem must have a transitive axiom report containing only `propext`, `Classical.choice`, and `Quot.sound`, with no `sorryAx` or added assumptions. The explicit statement check makes the submitted conclusion inspectable independently of the reference file’s answer notation.
 
-Section 8 reports compilation and axiom checks for 570 theorems in a 9,548-line source. The supplied file has 9,548 lines. The reported `validation.json` and finite-check program were not included, and the reported checks have not been reproduced here. See the [manuscript, Section 8](../paper/proof.pdf).
-
-## Repository verification record
-
-| Field | Record |
-| :--- | :--- |
-| Source revision built | Not checked |
-| Build commands executed | None |
-| Build result | Not run |
-| Kernel / axiom audit | Not run |
-| Target correspondence | Not independently reviewed |
-| File integrity | Uploaded source bytes matched the original files; see [SHA256SUMS](../SHA256SUMS). |
-
-## Materials still needed for reproduction
-
-The task project, `TaskSupport`, `validation.json`, and supplementary exact-arithmetic program described in the manuscript were not supplied.
-
-No `lean-toolchain`, `lakefile.toml` / `lakefile.lean`, or `lake-manifest.json` was supplied with this problem. Add the original project or task bundle before recording an independently reproduced build. The uploaded proof text has not been edited to guess the missing environment.
+Local compiler and axiom checks are evidence for review. They do not constitute an independent human proof review, a Justin Sun Prize verification, or an award decision.

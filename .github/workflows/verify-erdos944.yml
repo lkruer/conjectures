@@ -1,0 +1,42 @@
+name: Verify original Erdos 944 proof
+
+on:
+  push:
+    branches: [codex/erdos944-prize-submission]
+    paths:
+      - problems/erdos-944/lean/reproducible/**
+      - .github/workflows/verify-erdos944.yml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - name: Check out exact source
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+      - name: Install pinned Elan
+        shell: bash
+        run: |
+          curl --fail --silent --show-error --location --retry 3 \
+            https://raw.githubusercontent.com/leanprover/elan/v4.2.4/elan-init.sh \
+            --output "$RUNNER_TEMP/elan-init.sh"
+          sh "$RUNNER_TEMP/elan-init.sh" -y --default-toolchain none
+          echo "$HOME/.elan/bin" >> "$GITHUB_PATH"
+      - name: Build exact proof and audit transitive axioms
+        shell: bash
+        working-directory: problems/erdos-944/lean/reproducible
+        run: ./verify.sh
+      - name: Preserve verification evidence
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: erdos944-verification
+          path: |
+            problems/erdos-944/lean/reproducible/verification/
+            problems/erdos-944/lean/reproducible/SOURCE_SHA256SUMS
+          if-no-files-found: warn
+          retention-days: 90
