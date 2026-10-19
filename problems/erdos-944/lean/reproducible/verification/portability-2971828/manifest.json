@@ -1,0 +1,77 @@
+{
+  "status": "verified",
+  "verified_at_utc": "2026-10-19T00:48:05.080867+00:00",
+  "repository_commit": "297182848eb4c226f454804dd1eabdd741ef0863",
+  "github_sha": "297182848eb4c226f454804dd1eabdd741ef0863",
+  "github_run_id": "39182052094",
+  "github_run_attempt": "1",
+  "package_path": "problems/erdos-944/lean/reproducible",
+  "source_manifest_sha256": "0b68237633c256548a5272d73f2053091095cbe1cc0bef090abdf8ca1463d60d",
+  "platform": "Linux-6.17.0-1022-azure-x86_64-with-glibc2.39",
+  "lean_version": "Lean (version 4.33.1, x86_64-unknown-linux-gnu, commit 819816b2e0a3bf405af45ae5c7af2491d8f5bee6, Release)",
+  "lake_version": "Lake version 5.0.0-src+819816b (Lean version 4.33.1)",
+  "proof_declarations_audited": 2339,
+  "permitted_transitive_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "additional_axioms_or_sorryAx": false,
+  "dependencies": [
+    {
+      "name": "mathlib",
+      "revision": "0df444a360eaa60ab8c11dca51a86af692955474",
+      "url": "https://github.com/leanprover-community/mathlib4.git"
+    },
+    {
+      "name": "plausible",
+      "revision": "b7eb3304aeae834b12dda98993a37f6a41f6f0bb",
+      "url": "https://github.com/leanprover-community/plausible"
+    },
+    {
+      "name": "LeanSearchClient",
+      "revision": "5f4d51b81cbd3f6b32b156bfad9056621a040404",
+      "url": "https://github.com/leanprover-community/LeanSearchClient"
+    },
+    {
+      "name": "importGraph",
+      "revision": "16f02aa7642864af59f1ff0e384a015994db9118",
+      "url": "https://github.com/leanprover-community/import-graph"
+    },
+    {
+      "name": "proofwidgets",
+      "revision": "4be2e3d5087eeb272cf5a8853b8f9dd025ef5957",
+      "url": "https://github.com/leanprover-community/ProofWidgets4"
+    },
+    {
+      "name": "aesop",
+      "revision": "3448c0bcc5ce01b2d1546e483ec3620e32df3d0e",
+      "url": "https://github.com/leanprover-community/aesop"
+    },
+    {
+      "name": "Qq",
+      "revision": "92c15be17b7caf78c2ad767ec40f89052d908d81",
+      "url": "https://github.com/leanprover-community/quote4"
+    },
+    {
+      "name": "batteries",
+      "revision": "4488d40d070b9700d4d5a6aa342f0d40c31b2a2d",
+      "url": "https://github.com/leanprover-community/batteries"
+    },
+    {
+      "name": "Cli",
+      "revision": "6130a47896ce867c6a4a55373441e59e565bad0f",
+      "url": "https://github.com/leanprover/lean4-cli"
+    }
+  ],
+  "commands": [
+    "lake exe cache get",
+    "lake build PrizeSubmission AxiomAudit",
+    "lake env lean AxiomAudit.lean"
+  ],
+  "original_source_commit": "caa0b07847cc94a071215de82036be4b5805ee0c",
+  "original_source_hashes": {
+    "accepted-proof-body.lean.txt": "8bf7cd0e83463e5f304ad848921c5078d57e8f3411050e705c69a69822abecd5",
+    "Solutions/Erdos944.lean": "f10e4b93691bde98c457e3a95bf8cc92ece6d883dd9795beb92a1d2d7ec343a4"
+  }
+}
