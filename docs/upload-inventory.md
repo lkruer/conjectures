@@ -2,16 +2,15 @@
 
 [Back to the proof index](../README.md#proof-index)
 
-The repository contains **eleven PDFs and eleven Lean source files across eleven problem folders**. The author’s current list contains **12 entries: eight Erdős problems and four Green problems**. This inventory records file availability and the supplied scope labels; proof verification is tracked separately.
+The repository contains **eleven PDFs and twelve Lean source files across eleven problem folders**. The author’s current list contains **12 entries: eight Erdős problems and four Green problems**. This inventory records file availability and the supplied scope labels; proof verification is tracked separately. The [2026-10-18 submission audit](submission-audit-2026-10-18.md) records public submission links and accepted-source comparisons.
 
 ## Materials still to upload
 
-**One PDF and two Lean counterparts remain.**
+**One PDF and one Lean counterpart remain, both for Erdős #18.**
 
 | Problem | Still needed |
 | :--- | :--- |
 | Erdős #18 | PDF and Lean |
-| [Green #40 (f(2))](../problems/green-40/) | Lean only (`Green40.lean`, as named in the PDF) |
 
 These totals count missing PDF/Lean counterparts. Erdős 108 has both, but its PDF references `paper_main` and `arcGraph_triangle_free`, which are absent from the previously uploaded Lean file. A matching source revision or clarification is still needed; see the [source correspondence record](../problems/erdos-108/lean/README.md#manuscript-correspondence). Additional project and verification materials are tracked separately below.
 
@@ -28,7 +27,7 @@ These totals count missing PDF/Lean counterparts. Erdős 108 has both, but its P
 | [Erdős #354](../problems/erdos-354/) | Part (i), multiplier 2 | [Present](../problems/erdos-354/paper/proof.pdf) | [1 file](../problems/erdos-354/lean/) |
 | [Erdős #944](../problems/erdos-944/) | Existence statement | [Present](../problems/erdos-944/paper/proof.pdf) | [1 file](../problems/erdos-944/lean/) |
 | [Green #15](../problems/green-15/) | Lipschitz graph | [Present](../problems/green-15/paper/proof.pdf) | [1 file](../problems/green-15/lean/) |
-| [Green #40](../problems/green-40/) | f(2) = 1 | [Present](../problems/green-40/paper/proof.pdf) | **Not supplied** |
+| [Green #40](../problems/green-40/) | f(2) = 1 | [Present](../problems/green-40/paper/proof.pdf) | [1 recovered file](../problems/green-40/lean/) |
 | [Green #47](../problems/green-47/) | Exact-containment formulation | [Present](../problems/green-47/paper/proof.pdf) | [1 file](../problems/green-47/lean/) |
 | [Green #51](../problems/green-51/) | One-half density (1/2) | [Present](../problems/green-51/paper/proof.pdf) | [1 file](../problems/green-51/lean/) |
 
@@ -44,7 +43,7 @@ These totals count missing PDF/Lean counterparts. Erdős 108 has both, but its P
 | [Erdős #354](../problems/erdos-354/) | `erdos354-Kohlmeyer-Kruer.pdf` | 13 | `lean354` |
 | [Erdős #944](../problems/erdos-944/) | `erdos944-kruer-kohlmeyer (2).pdf` | 13 | `erdos944.lean` |
 | [Green #15](../problems/green-15/) | `Green15-Kohlmeyer-Kruer.pdf` | 8 | `Green15.lean` |
-| [Green #40](../problems/green-40/) | `green40-covering-codes.pdf` | 8 | **Not supplied** |
+| [Green #40](../problems/green-40/) | `green40-covering-codes.pdf` | 8 | `Main.lean` (accepted public download recovered 2026-10-18; PDF names standalone companion `Green40.lean`) |
 | [Green #47](../problems/green-47/) | `Green47-Kohlmeyer-Kruer (2).pdf` | 7 | `Green47-COUNTEREXAMPLE-UPLOAD.lean` |
 | [Green #51](../problems/green-51/) | `green51-one-half (1).pdf` | 7 | `green51onehalf.lean` |
 
@@ -57,6 +56,7 @@ These totals count missing PDF/Lean counterparts. Erdős 108 has both, but its P
 - Green 47’s PDF and source address exact containment. They explicitly exclude the version allowing finitely many exceptional elements.
 - Erdős 272’s `Main.lean` is the supplied submission body; its original wrapper is still needed for reproduction.
 - Green 15’s `Green15.lean` is a submission body whose validator supplies imports and the enclosing namespace. Green 51’s `green51onehalf.lean` includes its imports and `Bounty` namespace; its filename is preserved even though the manuscript calls the main proof `Solution.lean`.
+- Green 40's `Main.lean` preserves the filename and bytes of its accepted public submission download. Its [Lean record](../problems/green-40/lean/README.md) records the retrieval date, SHA-256, external certificate, and missing wrapper. This recovery does not establish a local build.
 
 ## Materials needed to reproduce the Lean checks
 
@@ -72,7 +72,7 @@ Uploaded Lean sources have not been independently compiled here. Original toolch
 | [Erdős #354](../problems/erdos-354/lean/) | Task project and support, `Audit.lean`, `verify.py`, and `verification.json`. |
 | [Erdős #944](../problems/erdos-944/lean/) | Task project and support, `validation.json`, and the supplementary finite-check program described in the PDF. |
 | [Green #15](../problems/green-15/lean/) | Main source present. The trusted `SolutionHeader.lean.txt` and `SolutionFooter.lean.txt`, original task/project configuration, and validation record remain to be supplied. |
-| [Green #40](../problems/green-40/lean/) | The PDF names `Green40.lean` as the main proof. Also supply the original pinned project, `TaskSupport`, and the verification record and reproduction instructions described in Section 8. |
+| [Green #40](../problems/green-40/lean/) | Accepted submission body present as `Main.lean`; still supply the original pinned project, trusted wrapper, `TaskSupport`, and the verification record and reproduction instructions described in Section 8. |
 | [Green #47](../problems/green-47/lean/) | The main submission body is present. The original task wrapper, problem definitions, `TaskSupport`, pinned project, standalone companion, and verification reports were not included. |
 | [Green #51](../problems/green-51/lean/) | Main source present as `green51onehalf.lean` (1,925 lines). The manuscript’s `PaperTheorem.lean`, `CheckGreen51.lean`, pinned task project with `TaskSupport`, and companion verification report remain to be supplied. |
 

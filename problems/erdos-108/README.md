@@ -16,7 +16,7 @@ Jensen Kohlmeyer and Liam Kruer · September 15, 2026
 | Manuscript date | September 15, 2026 |
 | Manuscript review | Not independently reviewed in this repository |
 | Lean | Uploaded; not checked |
-| Submission | Draft; no announcement recorded |
+| Submission | [Submitted to JSP](submission.md) |
 
 ## Result and scope
 
