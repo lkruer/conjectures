@@ -2,16 +2,16 @@
 
 [Back to the problem](README.md)
 
-**Status: Draft. No announcement has been recorded.**
+**Status: External certificate recorded.** [Current record](https://conjectures.io/results/8186c13b-077f-45bb-8702-870f1dab27e3) · [Dated audit](../../docs/submission-audit-2026-10-18.md)
 
 | Item | Record |
 | :--- | :--- |
 | Problem source | [Ben Green, *100 open problems*](https://people.maths.ox.ac.uk/greenbj/papers/open-problems.pdf), Problem 40 |
 | Manuscript | [PDF](paper/proof.pdf), September 15, 2026 |
 | Authors | Jensen Kohlmeyer and Liam Kruer |
-| Lean | Not uploaded; the PDF names `Green40.lean`. See the [Lean record](lean/README.md). |
-| Submission destination | Not recorded |
-| Proof snapshot | Not frozen |
+| Lean | [Accepted submission body](lean/Main.lean), recovered unchanged on 2026-10-18; see the [Lean record](lean/README.md). |
+| Submission destination | [Conjectures.io result](https://conjectures.io/results/8186c13b-077f-45bb-8702-870f1dab27e3) |
+| Proof snapshot | Public accepted-source download and SHA-256 recorded in the Lean record; manuscript announcement links are not frozen. |
 
 ## Summary for author review
 
@@ -19,15 +19,17 @@
 
 **Proof idea:** Iterated quadratic maps and a repair of their graphs provide additive sum bases; parity-check columns turn these into covering codes with the required density limit.
 
-**Verification:** Local checks are reported in Section 8. Repository reproduction has not been performed.
+**Verification:** Local checks are reported in Section 8. The public Conjectures.io certificate records passing verification for its accepted submission body. Repository reproduction has not been performed.
 
 ## Before sharing
 
-- [ ] Supply the Lean source and supporting project files.
+- [x] Recover and checksum the accepted Lean submission body.
+- [ ] Supply the supporting project files and trusted wrapper for local reproduction.
 - [ ] Complete author review of the argument and exact problem formulation.
 - [ ] Confirm the evidence and scope behind formal-verification claims.
 - [ ] Record the intended destination and prepare the announcement, acknowledgments, and commit permalinks.
 
 ## History
 
-No submissions recorded. Add the date, destination, and proof revision after an actual announcement.
+- **2026-09-15:** Conjectures.io records Lean verification of JenW1N's submission; its review was approved on 2026-09-16 and certified on 2026-09-17. [Public certificate](https://conjectures.io/results/8186c13b-077f-45bb-8702-870f1dab27e3).
+- **2026-10-18:** Recovered the public accepted source unchanged, recorded its checksum and external provenance, and retained local verification as pending. See the [submission audit](../../docs/submission-audit-2026-10-18.md). This history does not record a separate manuscript announcement or JSP submission for Green #40.

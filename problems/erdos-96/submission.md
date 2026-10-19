@@ -2,7 +2,7 @@
 
 [Back to the problem](README.md) · [Submission guide](../../docs/submission-guide.md)
 
-**Status: Draft. No announcement has been recorded.**
+**Status: External certificate recorded.** [Current record](https://conjectures.io/results/7ffd1c09-2912-4c4c-a7ff-a4faa263f517) · [Dated audit](../../docs/submission-audit-2026-10-18.md)
 
 ## Materials
 
@@ -40,4 +40,4 @@
 
 ## Submission and follow-up history
 
-No submissions or site references recorded. Add the date, destination or comment permalink, and proof revision after an actual announcement.
+- **2026-10-18 record:** [Conjectures.io certificate](https://conjectures.io/results/7ffd1c09-2912-4c4c-a7ff-a4faa263f517). See the [dated submission audit](../../docs/submission-audit-2026-10-18.md) for source identity and scope. This records the public submission or certificate, without inferring a separate manuscript announcement.

@@ -2,7 +2,7 @@
 
 [Back to the problem](README.md) · [Submission guide](../../docs/submission-guide.md)
 
-**Status: Draft. No announcement has been recorded.**
+**Status: Submitted to JSP.** [Original-author PR #5110](https://github.com/TheJustinSunPrize/awards/pull/5110) · [Related extension PR #4668](https://github.com/TheJustinSunPrize/awards/pull/4668) · [Dated audit](../../docs/submission-audit-2026-10-18.md)
 
 ## Materials
 
@@ -40,4 +40,4 @@
 
 ## Submission and follow-up history
 
-No submissions or site references recorded. Add the date, destination or comment permalink, and proof revision after an actual announcement.
+- **2026-10-18:** Filed the original-author submission [JSP-000785: original Kruer-Kohlmeyer solution and Lean proof, PR #5110](https://github.com/TheJustinSunPrize/awards/pull/5110). [Related extension PR #4668](https://github.com/TheJustinSunPrize/awards/pull/4668) is another contributor's submission using the credited original proof. These are distinct filings. See the [dated submission audit](../../docs/submission-audit-2026-10-18.md) for provenance.

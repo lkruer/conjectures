@@ -2,7 +2,7 @@
 
 [Back to the problem](README.md) · [Submission guide](../../docs/submission-guide.md)
 
-**Status: Draft. No announcement has been recorded.**
+**Status: Submitted to JSP.** [Current record](https://github.com/TheJustinSunPrize/awards/pull/4902) · [Dated audit](../../docs/submission-audit-2026-10-18.md)
 
 ## Materials
 
@@ -40,4 +40,4 @@
 
 ## Submission and follow-up history
 
-No submissions or site references recorded. Add the date, destination or comment permalink, and proof revision after an actual announcement.
+- **2026-10-18 record:** [JSP000052, PR #4902](https://github.com/TheJustinSunPrize/awards/pull/4902). See the [dated submission audit](../../docs/submission-audit-2026-10-18.md) for source identity and scope. This records the public submission or certificate, without inferring a separate manuscript announcement.

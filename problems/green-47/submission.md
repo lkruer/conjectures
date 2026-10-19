@@ -2,7 +2,7 @@
 
 [Back to the problem](README.md)
 
-**Status: Draft. No announcement has been recorded.**
+**Status: External certificate recorded.** [Current record](https://conjectures.io/results/3f7ea330-0480-4e1a-b2fa-143440bf03b7) · [Dated audit](../../docs/submission-audit-2026-10-18.md)
 
 ## Materials
 
@@ -12,7 +12,7 @@
 | Manuscript | [PDF](paper/proof.pdf), September 8, 2026 |
 | Authors | Jensen Kohlmeyer and Liam Kruer |
 | Lean | [Uploaded source](lean/Green47-COUNTEREXAMPLE-UPLOAD.lean); repository verification pending |
-| Submission destination | Not recorded |
+| Submission destination | [Conjectures.io certificate](https://conjectures.io/results/3f7ea330-0480-4e1a-b2fa-143440bf03b7) |
 | Proof snapshot | Not frozen; current links follow the repository branch. |
 
 ## Summary for author review
@@ -41,4 +41,4 @@
 
 ## History
 
-No submissions or external references recorded. Add the date, destination, and proof revision after an actual announcement.
+- **2026-10-18 record:** [Conjectures.io certificate](https://conjectures.io/results/3f7ea330-0480-4e1a-b2fa-143440bf03b7). See the [dated submission audit](../../docs/submission-audit-2026-10-18.md) for source identity and scope. This records the public submission or certificate, without inferring a separate manuscript announcement.
