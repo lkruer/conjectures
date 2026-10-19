@@ -15,12 +15,16 @@ These are pull requests in [TheJustinSunPrize/awards](https://github.com/TheJust
 | Erdős #108 | JSP-000120 | [#4903](https://github.com/TheJustinSunPrize/awards/pull/4903) |
 | Erdős #196 | JSP-000185 | [#4875](https://github.com/TheJustinSunPrize/awards/pull/4875) |
 | Erdős #354 | JSP-000294 | [#5000](https://github.com/TheJustinSunPrize/awards/pull/5000) |
+| Erdős #790 | JSP-000649 | [#4701, supporting-publication update](https://github.com/TheJustinSunPrize/awards/pull/4701) |
 | Erdős #859 | JSP-000712 | [#4904](https://github.com/TheJustinSunPrize/awards/pull/4904) |
+| Derivative-zero problem and order-one strengthening | JSP-000752 | [#4700, solver-only submission](https://github.com/TheJustinSunPrize/awards/pull/4700) |
 | Erdős #944 | JSP-000785 | [#5110, original-author submission](https://github.com/TheJustinSunPrize/awards/pull/5110); [#4668, related extension](https://github.com/TheJustinSunPrize/awards/pull/4668) |
 | Erdős #1057 | JSP-000877 | [#4874](https://github.com/TheJustinSunPrize/awards/pull/4874) |
 | Erdős #1062 | JSP-000882 | [#4905](https://github.com/TheJustinSunPrize/awards/pull/4905) |
 
 The original-author #944 submission is [PR #5110, JSP-000785: original Kruer-Kohlmeyer solution and Lean proof](https://github.com/TheJustinSunPrize/awards/pull/5110), filed on 2026-10-18 from the author's [prepared materials](https://github.com/lkruer/conjectures/tree/codex/erdos944-prize-submission). Related extension PR #4668 is another contributor's submission using the credited original proof; it is a distinct filing. The JSP list and this repository's manuscript inventory are different sets: in particular, #97 is distinct from the #96 manuscript here.
+
+PR #4700 is a solver-only submission for the full derivative-zero problem with an order-one strengthening and disclaims first priority. PR #4701 is a draft supporting-publication update for Erdős #790 whose scope remains pending; it does not claim the full catalog solution. Neither has a corresponding main problem folder in this repository. Neither filing claims first-solver priority; #4701 does not claim a full resolution of its broader catalog entry.
 
 ## Accepted-source correspondence
 
