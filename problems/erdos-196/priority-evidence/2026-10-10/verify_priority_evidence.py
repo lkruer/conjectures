@@ -12,6 +12,7 @@ import hashlib
 import json
 from pathlib import Path
 import subprocess
+import sys
 import tempfile
 import urllib.parse
 
@@ -56,7 +57,7 @@ def main():
     parser.add_argument("--output", type=Path)
     args = parser.parse_args()
     root = args.repository.resolve()
-    read = lambda name: json.loads((here / name).read_text())
+    read = lambda name: json.loads((here / name).read_text(encoding="utf-8"))
     message = read("discord-message.json")
     receipt = read("discord-attachment-receipt.json")
     result = read("conjectures-result.json")
@@ -101,7 +102,7 @@ def main():
             "fc-8432eac9-erdos196-erdos-196-b7454f0edd-counterexample-v1", "Task identity")
     identity_script = root / "problems/erdos-196/verification/2026-10-10/verify_source_identity.py"
     identity = json.loads(subprocess.check_output(
-        ["python3", str(identity_script), "--repository", str(root)], cwd=root))
+        [sys.executable, str(identity_script), "--repository", str(root)], cwd=root))
     require(identity["status"] == "PASS" and identity["source_sha256"] == sha(source),
             "Prior selected-proof identity check failed")
     fresh = None
@@ -125,7 +126,7 @@ def main():
                     "Fresh download left the identified Discord attachment")
             require(body.read_bytes() == pdf, "Fresh Discord bytes differ")
             modified_lines = [x.split(":", 1)[1].strip() for x in
-                              head.read_text().splitlines() if x.lower().startswith("last-modified:")]
+                              head.read_text(encoding="utf-8").splitlines() if x.lower().startswith("last-modified:")]
             fresh = {"kind": "live_discord_download", "matches": True,
                      "observed_at_utc": datetime.now(timezone.utc).isoformat(),
                      "last_modified": modified_lines[-1] if modified_lines else None}
@@ -149,7 +150,7 @@ def main():
     }
     text = json.dumps(output, indent=2) + "\n"
     if args.output:
-        args.output.write_text(text)
+        args.output.write_text(text, encoding="utf-8")
     print(text, end="")
 
 

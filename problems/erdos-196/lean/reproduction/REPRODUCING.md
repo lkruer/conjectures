@@ -12,6 +12,10 @@ python3 scripts/reproduce.py
 
 The script reconstructs the exact original Formal Conjectures commit, obtains the pinned Mathlib cache, compiles the supplied proof, and runs the axiom audit with Lean `--trust=0`. Results go to `reproduction-logs/`. If all dependency artifacts are already present, `python3 scripts/reproduce.py --skip-cache` performs the same compilation and audit without downloading the cache.
 
+On Windows, use `python` instead of `python3` if that is the installed Python 3 command. The current branch preserves LF line endings for both hashed provenance records. To reproduce the historical selected proof commit on Windows, clone with `git clone --config core.autocrlf=false --branch jsp-000185-erdos196 https://github.com/lkruer/conjectures.git` before checking out that commit; its older attributes did not preserve those two files against automatic CRLF conversion.
+
+The later tooling repairs do not change the six audited source files or the selected proof commit `bf058b903350eb8f873a22ab4a54b2e0faa9727d`. From the repository root, `python problems/erdos-196/verification/2026-10-10/verify_source_identity.py` checks their byte identity and `python problems/erdos-196/priority-evidence/2026-10-10/verify_priority_evidence.py` checks the retained evidence's consistency. These two Python checks do not rerun Lean or independently authenticate historical timestamps.
+
 Use this script rather than plain `lake build`: the pinned Formal Conjectures project also defines an `AnswerPostpone` library for the same problem modules. The script explicitly compiles problem 196 with `-Dgoogle.answer=always_true`, matching the original validator's affirmative-statement target. It does not modify the problem declaration or any proof step.
 
 ## Inputs and packaging

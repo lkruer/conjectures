@@ -49,7 +49,7 @@ def main():
     unwrapped = unwrapped[:-len(suffix)]
     require(unwrapped == service, "Wrapped proof changes the submitted payload")
 
-    checked = json.loads((here / "source-hashes.json").read_text())
+    checked = json.loads((here / "source-hashes.json").read_text(encoding="utf-8"))
     for path, digest in checked.items():
         historical = git_bytes(selected, path)
         require(hashlib.sha256(historical).hexdigest() == digest, "Selected source hash differs: " + path)
@@ -71,7 +71,7 @@ def main():
     }
     text = json.dumps(result, indent=2) + "\n"
     if args.output:
-        args.output.write_text(text)
+        args.output.write_text(text, encoding="utf-8")
     print(text, end="")
 
 

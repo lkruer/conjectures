@@ -1,0 +1,70 @@
+{
+  "status": "PASS",
+  "kind": "Windows tooling portability and source-identity check",
+  "observed_at_utc": "2026-10-19T00:42:33.293657+00:00",
+  "base_commit_before_tooling_repair": "523745100b4b2da52f8e9795c9e6a68f3aa7497e",
+  "selected_proof_commit": "bf058b903350eb8f873a22ab4a54b2e0faa9727d",
+  "runtime": {
+    "system": "Windows",
+    "python": "3.12.10"
+  },
+  "tooling_file_sha256": {
+    ".gitattributes": "8a0d9d3ba5f6d13be1808373a579113c7bab2cbb0405bfd1e13786be2e459fd9",
+    "problems/erdos-196/verification/2026-10-10/verify_source_identity.py": "7b681de7966bf567a2574dc614de3e440403f4d9962ff13b3223a91c0029a2c7",
+    "problems/erdos-196/priority-evidence/2026-10-10/verify_priority_evidence.py": "cf4799c3a2db01f8ff04cb047e8a77f81629cf651a455c34eb098a5aece5c712",
+    "problems/erdos-196/lean/reproduction/REPRODUCING.md": "4421d52e22c489e11ef0dd58a1e8696879d10357bfdcc64556860a21f74b1ae5"
+  },
+  "source_identity": {
+    "status": "PASS",
+    "source_sha256": "e65c98a926ce4eca5df30277790c8b3dbcc630074ceaa24a551464951b3d2826",
+    "source_bytes": 26497,
+    "original_commit": "8ede860e8fc90a300207a2c17e8aefe6167b3086",
+    "original_path": "problems/erdos-196/lean/Erdos196.lean",
+    "selected_proof_commit": "bf058b903350eb8f873a22ab4a54b2e0faa9727d",
+    "original_git_object_equals_service_download": true,
+    "selected_preserved_payload_equals_service_download": true,
+    "wrapped_proof_minus_only_imports_and_outer_namespace_equals_service_download": true,
+    "all_audited_sources_still_match_selected_commit": true,
+    "audited_files_checked": 6,
+    "historical_date_authenticated_by_this_script": false,
+    "scope": "Byte identity only. The service's historical dates require separate authentication."
+  },
+  "offline_priority_evidence_consistency": {
+    "status": "PASS",
+    "pdf_sha256": "b8b5a37349fcbc3d1fa89842ea67b6798dcb58a256998bb6c5064f3a499a7097",
+    "pdf_bytes": 91799,
+    "lean_sha256": "e65c98a926ce4eca5df30277790c8b3dbcc630074ceaa24a551464951b3d2826",
+    "lean_bytes": 26497,
+    "message_snowflake_utc": "2026-09-09T23:49:09.443000+00:00",
+    "attachment_snowflake_utc": "2026-09-09T23:49:09.372000+00:00",
+    "cdn_last_modified_utc": "2026-09-09T23:49:09+00:00",
+    "conjectures_verified_at": "2026-09-09T23:36:51.116698Z",
+    "same_pdf_in_original_and_selected_commits": true,
+    "same_lean_payload_in_service_original_and_selected_proof": true,
+    "message_precedes_ho_repository_seconds": 90443.557,
+    "message_precedes_ho_arxiv_seconds": 132241.557,
+    "fresh_comparison": null,
+    "scope": "Consistency and exact file identity. Provider records supply historical dates; this script does not create a timestamp certificate or establish unrestricted public publication."
+  },
+  "bootstrap": {
+    "status": "PASS",
+    "message": "Pinned Formal Conjectures already present: 8432eac998110a563e03df65a28c117e97c8c142"
+  },
+  "provenance_files": {
+    "problems/erdos-196/lean/reproduction/provenance/formal-conjectures.patch": {
+      "sha256": "d1a2c6dac5ea42366b6ceebcf2f57339c4fb29c4264ec3674065f025a0b30bae",
+      "equals_git_blob": true,
+      "eol_attribute": "lf"
+    },
+    "problems/erdos-196/lean/reproduction/provenance/formal-conjectures-commit.txt": {
+      "sha256": "b61cc82e8a768f1c8be4e4f57ed53152ef9dae56a9f4b93641b3383aaa19dce6",
+      "equals_git_blob": true,
+      "eol_attribute": "lf"
+    }
+  },
+  "limitations": [
+    "No new Lean compilation, Lean kernel replay or independent Nanoda run was performed.",
+    "The priority-evidence check validates captured records and file consistency, not live provider timestamps or historical publication priority.",
+    "The bootstrap reconstructs the pinned Formal Conjectures Git object; it does not compile that dependency."
+  ]
+}
