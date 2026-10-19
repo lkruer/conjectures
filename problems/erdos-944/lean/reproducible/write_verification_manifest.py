@@ -15,8 +15,8 @@ out = root / 'verification'
 def git(*args, cwd=root):
     return subprocess.check_output(['git', *args], cwd=cwd, text=True).strip()
 
-build = (out / 'build.log').read_text()
-audit = (out / 'axiom-audit.log').read_text()
+build = (out / 'build.log').read_text(encoding='utf-8')
+audit = (out / 'axiom-audit.log').read_text(encoding='utf-8')
 if 'Build completed successfully' not in build:
     raise SystemExit('The build log does not record a successful complete build.')
 m = re.search(r'PASS: (\d+) proof declarations checked;', audit)
@@ -25,7 +25,7 @@ if m is None:
 if 'error:' in audit.lower():
     raise SystemExit('The axiom audit log contains an error.')
 
-manifest = json.loads((root / 'lake-manifest.json').read_text())
+manifest = json.loads((root / 'lake-manifest.json').read_text(encoding='utf-8'))
 packages = []
 for p in manifest['packages']:
     actual = git('rev-parse', 'HEAD', cwd=root / '.lake' / 'packages' / p['name'])
@@ -54,7 +54,7 @@ for p in sorted(root.rglob('*')):
     if p.is_file() and p.name != 'SOURCE_SHA256SUMS':
         source_hashes.append(f'{hashlib.sha256(p.read_bytes()).hexdigest()}  {rel.as_posix()}\n')
 hash_text = ''.join(source_hashes)
-(root / 'SOURCE_SHA256SUMS').write_text(hash_text)
+(root / 'SOURCE_SHA256SUMS').write_text(hash_text, encoding='utf-8', newline='\n')
 now = datetime.datetime.now(datetime.timezone.utc).isoformat()
 result = {
     'status': 'verified',
@@ -66,8 +66,8 @@ result = {
     'package_path': root.relative_to(Path(git('rev-parse', '--show-toplevel'))).as_posix(),
     'source_manifest_sha256': hashlib.sha256(hash_text.encode()).hexdigest(),
     'platform': platform.platform(),
-    'lean_version': (out / 'lean-version.log').read_text().strip(),
-    'lake_version': (out / 'lake-version.log').read_text().strip(),
+    'lean_version': (out / 'lean-version.log').read_text(encoding='utf-8').strip(),
+    'lake_version': (out / 'lake-version.log').read_text(encoding='utf-8').strip(),
     'proof_declarations_audited': int(m[1]),
     'permitted_transitive_axioms': ['propext', 'Classical.choice', 'Quot.sound'],
     'additional_axioms_or_sorryAx': False,
@@ -76,8 +76,8 @@ result = {
     'original_source_commit': 'caa0b07847cc94a071215de82036be4b5805ee0c',
     'original_source_hashes': expected,
 }
-(out / 'manifest.json').write_text(json.dumps(result, indent=2) + '\n')
-(out / 'status.json').write_text(json.dumps({'status': 'verified', 'verified_at_utc': now}, indent=2) + '\n')
+(out / 'manifest.json').write_text(json.dumps(result, indent=2) + '\n', encoding='utf-8', newline='\n')
+(out / 'status.json').write_text(json.dumps({'status': 'verified', 'verified_at_utc': now}, indent=2) + '\n', encoding='utf-8', newline='\n')
 (out / 'REPORT.md').write_text(f'''# Erdős 944 Lean verification
 
 Result: **verified** at {now}.
@@ -92,5 +92,5 @@ Result: **verified** at {now}.
 `Erdos944Prize.target` explicitly proves the requested finite graph exists for every `k ≥ 4` and `r ≥ 1`; `finite_all` also covers `r = 0`. `benchmark_type_check` has exactly the elaborated original Formal Conjectures type. The imported problem stub contains placeholders, but the successful audit establishes that the proof does not depend on them.
 
 The original accepted proof body and its `Solutions/Erdos944.lean` wrapper matched their recorded source hashes. This is a successful Lean build and dependency audit, not a prize-award or priority decision. Full command output and all dependency revisions are retained beside this report.
-''')
+''', encoding='utf-8', newline='\n')
 print(f"Verification manifest written for {result['repository_commit']}; {result['proof_declarations_audited']} declarations audited.")

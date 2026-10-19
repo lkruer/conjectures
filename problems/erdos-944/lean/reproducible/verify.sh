@@ -1,8 +1,9 @@
 #!/usr/bin/env bash
 set -euo pipefail
 cd "$(dirname "$0")"
+PYTHON="${PYTHON:-python3}"
 mkdir -p verification
-python3 - <<'CLEANUP'
+"$PYTHON" - <<'CLEANUP'
 from pathlib import Path
 for name in ('REPORT.md', 'manifest.json', 'build.log', 'axiom-audit.log', 'cache-get.log', 'lake-version.log', 'lean-version.log'):
     (Path('verification') / name).unlink(missing_ok=True)
@@ -15,4 +16,4 @@ lean --version | tee verification/lean-version.log
 lake exe cache get 2>&1 | tee verification/cache-get.log
 lake build PrizeSubmission AxiomAudit 2>&1 | tee verification/build.log
 lake env lean AxiomAudit.lean 2>&1 | tee verification/axiom-audit.log
-python3 write_verification_manifest.py
+"$PYTHON" write_verification_manifest.py
