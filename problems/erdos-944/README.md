@@ -16,7 +16,7 @@ Liam Kruer and Jensen Kohlmeyer · September 10, 2026
 | Manuscript date | September 10, 2026 |
 | Manuscript review | External mathematical review remains required; local checks establish formal scope and reproduction only. |
 | Lean | Exact accepted source and pinned reproduction package available; see verification record. |
-| Submission | Original-author submission prepared for JSP-000785; see submission notes. |
+| Submission | [Original-author JSP-000785 PR #5110](https://github.com/TheJustinSunPrize/awards/pull/5110), submitted 18 October 2026; maintainer review pending. |
 
 ## Problem and manuscript claim
 

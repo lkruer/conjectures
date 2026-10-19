@@ -2,7 +2,7 @@
 
 [Problem](README.md) · [Manuscript](paper/proof.pdf) · [Reproduction package](lean/reproducible/) · [Source history](SOURCE_HISTORY.md)
 
-The original mathematical and Lean contributions are credited to **Liam Kruer (`lkruer`) and Jensen Kohlmeyer (`JENW1N`)**. This package is prepared from the original author-controlled repository for review by the Justin Sun Prize. Preparation, submission, and even a successful proof check do not announce an award.
+The original mathematical and Lean contributions are credited to **Liam Kruer (`lkruer`) and Jensen Kohlmeyer (`JENW1N`)**. This package was submitted from the original author-controlled repository as [JSP PR #5110](https://github.com/TheJustinSunPrize/awards/pull/5110) on 18 October 2026. Preparation, submission, and even a successful proof check do not announce an award.
 
 ## Contribution submitted
 
@@ -31,6 +31,6 @@ The organizers must review the mathematics, reproduce the proof, reconcile attri
 
 Source commit: `d42416ace335b42e05c6f46d250c869bce4b5239`, on branch `codex/erdos944-prize-submission`. [Fresh verification run](https://github.com/lkruer/conjectures/actions/runs/39160734681): successful build and 2,339-declaration transitive axiom audit. [Permanent report](lean/reproducible/verification/REPORT.md). The evidence commit only archives outputs and updates documentation; it does not change the tested proof.
 
-## Prepared original-author pull request
+## Filed original-author pull request
 
-[Full prepared PR text](PR_SUBMISSION.md). [Published catalog comparison](https://github.com/TheJustinSunPrize/awards/compare/main...lkruer:awards:codex/erdos944-original-authors). The connected GitHub integration refused PR creation with HTTP 403; the original-author PR has not yet been opened. This permission failure is separate from the successful proof verification.
+[JSP PR #5110](https://github.com/TheJustinSunPrize/awards/pull/5110) is open for review. [Filed PR text](PR_SUBMISSION.md). The catalog diff changes only the permitted status, Lean proof, attribution and publication fields. It records the original finite-existence contribution separately from the later prescribed-order extension in #4668. No eligibility or award decision has been made.

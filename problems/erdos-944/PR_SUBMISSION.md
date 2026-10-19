@@ -1,6 +1,6 @@
-# Prepared Justin Sun Prize pull request
+# Original-author Justin Sun Prize submission
 
-This is the exact prepared contribution text. As of 18 October 2026 the submission branch is published, but PR creation was refused by the connected GitHub integration (HTTP 403). A published branch is not a filed PR or an award claim.
+Submitted on 18 October 2026 as [PR #5110](https://github.com/TheJustinSunPrize/awards/pull/5110). The text below records the filed contribution. Review, priority and eligibility remain pending.
 
 ## Submission type
 
@@ -15,6 +15,19 @@ This is the original contributors’ registration for **JSP-000785 / Erdős #944
 - **Current entry:** [JSP-000785](https://github.com/TheJustinSunPrize/awards/blob/main/problems/catalog-0701-0800.md#JSP-000785), currently `Open`, `Lean proof: No`, `Eligible to claim: No`. Proposed change: record the complete solution, original proof source, attribution and publication evidence; mark the solution and Lean proof accepted only after maintainer review. Maintainers determine eligibility and claim-status updates.
 - **Related work:** [PR #4668](https://github.com/TheJustinSunPrize/awards/pull/4668) submits peilinliu66-dev’s later prescribed-order extension and finite interfaces, using our original finite-existence proof. This submission registers our own mathematical and Lean contributions; it does not claim that extension or replace its attribution. Our existing evidence appears in [these comments](https://github.com/TheJustinSunPrize/awards/pull/4668#issuecomment-6094259665) and [#5002](https://github.com/TheJustinSunPrize/awards/issues/5002).
 - **Complete mathematical solution:** [original manuscript](https://github.com/lkruer/conjectures/blob/8ede860e8fc90a300207a2c17e8aefe6167b3086/problems/erdos-944/paper/proof.pdf), dated **10 September 2026**: Theorem 1.1 establishes the four-colour construction for every edge budget; Corollary 1.2 gives all-colour existence, crediting Skottová–Steiner’s earlier higher-colour result. The statement is existence of a suitable finite graph, not existence at every sufficiently large prescribed order.
+
+## Original contribution and related submissions
+
+The records below support an earlier original contribution to the finite-existence problem by Kruer and Kohlmeyer. The later prescribed-order result is a distinct extension and retains its own attribution. We request separate review of those contributions; these dates do not by themselves establish Justin Sun Prize eligibility.
+
+| Submission/source | Verified chronology and scope | Relationship to this submission |
+| --- | --- | --- |
+| Kruer–Kohlmeyer original result | [Conjectures.io](https://conjectures.io/results/e7afff2c-bb07-4fa8-92b6-67a530aaad70) records acceptance on 11 September 2026 and certification on 16 September for all `k ≥ 4`, `r ≥ 1`. The [original repository commit](https://github.com/lkruer/conjectures/commit/8ede860e8fc90a300207a2c17e8aefe6167b3086) is dated 14 September. | Original finite-existence contribution; the accepted and historical repository files are distinct versions, as documented in the source history. |
+| [PR #4668](https://github.com/TheJustinSunPrize/awards/pull/4668) | Opened 2 October 2026. Explicitly credits Kruer and Kohlmeyer for the finite seed theorem and claims a new four-colour prescribed-order bridge. | Uses the original result while adding a separately credited extension; it does not establish earlier authorship of the seed theorem. |
+| [PR #3430](https://github.com/TheJustinSunPrize/awards/pull/3430) | Closed. Its cited `Erdos785.lean` concerns additive complements, whereas JSP-000785 is Erdős 944. Its actual submitted file proves only elementary prime and arithmetic statements. | Does not supply a proof of this graph-theory problem. |
+| [PR #2442](https://github.com/TheJustinSunPrize/awards/pull/2442) | Closed. Its submitted Lean file proves four propositions of type `True`; its body expressly disclaims a complete proof. | Does not supply the arbitrary-edge-budget finite-existence theorem. |
+
+The original manuscript above is linked to the preserved author-controlled Git object. The older Conjectures.io paper link in #4668 currently returns 404; the service result and accepted-source identity remain separately linked. No attribution or prize entitlement is inferred from a dead mirror link.
 
 ## Formal statement
 
@@ -46,13 +59,17 @@ This is the original contributors’ registration for **JSP-000785 / Erdős #944
 - **Dependencies:** Mathlib `0df444a360eaa60ab8c11dca51a86af692955474`, with the exact remaining dependencies recorded in the submitted `lake-manifest.json` and provenance files.
 - **Pinned instructions:** [reproduction README](https://github.com/lkruer/conjectures/blob/d42416ace335b42e05c6f46d250c869bce4b5239/problems/erdos-944/lean/reproducible/README.md).
 
+The commands below use Bash and Python 3. The clone disables automatic line-ending conversion so the historical checked source retains its exact bytes.
+
 ```sh
-git clone --branch codex/erdos944-prize-submission https://github.com/lkruer/conjectures.git
+git clone --config core.autocrlf=false --branch codex/erdos944-prize-submission https://github.com/lkruer/conjectures.git
 cd conjectures
 git checkout d42416ace335b42e05c6f46d250c869bce4b5239
 cd problems/erdos-944/lean/reproducible
 ./verify.sh
 ```
+
+For Windows Git Bash, the [portable tooling edition](https://github.com/lkruer/conjectures/blob/297182848eb4c226f454804dd1eabdd741ef0863/problems/erdos-944/lean/reproducible/README.md) supports `PYTHON=python bash ./verify.sh`. Its mathematical proof files are unchanged from the selected source; its tooling checks are separate from the pinned successful proof audit.
 
 The script builds `PrizeSubmission` and `AxiomAudit`, then executes the transitive audit again. The report below supplies the actual clean-target build, literal statement inspection and `#print axioms` output for every submitted target. Cached dependency reuse is disclosed; it is not described as a fresh build of Lean or all of Mathlib.
 
