@@ -81,6 +81,8 @@ All **2,339 audited declarations** have no transitive axiom outside `propext`, `
 
 This is a Lean compilation and transitive axiom audit with the official pinned Mathlib cache. It is not an independent second-kernel replay, a full human review of the prose, or a decision on priority or prize eligibility. Reference-file placeholders remain in the archived benchmark but are not dependencies of any submitted final theorem.
 
+**Portability repair recheck — 18 October 2026:** [Actions run 39182052094](https://github.com/lkruer/conjectures/actions/runs/39182052094) also passed at tooling commit `297182848eb4c226f454804dd1eabdd741ef0863`. Its [permanent report and raw logs](https://github.com/lkruer/conjectures/blob/02683427d9d6d6325061f69b41800078e53f2145/problems/erdos-944/lean/reproducible/verification/portability-2971828/README.md) record the successful build and all 2,339 axiom checks. All 204 source-manifest checksums were independently compared with the tested Git objects; the proof, finite-statement wrapper, axiom audit and accepted body are unchanged from the selected proof snapshot. The report uses 19 October UTC, which is 18 October in America/Indianapolis. This repeat check does not replace the earlier proof or priority records.
+
 ## Attribution
 
 - **Original mathematical contribution:** **Liam Kruer (`lkruer`) and Jensen Kohlmeyer (`JENW1N`)**, for the four-colour arbitrary-edge-budget construction and complete finite-existence solution, with the earlier higher-colour mathematics credited below.

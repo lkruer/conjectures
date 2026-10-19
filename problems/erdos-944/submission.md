@@ -31,6 +31,8 @@ The organizers must review the mathematics, reproduce the proof, reconcile attri
 
 Source commit: `d42416ace335b42e05c6f46d250c869bce4b5239`, on branch `codex/erdos944-prize-submission`. [Fresh verification run](https://github.com/lkruer/conjectures/actions/runs/39160734681): successful build and 2,339-declaration transitive axiom audit. [Permanent report](lean/reproducible/verification/REPORT.md). The evidence commit only archives outputs and updates documentation; it does not change the tested proof.
 
+**Portability repair recheck — 18 October 2026:** [Actions run 39182052094](https://github.com/lkruer/conjectures/actions/runs/39182052094) also passed at tooling commit `297182848eb4c226f454804dd1eabdd741ef0863`. Its [permanent report and raw logs](https://github.com/lkruer/conjectures/blob/02683427d9d6d6325061f69b41800078e53f2145/problems/erdos-944/lean/reproducible/verification/portability-2971828/README.md) record the successful build and all 2,339 axiom checks. All 204 source-manifest checksums were independently compared with the tested Git objects; the proof, finite-statement wrapper, axiom audit and accepted body are unchanged from the selected proof snapshot. The report uses 19 October UTC, which is 18 October in America/Indianapolis. This repeat check does not replace the earlier proof or priority records.
+
 ## Filed original-author pull request
 
 [JSP PR #5110](https://github.com/TheJustinSunPrize/awards/pull/5110) is open for review. [Filed PR text](PR_SUBMISSION.md). The catalog diff changes only the permitted status, Lean proof, attribution and publication fields. It records the original finite-existence contribution separately from the later prescribed-order extension in #4668. No eligibility or award decision has been made.

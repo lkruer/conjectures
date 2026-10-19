@@ -8,7 +8,7 @@ The 191 local import files needed by that solution are vendored, including the F
 
 ## Verify
 
-Install [elan](https://github.com/leanprover/elan), Bash, and Python 3. Make `lean`, `lake`, and `python3` available in `PATH`, then run from Bash:
+Install [elan](https://github.com/leanprover/elan), Bash, and Python 3.10 or newer. Make `lean`, `lake`, and `python3` available in `PATH`, then run from Bash:
 
 ```sh
 ./verify.sh
@@ -29,3 +29,5 @@ The committed `verification/` evidence and `SOURCE_SHA256SUMS` describe the comm
 `Erdos944Prize.benchmark_type_check` checks that the positive answer also has exactly the original benchmark's elaborated type. The imported Formal Conjectures file contains the usual unsolved theorem placeholders, but the axiom audit checks that the solution does not depend on them. `AxiomAudit.lean` checks every proof declaration's transitive axioms and fails if any axiom outside `propext`, `Classical.choice`, or `Quot.sound` is found.
 
 See `THIRD-PARTY-NOTICES.md` for the scope of the copied Apache license notices. Successful local verification establishes the recorded Lean result; prize eligibility, attribution, and any award remain decisions of the prize organizers.
+
+The [portability-repair verification](verification/portability-2971828/README.md) records a second successful build and axiom audit at tooling commit `297182848eb4c226f454804dd1eabdd741ef0863`; the selected proof inputs are unchanged.
