@@ -2,7 +2,7 @@
 
 [Back to the proof index](../README.md#proof-index)
 
-The repository contains **eleven PDFs and eleven Lean source files across eleven problem folders**. The author’s current list contains **12 entries: eight Erdős problems and four Green problems**. This inventory records file availability and the supplied scope labels; proof verification is tracked separately.
+The repository contains **twelve PDFs across twelve problem folders**, with original and generated Lean artifacts recorded per problem. The author’s current list contains **13 entries: nine Erdős problems and four Green problems**. This inventory records file availability and the supplied scope labels; proof verification is tracked separately.
 
 ## Materials still to upload
 
@@ -23,6 +23,7 @@ These totals count missing PDF/Lean counterparts. Erdős 108 has both, but its P
 | Erdős #18 | As listed by the author | **Not supplied** | **Not supplied** |
 | [Erdős #96](../problems/erdos-96/) | Convex unit distances | [Present](../problems/erdos-96/paper/proof.pdf) | [1 file](../problems/erdos-96/lean/) |
 | [Erdős #108](../problems/erdos-108/) | Counterexample via arc graphs | [Present](../problems/erdos-108/paper/proof.pdf) | [1 file; correspondence note](../problems/erdos-108/lean/) |
+| [Erdős #156](../problems/erdos-156/) | Complete eventual O(N^(1/3)) upper bound | [Present](../problems/erdos-156/paper/proof.pdf) | [Original files and verified standalone project](../problems/erdos-156/lean/) |
 | [Erdős #196](../problems/erdos-196/) | Four-term progression counterexample | [Present](../problems/erdos-196/paper/proof.pdf) | [1 file](../problems/erdos-196/lean/) |
 | [Erdős #272](../problems/erdos-272/) | Szabó strong variant | [Present](../problems/erdos-272/paper/proof.pdf) | [1 file](../problems/erdos-272/lean/) |
 | [Erdős #354](../problems/erdos-354/) | Part (i), multiplier 2 | [Present](../problems/erdos-354/paper/proof.pdf) | [1 file](../problems/erdos-354/lean/) |
@@ -60,7 +61,7 @@ These totals count missing PDF/Lean counterparts. Erdős 108 has both, but its P
 
 ## Materials needed to reproduce the Lean checks
 
-Uploaded Lean sources have not been independently compiled here. Original toolchain/project files, task support, and the verification records described by the manuscripts were not included. The following support files are separate from the PDF/Lean counterpart checklist above.
+The Erdős #156 standalone package has recorded source checks, a complete theorem axiom audit, an explicit statement bridge, and kernel replay. Other uploaded Lean sources have not been independently compiled here. Original toolchain/project files, task support, and the verification records described by the manuscripts were not included. The following support files are separate from the PDF/Lean counterpart checklist above.
 
 | Problem | Additional reproduction material described by the upload |
 | :--- | :--- |
@@ -77,3 +78,4 @@ Uploaded Lean sources have not been independently compiled here. Original toolch
 | [Green #51](../problems/green-51/lean/) | Main source present as `green51onehalf.lean` (1,925 lines). The manuscript’s `PaperTheorem.lean`, `CheckGreen51.lean`, pinned task project with `TaskSupport`, and companion verification report remain to be supplied. |
 
 TeX, bibliography, and figure sources were not supplied as separate files. Submission and review statuses remain recorded on each problem page.
+

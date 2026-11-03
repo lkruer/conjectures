@@ -1,0 +1,13 @@
+✔ [8931/8933] Built Statement (6.4s)
+✖ [8932/8933] Building Erdos156 (29s)
+trace: .> LEAN_PATH=/work/.lake/packages/Cli/.lake/build/lib/lean:/work/.lake/packages/batteries/.lake/build/lib/lean:/work/.lake/packages/Qq/.lake/build/lib/lean:/work/.lake/packages/aesop/.lake/build/lib/lean:/work/.lake/packages/proofwidgets/.lake/build/lib/lean:/work/.lake/packages/importGraph/.lake/build/lib/lean:/work/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/work/.lake/packages/plausible/.lake/build/lib/lean:/work/.lake/packages/mathlib/.lake/build/lib/lean:/work/.lake/build/lib/lean /opt/lean/bin/lean /work/Erdos156.lean -o /work/.lake/build/lib/lean/Erdos156.olean -i /work/.lake/build/lib/lean/Erdos156.ilean -c /work/.lake/build/ir/Erdos156.c --setup /work/.lake/build/ir/Erdos156.setup.json --json
+error: Erdos156.lean:803:6: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  True ↔ ?p
+in the target expression
+  Erdos156.Target ↔ ∃ C, 0 < C ∧ ∀ᶠ (N : ℕ) in atTop, ∃ A, (↑A).IsMaximalSidonSetIn N ∧ ↑(#A) ≤ C * ↑N ^ (1 / 3)
+
+⊢ Erdos156.Target ↔ ∃ C, 0 < C ∧ ∀ᶠ (N : ℕ) in atTop, ∃ A, (↑A).IsMaximalSidonSetIn N ∧ ↑(#A) ≤ C * ↑N ^ (1 / 3)
+warning: Erdos156.lean:1765:12: exponent 370 exceeds the threshold 256, exponentiation operation was not evaluated, use `set_option exponentiation.threshold <num>` to set a new threshold
+Some required targets logged failures:
+- Erdos156
+error: build failed

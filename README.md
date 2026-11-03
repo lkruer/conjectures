@@ -8,15 +8,16 @@ A home for manuscripts, formalizations, and review materials connected with [Erd
 
 ## Proof index
 
-**11 manuscripts · 11 Lean source files · 11 problem folders.** The [complete upload checklist](docs/upload-inventory.md#materials-still-to-upload) tracks all 12 entries on the author-provided list. One PDF and two Lean counterparts remain to be supplied.
+**12 manuscripts · 12 problem folders, with source and verification records maintained per problem.** The [complete upload checklist](docs/upload-inventory.md#materials-still-to-upload) tracks all 13 entries on the author-provided list. One PDF and two Lean counterparts remain to be supplied.
 
-The descriptions below reflect the uploaded materials. Manuscript-reported verification has not yet been independently reproduced in this repository.
+The descriptions below reflect the uploaded materials. The Erdős #156 package has a recorded independent Lean source check and kernel replay; manuscript-reported verification for the other entries has not been independently reproduced in this repository.
 
 | Problem | Result / title | Proof PDF | Lean | Submission |
 | :--- | :--- | :--- | :--- | :--- |
 | [Erdős #14](problems/erdos-14/) | Non-unique sums, parts I and II | [PDF](problems/erdos-14/paper/proof.pdf) | [2 files; not checked](problems/erdos-14/lean/) | Draft |
 | [Erdős #96](problems/erdos-96/) | Unit distances in convex position | [PDF](problems/erdos-96/paper/proof.pdf) | [Source; not checked](problems/erdos-96/lean/) | Draft |
 | [Erdős #108](problems/erdos-108/) | Counterexample via arc graphs | [PDF](problems/erdos-108/paper/proof.pdf) | [Source; not checked](problems/erdos-108/lean/) | Draft |
+| [Erdős #156](problems/erdos-156/) | Small maximal integer Sidon sets | [PDF](problems/erdos-156/paper/proof.pdf) | [Build passing; scope recorded](problems/erdos-156/lean/) | Ready for prize review |
 | [Erdős #196](problems/erdos-196/) | Permutations avoiding four-term progressions | [PDF](problems/erdos-196/paper/proof.pdf) | [Source; not checked](problems/erdos-196/lean/) | Draft |
 | [Erdős #272](problems/erdos-272/) | Arithmetic-intersection families: linear error | [PDF](problems/erdos-272/paper/proof.pdf) | [Source; not checked](problems/erdos-272/lean/) | Draft |
 | [Erdős #354](problems/erdos-354/) | Two floor-doubling sequences, part I | [PDF](problems/erdos-354/paper/proof.pdf) | [Source; not checked](problems/erdos-354/lean/) | Draft |
@@ -58,3 +59,4 @@ Manuscript review and Lean verification are recorded separately on each problem 
 ## Adding or updating material
 
 Use the [upload guide](CONTRIBUTING.md) for new manuscripts or revisions. The [upload checklist](docs/upload-inventory.md#materials-still-to-upload) identifies the remaining PDF and Lean counterparts. Original Lean project or task bundles can be added alongside the supplied sources to make their builds reproducible; the [inventory](docs/upload-inventory.md) records what is still needed.
+

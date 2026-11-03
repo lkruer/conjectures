@@ -1,0 +1,10 @@
+{
+  "Statement.lean": "98aae6f4a9e2e2b341899d45b23768f8410da6f9ffc63c8ef540bf12aa2f8426",
+  "Erdos156.lean": "0ea0657fa26aeb071bee218825a38bc106607724478600101f47b53c8e7b34a3",
+  "Main.lean": "adb53f0652d673af4f4eb4718be91891cf4b7ea6ee92abd0ea5d77b00dcd758c",
+  "Audit.lean": "ab9f6cf4cd041f9fb03134ac3716f5130e9382a082918efd4b85dbddfccbbd7a",
+  "AuditAll.lean": "b987b1dc9b9a7b4817efbd00ccb94a9722a20cf9b32d781241c985907ba1f7a2",
+  "lean-toolchain": "f4085f5f49cb07b752ed5b171651770205bbbb73ea5445f0e14db04264e8506c",
+  "lakefile.toml": "273cf031a73491591545f62904bdc0da3b34a7a5e48e7aa32d95a80ddadbae76",
+  "lake-manifest.json": "d46f7ea861c52d2cfcd829cb64acd496ca38c5086a8dc2aacc2a1198698f7374"
+}

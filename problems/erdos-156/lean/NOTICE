@@ -1,0 +1,10 @@
+The problem definitions in Statement.lean are adapted from the Formal Conjectures project.
+Copyright 2025-2026 The Formal Conjectures Authors.
+These adapted definitions are licensed under the Apache License, Version 2.0:
+https://www.apache.org/licenses/LICENSE-2.0
+
+Sources pinned for definition comparison:
+https://github.com/google-deepmind/formal-conjectures/blob/7db2ea3b91bfbd0ab620215163e6c488bbb916d5/FormalConjecturesForMathlib/Combinatorics/Basic.lean
+https://github.com/google-deepmind/formal-conjectures/blob/7db2ea3b91bfbd0ab620215163e6c488bbb916d5/FormalConjectures/ErdosProblems/156.lean
+
+No license for the authors' manuscript or original proof is newly assigned by this notice.

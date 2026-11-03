@@ -1,0 +1,24 @@
+Bounty.target : True ↔ (fun N => ↑(Erdos156.minMaximalSidonSet N)) =O[atTop] fun N => ↑N ^ (1 / 3)
+Erdos156.solved : (fun N => ↑(Erdos156.minMaximalSidonSet N)) =O[atTop] fun N => ↑N ^ (1 / 3)
+IndependentAudit.original_question : ∃ C,
+  0 < C ∧
+    ∀ᶠ (N : ℕ) in atTop,
+      ∃ A,
+        (∀ x ∈ A, 1 ≤ x ∧ x ≤ N) ∧
+          (∀ i₁ ∈ A, ∀ j₁ ∈ A, ∀ i₂ ∈ A, ∀ j₂ ∈ A, i₁ + i₂ = j₁ + j₂ → i₁ = j₁ ∧ i₂ = j₂ ∨ i₁ = j₂ ∧ i₂ = j₁) ∧
+            (∀ (x : ℕ),
+                1 ≤ x →
+                  x ≤ N →
+                    x ∉ A →
+                      ¬∀ i₁ ∈ ↑A ∪ {x},
+                          ∀ j₁ ∈ ↑A ∪ {x},
+                            ∀ i₂ ∈ ↑A ∪ {x},
+                              ∀ j₂ ∈ ↑A ∪ {x}, i₁ + i₂ = j₁ + j₂ → i₁ = j₁ ∧ i₂ = j₂ ∨ i₁ = j₂ ∧ i₂ = j₁) ∧
+              ↑A.card ≤ C * ↑N ^ (1 / 3)
+'Bounty.target' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos156.solved' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Bounty.target_iff_small_maximal_sets' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Bounty.Construction.eventual_small_maximal_sets' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IndependentAudit.original_question' depends on axioms: [propext, Classical.choice, Quot.sound]
+theorem Erdos156.solved : (fun N => ↑(Erdos156.minMaximalSidonSet N)) =O[atTop] fun N => ↑N ^ (1 / 3) :=
+Bounty.target.mp trivial

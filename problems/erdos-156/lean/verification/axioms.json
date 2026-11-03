@@ -1,0 +1,875 @@
+{
+  "Bounty.SignPatterns.independent_of_all_patterns": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "Bounty.SignPatterns.mem_positiveFamily": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "Bounty.SignPatterns.independent_of_shattered": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "Bounty.SignPatterns.positiveFamily_vcDim_le": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "Bounty.SignPatterns.family_card_le_of_vcDim_le": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "Bounty.SignPatterns.positiveFamily_card_le": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "Bounty.SignPatterns.positiveSet_mem": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "Bounty.SignPatterns.sign_determined_card_le": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "Bounty.SignPatterns.augmentForm_apply": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "Bounty.SignPatterns.affine_sign_determined_card_le": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "Bounty.SignPatterns.floor_mem_cut_interval": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "Bounty.SignPatterns.floor_eq_of_integer_cuts": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "Bounty.SignPatterns.fract_lt_iff_of_integer_cuts": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "Bounty.SignPatterns.fractional_phase_card_le": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "Bounty.exists_hitting_word": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "Bounty.exists_hitting_word_permutations": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "Bounty.polynomial_geometric_eventually_lt": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "Bounty.exists_hitting_word_of_polynomial_bound": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "Bounty.quadraticMark_pair": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "Bounty.quadratic_difference_lift": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "Bounty.quadratic_six_option_cover": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "Bounty.quadraticSeed_isSidon": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "Bounty.quadraticSeed_card": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "Bounty.quadraticMark_lt": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "Bounty.sidon_difference_injective": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "Bounty.sidon_interval_count": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "Bounty.sidon_interval_count_five_mul": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "Bounty.sidon_multiples_count": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "Bounty.exists_maximal_completion": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "Bounty.exists_maximal_completion_with_exception_bounds": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "Bounty.maximal_completion_card_le_fourteen_mul": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "Bounty.minMaximalSidonSet_le": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "Bounty.minMaximalSidonSet_attained": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "Bounty.target_iff_small_maximal_sets": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "Bounty.quadratic_difference_canonical": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "Bounty.residueReal_nonneg": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "Bounty.residueReal_lt_one": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "Bounty.fract_int_div_eq_residueReal": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "Bounty.fract_linear_phase": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "Bounty.fract_quadratic_phase": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "Bounty.firstPhase_apply": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "Bounty.secondPhase_apply": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "Bounty.firstThreshold_apply": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "Bounty.secondThreshold_apply": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "Bounty.phaseFamily_rows_nonempty": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "Bounty.phaseFamily_card_le": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "Bounty.phaseFamilyAll_card_le": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "Bounty.rulerIndex_le": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "Bounty.phaseFamilyAll_card_polynomial": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "Bounty.exists_sparse_phase_word": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "Bounty.modularVector_inBox": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "Bounty.residueReal_lt_div": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "Bounty.phaseChoice_modular": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "Bounty.phaseChoice_covers": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "Bounty.natural_pair_of_sum_sq": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "Bounty.rulerValue_pair": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "Bounty.alphabetDelta_le": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "Bounty.alphabetEpsilon_le": [
+    "propext",
+    "Quot.sound"
+  ],
+  "Bounty.alphabetDelta_pair": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "Bounty.alphabetDelta_isSidon": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "Bounty.exists_inverse_twice": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "Bounty.phase_word_covers_decomposed": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "Bounty.sparse_word_covers": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "Bounty.exists_fixed_translate_alphabet": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "Bounty.Window.rulerPhase_apply": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "Bounty.Window.rulerPhase_bounds": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "Bounty.Window.floorFamily_card_le": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "Bounty.Window.floorFamily_card_polynomial": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "Bounty.Window.linearPhase_apply": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "Bounty.Window.squarePhase_apply": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "Bounty.Window.heightPhase_apply": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "Bounty.Window.residueThreshold_apply": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "Bounty.Window.sum_product_abs_bound": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "Bounty.Window.linearPhase_abs_le": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "Bounty.Window.squarePhase_abs_le": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "Bounty.Window.windowFamily_card_le": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "Bounty.Window.windowFeature_bound": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "Bounty.Window.parityFamily_card_le": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "Bounty.Window.allWindowFamily_card_le": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "Bounty.Window.windowCountBound_polynomial": [
+    "propext"
+  ],
+  "Bounty.Window.allWindowFamily_card_polynomial": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "Bounty.Window.rotation_val": [
+    "propext",
+    "Quot.sound"
+  ],
+  "Bounty.Window.rotations_card_le": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "Bounty.Window.exists_periodic_word": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "Bounty.Window.rulerFloorVector_inBox": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "Bounty.Window.rulerCarry_eq_floor": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "Bounty.Window.rulerCarry_mem_floorFamily": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "Bounty.Window.anchorRuler_increment": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "Bounty.Window.parityOf_val": [
+    "propext",
+    "Quot.sound"
+  ],
+  "Bounty.Window.parityOf_modEq": [
+    "propext",
+    "Quot.sound"
+  ],
+  "Bounty.Window.sigmaFlag_actual": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "Bounty.Window.parity_half_eq": [
+    "propext",
+    "Quot.sound"
+  ],
+  "Bounty.Window.parityFlag_value": [
+    "propext",
+    "Quot.sound"
+  ],
+  "Bounty.Window.fract_sum_residue": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "Bounty.Window.fieldLinear_sq": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "Bounty.Window.normalizedCoeffs_inBox": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "Bounty.Window.normalized_linearPhase": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "Bounty.Window.normalized_squarePhase": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "Bounty.Window.field_square_val": [
+    "propext",
+    "Quot.sound"
+  ],
+  "Bounty.Window.arithmeticMatrix_eq_windowMatrix": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "Bounty.Window.arithmeticMatrix_mem_allWindowFamily": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "Bounty.Window.sigmaValue_actual": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "Bounty.Window.fieldLinear_data": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "Bounty.Window.heightPhase_data": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "Bounty.Window.dataMatrix_mem_allWindowFamily": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "Bounty.Window.data_parameter_equation": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "Bounty.Window.two_ne_zero": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "Bounty.Window.twice_mul_ne_zero": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "Bounty.Window.small_multiple_zero": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "Bounty.Window.quadratic_difference_iff": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "Bounty.Window.parityOf_one_iff": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "Bounty.Window.data_entry_iff": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "Bounty.Window.periodic_word_data_cover": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "Bounty.Window.baseQuotient_increment": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "Bounty.Window.window_value_identity": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "Bounty.Window.height_from_interval": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "Bounty.Window.exists_inverse_four": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "Bounty.Window.rotation_mod_value": [
+    "propext",
+    "Quot.sound"
+  ],
+  "Bounty.Window.ruler_window_cover": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "Bounty.Window.exists_sparse_phase_word_ge_two": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "Bounty.Window.exists_coverAlphabet": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "Bounty.Window.CoverAlphabet.exists_ruler_word": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "Bounty.Construction.phaseFamilyAll_card_scaled": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "Bounty.Construction.scaledIndex_le": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "Bounty.Construction.exists_scaled_phase_word": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "Bounty.Construction.scaledDelta_le": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "Bounty.Construction.word_cover_from_index_bound": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "Bounty.Construction.scaledDelta_gap": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "Bounty.Construction.exists_separatedAlphabet": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "Bounty.Construction.deltaDiff_abs_le": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "Bounty.Construction.epsilonDiff_abs_le": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "Bounty.Construction.deltaDiff_ne_zero": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "Bounty.Construction.tag_collision_divides": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "Bounty.Construction.int_eq_zero_of_dvd_abs_lt": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "Bounty.Construction.one_of_two_tag_unique": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "Bounty.Construction.exists_sumfree_translate": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "Bounty.Construction.exists_tagWitness": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "Bounty.Construction.exists_two_tagged_alphabets": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "Bounty.Construction.anchorRuler_pair": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "Bounty.Construction.anchorRuler_step": [
+    "propext",
+    "Quot.sound"
+  ],
+  "Bounty.Construction.anchorRuler_strictMono": [
+    "propext",
+    "Quot.sound"
+  ],
+  "Bounty.Construction.anchor_eq_baseline": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "Bounty.Construction.anchorFactor_pair": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "Bounty.Construction.anchorFactor_sum_ne": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "Bounty.Construction.anchorSet_isSidon": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "Bounty.Construction.sidon_union_of_sum_separation": [
+    "propext"
+  ],
+  "Bounty.Construction.quadraticSeed_lt": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "Bounty.Construction.quadraticSeed_mod_inj": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "Bounty.Construction.quadraticSeed_divisible_zero": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "Bounty.Construction.anchor_dvd": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "Bounty.Construction.anchor_lower": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "Bounty.Construction.anchorSet_dvd": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "Bounty.Construction.anchorSet_lower": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "Bounty.Construction.seed_anchor_union_isSidon": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "Bounty.Construction.bounded_steps": [
+    "propext",
+    "Quot.sound"
+  ],
+  "Bounty.Construction.exists_recent_window": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "Bounty.Construction.baseline_strictMono": [
+    "propext",
+    "Quot.sound"
+  ],
+  "Bounty.Construction.baseline_step": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "Bounty.Construction.periodicLabels_rotation": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "Bounty.Construction.difference_blocks_insertion": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "Bounty.Construction.exists_coverScheme": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "Bounty.Construction.CoverScheme.seed_card": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "Bounty.Construction.CoverScheme.blocks_interior": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "Bounty.Construction.sidon_image_succ": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "Bounty.Construction.sidon_image_pred": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "Bounty.Construction.sidon_shifted_multiples_count": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "Bounty.Construction.CoverScheme.exists_truncation": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "Bounty.Construction.blocked_succ": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "Bounty.Construction.maximal_completion_shifted": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "Bounty.Construction.CoverScheme.small_maximal_of_primes": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "Bounty.Construction.exists_cube_scale": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "Bounty.Construction.cube_scale_real_bound": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "Bounty.Construction.anchorRuler_last_lower": [
+    "propext",
+    "Quot.sound"
+  ],
+  "Bounty.Construction.baseline_last_large": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "Bounty.Construction.choose_primes_at_scale": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "Bounty.Construction.CoverScheme.small_maximal_at_scale": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "Bounty.Construction.eventual_small_maximal_sets": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "Bounty.target": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ]
+}

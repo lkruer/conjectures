@@ -1,0 +1,20 @@
+name = "erdos156_submission"
+version = "1.0.0"
+defaultTargets = ["Main"]
+
+[[require]]
+name = "mathlib"
+git = "https://github.com/leanprover-community/mathlib4.git"
+rev = "065356127b1dc0016f66b7283ce0ce2c4055aa55"
+
+[[lean_lib]]
+name = "Statement"
+
+[[lean_lib]]
+name = "Erdos156"
+
+[[lean_lib]]
+name = "Main"
+
+[[lean_lib]]
+name = "Audit"
